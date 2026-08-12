@@ -5,12 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Metal Gear Solid: The Twin Snakes 한국어 패치 배포 페이지" />
   <title>METAL GEAR SOLID: THE TWIN SNAKES — 한국어 패치</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=20260812-mobile2" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20260812-gamesel1" />
 </head>
 <body>
   <div class="scanlines" aria-hidden="true"></div>
   <header class="site-header">
-    <a class="archive-mark" href="#top" aria-label="한글화 패치 아카이브 홈"><span class="archive-dot"></span><span>PATCH ARCHIVE / GC-001</span></a>
+    <div class="header-primary">
+      <a class="archive-mark" href="#top" aria-label="한글화 패치 아카이브 홈"><span class="archive-dot"></span><span>PATCH ARCHIVE / GC-001</span></a>
+      <label class="game-select">
+        <span>GAME SELECT</span>
+        <select aria-label="패치 페이지 선택" onchange="if(this.value) location.href=this.value">
+          <option value="patch.html" selected>METAL GEAR SOLID: THE TWIN SNAKES</option>
+          <option value="sonic-adventure-2.html">SONIC ADVENTURE 2</option>
+        </select>
+      </label>
+    </div>
     <nav>
       <a href="index.html">홈</a>
       <a href="#game-intro">게임 소개</a>
@@ -109,8 +118,22 @@
           <div class="step"><b>04</b><div><h3>출력 ISO 자동 검증</h3><p>완성된 ISO는 원본 파일과 같은 폴더에 생성되며 SHA-256까지 자동 검증합니다. 검증에 실패한 출력 파일은 삭제됩니다.</p></div></div>
         </div>
         <div class="source-grid">
-          <article><span>DISC 1 / MD5</span><code>796319a44e67e9d34e90482d36b26e18</code><span>SHA-256</span><code>c514c3a672cf3587be87af9874629dfe31b21f92a46e760a9d7ba317f0399591</code></article>
-          <article><span>DISC 2 / MD5</span><code>4b0bc9bfe1c4098725bef272f5e03f4d</code><span>SHA-256</span><code>e1fac2270a95eb40781af29db67d2c741931bc96e884931e42371c036e94a4e4</code></article>
+          <article>
+            <span>DISC 1 / ORIGINAL IMAGE</span>
+            <code>Metal Gear Solid - The Twin Snakes (Japan) (En,Ja) (Disc 1).iso</code>
+            <span>MD5</span>
+            <code>796319a44e67e9d34e90482d36b26e18</code>
+            <span>SHA-256</span>
+            <code>c514c3a672cf3587be87af9874629dfe31b21f92a46e760a9d7ba317f0399591</code>
+          </article>
+          <article>
+            <span>DISC 2 / ORIGINAL IMAGE</span>
+            <code>Metal Gear Solid - The Twin Snakes (Japan) (En,Ja) (Disc 2).iso</code>
+            <span>MD5</span>
+            <code>4b0bc9bfe1c4098725bef272f5e03f4d</code>
+            <span>SHA-256</span>
+            <code>e1fac2270a95eb40781af29db67d2c741931bc96e884931e42371c036e94a4e4</code>
+          </article>
         </div>
         <div class="notice"><b>SUPPORTED ORIGINAL</b><p>일본판 retail Disc 1 / Disc 2, 각 1,459,978,240 bytes 기준입니다. 패키지에는 Windows x86_64용 Xdelta 3.2.0이 포함되어 있습니다.</p></div>
       </div>
