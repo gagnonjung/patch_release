@@ -5,10 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Metal Gear Solid: The Twin Snakes 한국어 패치 배포 페이지" />
   <title>METAL GEAR SOLID: THE TWIN SNAKES — 한국어 패치</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=20260812-gamesel1" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20260813-bgm1" />
 </head>
 <body>
   <div class="scanlines" aria-hidden="true"></div>
+  <audio id="page-bgm" preload="auto" loop src="https://jetta.vgmtreasurechest.com/soundtracks/metal-gear-solid-twin-snakes-the-complete-soundtrack-gamerip/rgfhvhyx/006%20Main%20Screen%20~Twin%20Snakes%20Main%20Titles~.mp3"></audio>
+  <div class="bgm-controls" aria-label="배경 음악 컨트롤">
+    <span class="bgm-label">BGM</span>
+    <button id="bgm-toggle" type="button" aria-label="배경 음악 재생 또는 정지">PLAY</button>
+    <button id="bgm-mute" type="button" aria-label="배경 음악 음소거 또는 해제">MUTE</button>
+  </div>
   <header class="site-header">
     <div class="header-primary">
       <a class="archive-mark" href="#top" aria-label="한글화 패치 아카이브 홈"><span class="archive-dot"></span><span>PATCH ARCHIVE / GC-001</span></a>
@@ -201,7 +207,7 @@
     <span>본 프로젝트는 비공식 팬 번역 프로젝트이며 관련 권리자와 제휴·승인 관계가 없습니다.</span>
   </footer>
 
-  <script src="assets/js/site.js?v=20260812-type1"></script>
+  <script src="assets/js/site.js?v=20260813-bgm1"></script>
   <script>document.querySelectorAll('.disabled-link').forEach(a=>a.addEventListener('click',e=>e.preventDefault()));</script>
 </body>
 </html>
