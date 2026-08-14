@@ -1,12 +1,12 @@
 const release = {
-  status: "QA RELEASE",
-  title: "MGS_TTS_KO_QA_20260811_R10_xdelta_windows.zip",
-  version: "0.90 / R10",
-  date: "2026-08-11",
-  size: "133.82 MiB / 140,321,035 bytes",
+  status: "FINAL RELEASE",
+  title: "MGS_TTS_KO_v1.0_xdelta_windows.zip",
+  version: "1.0",
+  date: "2026-08-15",
+  size: "133.02 MiB / 139,478,459 bytes",
   provider: "MEGA",
-  url: "https://mega.nz/file/ln0kRKQB#3AI9Ge5TgNZrIKiV6ERnZg2IVSPyI_ALh94KjebExWM",
-  patchSha256: "a2d4686f2e5adf887a3cd3aa6256b79f80a9d69762d922d4d3344479438bc6d0",
+  url: "https://mega.nz/file/pm9T3ApS#X6fAnfwQplNY41qfABQKMZD_iLeW82BcrccT5gOjyGs",
+  patchSha256: "9b9acbd1fbcd0196275d202217842339ae25a6420a5131f7d1b021a99ef01448",
   sourceSha256: "Disc 1: c514c3a672cf3587be87af9874629dfe31b21f92a46e760a9d7ba317f0399591 / Disc 2: e1fac2270a95eb40781af29db67d2c741931bc96e884931e42371c036e94a4e4"
 };
 
