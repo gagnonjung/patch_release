@@ -27,7 +27,9 @@ setText("source-hash", release.sourceSha256);
 const link = document.getElementById("release-link");
 if (link && release.url) {
   link.href = release.url;
-  link.textContent = `DOWNLOAD — ${release.provider}`;
+  const label = link.querySelector("span:last-child");
+  if (label) label.textContent = `DOWNLOAD — ${release.provider}`;
+  else link.textContent = `DOWNLOAD — ${release.provider}`;
   link.classList.remove("disabled");
   link.removeAttribute("aria-disabled");
   link.target = "_blank";
