@@ -56,11 +56,11 @@
 패키지 뒷면이 없어서 말이야.</p></div>
       </div>
       <div class="hero-copy codec-hero-copy">
-        <p class="kicker">KOREAN LOCALIZATION / v1.01</p>
+        <p class="kicker">KOREAN LOCALIZATION / v1.02 HOTFIX</p>
         <h1 class="main-logo"><img src="assets/images/mgs-tts-logo.webp" alt="METAL GEAR SOLID THE TWIN SNAKES" /></h1>
         <div class="hero-actions"><a class="button primary" href="#download">패치 받기</a><a class="button ghost" href="https://cafe.naver.com/f-e/cafes/16259867/menus/75" target="_blank" rel="noopener noreferrer">제보하기</a><a class="button ghost" href="#overview">패치 개요</a></div>
-        <p class="hero-description">닌텐도 게임큐브용 <b>메탈 기어 솔리드: 더 트윈 스네이크스</b> 비공식 한국어 패치입니다. v1.0 이후 실기 검수에서 확인된 Mission Log 조판, BRIEFING 정렬, 무전 대사와 특수기호, 컷신 줄바꿈, 시스템·메모리 카드 QA를 보강한 <b>v1.01 수정 릴리스</b>입니다.</p>
-        <div class="status-row"><span>PLATFORM / NINTENDO GAMECUBE</span><span>REGION / JAPAN</span><span class="status-active">STATUS / v1.01</span></div>
+        <p class="hero-description">닌텐도 게임큐브용 <b>메탈 기어 솔리드: 더 트윈 스네이크스</b> 비공식 한국어 패치입니다. <b>v1.02 Hotfix</b>는 v1.01 실기에서 확인된 벌컨 레이븐 전차전 직후의 치명적인 프리징을 수정하고, 무전 화자·어투와 컷신 줄바꿈·문장부호 QA를 함께 보강한 안정성 핫픽스입니다.</p>
+        <div class="status-row"><span>PLATFORM / NINTENDO GAMECUBE</span><span>REGION / JAPAN</span><span class="status-active">STATUS / v1.02 HOTFIX</span></div>
       </div>
     </section>
 
@@ -97,7 +97,7 @@
       <div class="body-copy">
         <p><b>메탈 기어 솔리드: 더 트윈 스네이크스</b>는 2004년 3월 11일 일본에서 발매된 닌텐도 게임큐브용 타이틀입니다. 이번 한국어 패치는 일본판 정품 Disc 1·Disc 2를 대상으로 제작했으며, 원작의 분위기와 인물별 말투를 살리면서 게임 전체를 자연스럽게 플레이할 수 있도록 텍스트와 화면 출력을 함께 다듬는 것을 목표로 합니다.</p>
         <p>패치에는 일반 및 자동 호출을 포함한 <b>CODEC 무전</b>, <b>컷신 자막</b>, 메뉴·아이템·저장·언어 설정 등 <b>주요 시스템 텍스트</b>, 스테이지명과 각종 안내 문구의 한국어화가 포함됩니다. 단순히 일본어 문자열을 한국어로 교체하는 방식에 그치지 않고, 한글 폰트와 글리프 처리, 문장별 줄바꿈과 출력 폭, 자막 타이밍, UI 정렬과 가독성도 한국어 환경에 맞춰 조정했습니다.</p>
-        <p>텍스트 삽입 이후 실제 플레이에서 발생할 수 있는 글자 깨짐, 폭 초과, 무전 표시 오류, 로딩 프리징 등의 문제를 반복 검증했습니다. <b>v1.01</b>은 v1.0 이후 실기 검수에서 확인된 Mission Log 조판, BRIEFING 정렬, 무전 문맥과 특수기호, 컷신 줄바꿈, 시스템·메모리 카드 문구를 다시 전수 QA한 수정 릴리스입니다. 이후에도 오탈자나 특정 상황의 표시 문제가 발견되면 제보를 부탁드립니다.</p>
+        <p>텍스트 삽입 이후 실제 플레이에서 발생할 수 있는 글자 깨짐, 폭 초과, 무전 표시 오류, 로딩 프리징 등의 문제를 반복 검증했습니다. <b>v1.02 Hotfix</b>에서는 한글화된 <code>stage.dat</code>의 재압축으로 일부 loader-visible 압축 영역이 일본판보다 작아지면서 발생하던 전차전 이후 프리징을 수정했습니다. 동시에 메모리 카드 문구, 메이 링·나오미·나스타샤의 어투와 화자, Ninja/Gray Fox 대사, Disc 2 컷신을 다시 검수했습니다.</p>
         <p>배포 ZIP에는 Disc 1·Disc 2용 xdelta 패치와 Windows용 적용 스크립트가 포함되어 있습니다. 원본의 MD5를 자동으로 판별한 뒤 해당 패치를 적용하고, 완성된 ISO의 SHA-256까지 검증하도록 구성했습니다. <b>원본 게임 데이터는 배포본에 포함되지 않으며</b>, 사용자가 소유한 지원 일본판 원본을 기준으로 패치를 적용해야 합니다.</p>
       </div>
     </section>
@@ -129,56 +129,58 @@
 
       <div id="release-notes" class="subsection-block release-notes-block">
         <div class="section-heading-row">
-          <div><p class="section-index">04-A / PATCH NOTES</p><h2>v1.01 패치 노트</h2></div>
-          <p class="section-note">v1.0 → v1.01</p>
+          <div><p class="section-index">04-A / PATCH NOTES</p><h2>v1.02 Hotfix 패치 노트</h2></div>
+          <p class="section-note">v1.01 → v1.02</p>
         </div>
         <div class="release-notes-grid">
           <article>
-            <span>MISSION LOG / BRIEFING</span>
-            <h3>조판과 UI 정렬 보정</h3>
+            <span>CRITICAL STABILITY HOTFIX</span>
+            <h3>벌컨 레이븐 전차전 프리징 수정</h3>
             <ul>
-              <li>Mission Log의 과도한 줄바꿈을 재검토해 지적 구간을 3줄 → 2줄로 재배치</li>
-              <li>25.5-cell 안전 폭 안에서 문장 가독성과 우측 여백을 다시 조정</li>
-              <li>BRIEFING FILES의 <code>메릴</code>, <code>지원요원</code>, <code>제한시간</code>을 우측 정렬</li>
-              <li><code>로이 캠벨</code> 앞 실제 표시 리더 라인 길이 보정</li>
+              <li>벌컨 레이븐 전차전 직후 다음 구역으로 전환할 때 발생하던 치명적인 프리징 수정</li>
+              <li>원인을 <code>stage.dat</code> 압축 영역의 retail 대비 shrink로 확정</li>
+              <li>모든 압축 폴더에 일본판 retail 하한을 보존하는 fixed-span 정책 적용</li>
+              <li>실기에서 전차전 이후 전환과 <code>핵탄두 보관동 1F</code> 표시 정상 확인</li>
             </ul>
           </article>
           <article>
-            <span>CODEC / DIALOGUE</span>
-            <h3>무전 대사와 용어 교정</h3>
+            <span>STAGE / RELEASE GATE</span>
+            <h3>두 디스크 압축 구조 안전성 강화</h3>
             <ul>
-              <li>메이 링 <code>네 행동도</code> → <code>당신 행동도</code></li>
-              <li>메릴 해당 대사를 <code>…그 사람이 아닌가?</code>로 정리</li>
-              <li><code>콤뱃</code> 잔존을 전수 조사해 <code>컴뱃</code>으로 통일</li>
-              <li><code>큭, 대령 이 인간…</code> 등 동일 원문에서 갈라진 무전 변형 통일</li>
+              <li>Disc 1 압축 폴더 199개 / Disc 2 204개 전수 감사</li>
+              <li>descriptor below retail 0 / 0x800-sector span below retail 0</li>
+              <li>compressed offset/allocation change 0 / zlib error 0</li>
+              <li><code>audit_stage_compressed_spans.py --fail-on-shrink</code>를 릴리스 차단 게이트로 추가</li>
             </ul>
           </article>
           <article>
-            <span>SYMBOL / QUOTE QA</span>
-            <h3>특수기호 표시 문제 수정</h3>
+            <span>CODEC / CHARACTER REGISTER</span>
+            <h3>화자·어투·장비 획득 대사 재검수</h3>
             <ul>
-              <li>CODEC의 일본어 장음표 <code>ー</code> 62건이 실기에서 <code>□</code>로 표시되던 문제 제거</li>
-              <li>곡선형 따옴표와 일본식 괄호를 한국어 표시 필드에서 반각 ASCII quote로 정규화</li>
-              <li>재생성 원본·TM·override까지 함께 정리해 동일 기호 재유입 방지</li>
+              <li>메이 링의 스네이크 대상 <code>너/네</code> 계열을 전수 확인해 <code>당신</code> 계열로 정리</li>
+              <li>그레이 폭스 전투 직후 Snake / Campbell / Naomi 화자 맵을 재고정하고 나오미 존댓말 복원</li>
+              <li>나스타샤 장비 획득 표현을 원문 문맥별로 <code>구하셨군요</code> / <code>구하신 모양이군요</code> / <code>구하면</code> / <code>입수했다면</code>으로 구분</li>
+              <li>Ninja / Gray Fox 관련 대사를 일본어 원문과 대본 문맥에 맞춰 교정</li>
             </ul>
           </article>
           <article>
-            <span>CUTSCENE / SYSTEM</span>
-            <h3>컷신·메모리 카드 전수 QA</h3>
+            <span>CUTSCENE / SYSTEM QA</span>
+            <h3>메모리 카드·Disc 2 컷신 보강</h3>
             <ul>
-              <li>컷신 줄바꿈을 어절·형태소·바이트 용량·우측 여백 기준으로 다시 전수 검사</li>
-              <li>시스템/메모리 카드의 저장·불러오기·초기화·삭제 경고문 별도 전수 검사</li>
-              <li><code>메모리 카드</code>, <code>초기화</code>, <code>파워 버튼</code> 표기를 고정</li>
+              <li>메모리 카드 경고의 <code>POWER</code>를 <code>파워</code>로 현지화하고 불필요한 강제 중간 개행 제거</li>
+              <li>오타콘 CODEC 202행과 Disc 2 후반 컷신을 재검토해 직역투를 자연스럽게 수정</li>
+              <li>Disc 2 소비 컷신 1,479행 감사, 고신뢰 209행은 화자 메타데이터까지 고정</li>
+              <li>문장부호·어절/형태소 줄바꿈·컷신 byte budget 재검증</li>
             </ul>
           </article>
           <article>
             <span>RELEASE VALIDATION</span>
-            <h3>v1.01 최종 배포 검증</h3>
+            <h3>v1.02 Hotfix 최종 배포 검증</h3>
             <ul>
-              <li>유효 대사 16,032개 전수 검사, CODEC·컷신 layout finding 0</li>
-              <li>시스템/메모리 카드 일본어 소비 구간 48/48 확인, 정적 글리프 510/510</li>
-              <li>프로젝트 자동 테스트 276/276 PASS</li>
-              <li>xdelta 3.2.0 Disc 1·2 encode/decode 및 실제 Windows 적용 경로 검증 PASS</li>
+              <li>한국어 정적 글리프 510/510, missing 0</li>
+              <li>CODEC 11,960행: long row 0 / visible overflow 0 / reflow candidate 0</li>
+              <li>프로젝트 자동 테스트 293/293 PASS</li>
+              <li>xdelta Disc 1·2 encode → decode 결과 목표 ISO와 byte-identical PASS</li>
             </ul>
           </article>
         </div>
@@ -188,7 +190,7 @@
         <p class="section-index">04-B / INSTALL GUIDE</p>
         <h3 class="subsection-title">적용 방법</h3>
         <div class="steps">
-          <div class="step"><b>01</b><div><h3>ZIP 전체 압축 해제</h3><p><code>MGS_TTS_KO_v1.01_xdelta_windows.zip</code>의 내용을 한 폴더에 모두 압축 해제합니다.</p></div></div>
+          <div class="step"><b>01</b><div><h3>ZIP 전체 압축 해제</h3><p><code>MGS_TTS_KO_v1.02_xdelta_windows.zip</code>의 내용을 한 폴더에 모두 압축 해제합니다.</p></div></div>
           <div class="step"><b>02</b><div><h3>일본판 원본을 BAT에 드래그 앤 드롭</h3><p>정품 Disc 1 또는 Disc 2 원본 파일을 <code>apply_patch.bat</code> 위로 끌어다 놓습니다. 파일명과 확장자는 판별에 사용하지 않으며, 두 파일을 동시에 선택해도 됩니다.</p></div></div>
           <div class="step"><b>03</b><div><h3>MD5 자동 판별 · xdelta 적용</h3><p>BAT가 원본의 MD5를 계산해 Disc 1 / Disc 2를 자동 판별하고, 지원 원본과 일치할 때 해당 xdelta를 적용합니다.</p></div></div>
           <div class="step"><b>04</b><div><h3>출력 ISO 자동 검증</h3><p>완성된 ISO는 원본 파일과 같은 폴더에 <code>Metal Gear Solid - The Twin Snakes (Korea) (Disc 1).iso</code> 또는 <code>Metal Gear Solid - The Twin Snakes (Korea) (Disc 2).iso</code>로 생성되며 SHA-256까지 자동 검증합니다. 검증에 실패한 출력 파일은 삭제됩니다.</p></div></div>
@@ -211,7 +213,7 @@
             <code>e1fac2270a95eb40781af29db67d2c741931bc96e884931e42371c036e94a4e4</code>
           </article>
         </div>
-        <div class="notice"><b>SUPPORTED ORIGINAL</b><p>일본판 retail Disc 1 / Disc 2, 각 1,459,978,240 bytes 기준입니다. 패키지에는 Windows x86_64용 Xdelta 3.2.0이 포함되어 있습니다.</p></div>
+        <div class="notice"><b>SUPPORTED ORIGINAL</b><p>일본판 retail Disc 1 / Disc 2, 각 1,459,978,240 bytes 기준입니다. <b>v1.02는 v1.01 ISO에 덧씌우는 증분 패치가 아니며 일본판 원본에 직접 적용합니다.</b> 패키지에는 Windows x86_64용 Xdelta 3.2.0이 포함되어 있습니다.</p></div>
       </div>
 
       <div id="license" class="subsection-block license-section nested-license">
@@ -233,7 +235,7 @@
         <div class="download-section embedded-download">
           <div>
             <h3 class="subsection-title">패치 다운로드</h3>
-            <p class="download-lead">현재 최신 배포본은 <b>v1.01</b>입니다. 다운로드 후 포함된 README와 지원 원본 해시를 확인해 주세요.</p>
+            <p class="download-lead">현재 최신 배포본은 <b>v1.02 Hotfix</b>입니다. 다운로드 후 포함된 README와 지원 원본 해시를 확인해 주세요.</p>
             <div class="notice">
               <b>REQUIRED ORIGINAL IMAGES</b>
               <p>
@@ -249,13 +251,13 @@
             </div>
           </div>
           <div class="release-card">
-            <div class="release-top"><span>LATEST BUILD</span><span id="release-status">UPDATE RELEASE</span></div>
-            <h3 id="release-title">MGS_TTS_KO_v1.01_xdelta_windows.zip</h3>
-            <dl><div><dt>VERSION</dt><dd id="release-version">1.01</dd></div><div><dt>DATE</dt><dd id="release-date">2026-08-15</dd></div><div><dt>SIZE</dt><dd id="release-size">133.64 MiB / 140,132,553 bytes</dd></div><div><dt>PRIMARY</dt><dd id="release-provider">MEGA</dd></div></dl>
-            <div class="notice test-environment"><b>TESTED ENVIRONMENT</b><p>Dolphin Emulator 2606 — 실행 및 플레이 확인<br>Nintendo GameCube 실기 — 실행 및 플레이 확인<br>v1.01 최종 배포본 기준</p></div>
-            <a id="release-link" class="button download-button mega-download" href="https://mega.nz/file/gz1gXLxQ#k9KIzZhPmcYNjTeVvIN_ercY5ZhPTjR3PKpVotNIFKQ" target="_blank" rel="noopener noreferrer"><span class="download-icon mega-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="11" fill="#d9272e"/><path d="M5.8 8.2h2.8l3.4 4 3.4-4h2.8v7.6h-2.5v-4.2L12 15.7l-3.7-4.1v4.2H5.8z" fill="#fff"/></svg></span><span>DOWNLOAD — MEGA</span></a>
-            <a class="button download-button drive-download" href="https://drive.google.com/file/d/1peal2Ma_wybBmiaDh9Me6qeNbIlrKeax/view?usp=sharing" target="_blank" rel="noopener noreferrer"><span class="download-icon drive-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M8.1 2.5h5.1l5.2 9H13z" fill="#2ca24c"/><path d="M8.1 2.5 2.7 12l2.6 4.5 5.3-9z" fill="#f6c344"/><path d="M5.3 16.5h10.4l2.7-5H8z" fill="#4285f4"/></svg></span><span>MIRROR — GOOGLE DRIVE</span></a>
-            <div class="hash-block"><span>SHA-256 / PATCH ZIP</span><code id="patch-hash">9b18a85977637a954b3dd10bd3fc45d69737814b1d5d88b30fc5c8aea70f2a44</code></div>
+            <div class="release-top"><span>LATEST BUILD</span><span id="release-status">HOTFIX RELEASE</span></div>
+            <h3 id="release-title">MGS_TTS_KO_v1.02_xdelta_windows.zip</h3>
+            <dl><div><dt>VERSION</dt><dd id="release-version">1.02</dd></div><div><dt>DATE</dt><dd id="release-date">2026-08-16</dd></div><div><dt>SIZE</dt><dd id="release-size">133.64 MiB / 140,128,411 bytes</dd></div><div><dt>PRIMARY</dt><dd id="release-provider">MEGA</dd></div></dl>
+            <div class="notice test-environment"><b>TESTED ENVIRONMENT</b><p>Dolphin Emulator 2606 — 실행 및 플레이 확인<br>Nintendo GameCube 실기 — 전차전 이후 전환 및 주요 진행 확인<br>v1.02 Hotfix 최종 배포본 기준</p></div>
+            <a id="release-link" class="button download-button mega-download" href="https://mega.nz/file/YydESaAT#x3xbNXz3lUdc6BlE0hKiNSWs-dc-BURWpXm-OUq1JaU" target="_blank" rel="noopener noreferrer"><span class="download-icon mega-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="11" fill="#d9272e"/><path d="M5.8 8.2h2.8l3.4 4 3.4-4h2.8v7.6h-2.5v-4.2L12 15.7l-3.7-4.1v4.2H5.8z" fill="#fff"/></svg></span><span>DOWNLOAD — MEGA</span></a>
+            <a id="release-mirror" class="button download-button drive-download" href="https://drive.google.com/file/d/1bqBxRKM4Dkj7mGmblgAFI5tuPKPx5Muw/view?usp=sharing" target="_blank" rel="noopener noreferrer"><span class="download-icon drive-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M8.1 2.5h5.1l5.2 9H13z" fill="#2ca24c"/><path d="M8.1 2.5 2.7 12l2.6 4.5 5.3-9z" fill="#f6c344"/><path d="M5.3 16.5h10.4l2.7-5H8z" fill="#4285f4"/></svg></span><span>MIRROR — GOOGLE DRIVE</span></a>
+            <div class="hash-block"><span>SHA-256 / PATCH ZIP</span><code id="patch-hash">476673d0ef2bf31b14f79510243e9b9fdf83f31fc3d61a2fa746f39187dc7801</code></div>
             <div class="hash-block"><span>SUPPORTED ORIGINAL / SHA-256</span><code id="source-hash">Disc 1: c514c3a672cf3587be87af9874629dfe31b21f92a46e760a9d7ba317f0399591 / Disc 2: e1fac2270a95eb40781af29db67d2c741931bc96e884931e42371c036e94a4e4</code></div>
           </div>
         </div>
@@ -277,7 +279,7 @@
     <span>본 프로젝트는 비공식 팬 번역 프로젝트이며 관련 권리자와 제휴·승인 관계가 없습니다.</span>
   </footer>
 
-  <script src="assets/js/site.js?v=20260815-v101"></script>
+  <script src="assets/js/site.js?v=20260816-v102"></script>
   <script>document.querySelectorAll('.disabled-link').forEach(a=>a.addEventListener('click',e=>e.preventDefault()));</script>
 </body>
 </html>

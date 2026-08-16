@@ -1,12 +1,13 @@
 const release = {
-  status: "UPDATE RELEASE",
-  title: "MGS_TTS_KO_v1.01_xdelta_windows.zip",
-  version: "1.01",
-  date: "2026-08-15",
-  size: "133.64 MiB / 140,132,553 bytes",
+  status: "HOTFIX RELEASE",
+  title: "MGS_TTS_KO_v1.02_xdelta_windows.zip",
+  version: "1.02",
+  date: "2026-08-16",
+  size: "133.64 MiB / 140,128,411 bytes",
   provider: "MEGA",
-  url: "https://mega.nz/file/gz1gXLxQ#k9KIzZhPmcYNjTeVvIN_ercY5ZhPTjR3PKpVotNIFKQ",
-  patchSha256: "9b18a85977637a954b3dd10bd3fc45d69737814b1d5d88b30fc5c8aea70f2a44",
+  url: "https://mega.nz/file/YydESaAT#x3xbNXz3lUdc6BlE0hKiNSWs-dc-BURWpXm-OUq1JaU",
+  mirrorUrl: "https://drive.google.com/file/d/1bqBxRKM4Dkj7mGmblgAFI5tuPKPx5Muw/view?usp=sharing",
+  patchSha256: "476673d0ef2bf31b14f79510243e9b9fdf83f31fc3d61a2fa746f39187dc7801",
   sourceSha256: "Disc 1: c514c3a672cf3587be87af9874629dfe31b21f92a46e760a9d7ba317f0399591 / Disc 2: e1fac2270a95eb40781af29db67d2c741931bc96e884931e42371c036e94a4e4"
 };
 
@@ -34,6 +35,17 @@ if (link && release.url) {
   link.removeAttribute("aria-disabled");
   link.target = "_blank";
   link.rel = "noopener noreferrer";
+}
+
+const mirrorLink = document.getElementById("release-mirror");
+if (mirrorLink && release.mirrorUrl) {
+  mirrorLink.href = release.mirrorUrl;
+  const label = mirrorLink.querySelector("span:last-child");
+  if (label) label.textContent = "MIRROR — GOOGLE DRIVE";
+  mirrorLink.classList.remove("disabled");
+  mirrorLink.removeAttribute("aria-disabled");
+  mirrorLink.target = "_blank";
+  mirrorLink.rel = "noopener noreferrer";
 }
 
 const codecMeterBars = [...document.querySelectorAll(".codec-meter i")];
