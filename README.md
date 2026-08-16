@@ -28,8 +28,8 @@ Release archive:
 - Size: `140,134,834 bytes / 133.64 MiB`
 - SHA-256: `4096ea62dbb1f55cdd7ef830a56c5a7e658c541031eccc84bc2804bac35eead8`
 - ZIP integrity: `13 entries / ISO 0 / SHA256SUMS.txt 12/12 PASS`
-- Primary download: https://mega.nz/file/JzdDQQwR#qDYFh2cmF5PWdouFDQuiG7Yay5HP_W5d2GtEzW6VXug
-- Mirror: https://drive.google.com/file/d/1E-MtgvnhPWZFnklfRHpu8uxFdsdNNpsM/view?usp=sharing
+- Primary download: temporarily disabled
+- Mirror: temporarily disabled
 
 v1.03 keeps the v1.02 fixed-span stage stability fix and adds user-feedback QA for untranslated system text, Meryl/Psycho Mantis dialogue, semantic line breaks, and Korean run-on sentence boundaries. The final sentence-boundary audit corrected 24 cutscene cases and 10 VOX cases, for 34 fixes total.
 

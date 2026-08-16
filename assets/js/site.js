@@ -5,8 +5,8 @@ const release = {
   date: "2026-08-16",
   size: "133.64 MiB / 140,134,834 bytes",
   provider: "MEGA",
-  url: "https://mega.nz/file/JzdDQQwR#qDYFh2cmF5PWdouFDQuiG7Yay5HP_W5d2GtEzW6VXug",
-  mirrorUrl: "https://drive.google.com/file/d/1E-MtgvnhPWZFnklfRHpu8uxFdsdNNpsM/view?usp=sharing",
+  url: "",
+  mirrorUrl: "",
   patchSha256: "4096ea62dbb1f55cdd7ef830a56c5a7e658c541031eccc84bc2804bac35eead8",
   sourceSha256: "Disc 1: c514c3a672cf3587be87af9874629dfe31b21f92a46e760a9d7ba317f0399591 / Disc 2: e1fac2270a95eb40781af29db67d2c741931bc96e884931e42371c036e94a4e4"
 };
