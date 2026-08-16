@@ -97,7 +97,7 @@
       <div class="body-copy">
         <p><b>메탈 기어 솔리드: 더 트윈 스네이크스</b>는 2004년 3월 11일 일본에서 발매된 닌텐도 게임큐브용 타이틀입니다. 이번 한국어 패치는 일본판 정품 Disc 1·Disc 2를 대상으로 제작했으며, 원작의 분위기와 인물별 말투를 살리면서 게임 전체를 자연스럽게 플레이할 수 있도록 텍스트와 화면 출력을 함께 다듬는 것을 목표로 합니다.</p>
         <p>패치에는 일반 및 자동 호출을 포함한 <b>CODEC 무전</b>, <b>컷신 자막</b>, 메뉴·아이템·저장·언어 설정 등 <b>주요 시스템 텍스트</b>, 스테이지명과 각종 안내 문구의 한국어화가 포함됩니다. 단순히 일본어 문자열을 한국어로 교체하는 방식에 그치지 않고, 한글 폰트와 글리프 처리, 문장별 줄바꿈과 출력 폭, 자막 타이밍, UI 정렬과 가독성도 한국어 환경에 맞춰 조정했습니다.</p>
-        <p>텍스트 삽입 이후 실제 플레이에서 발생할 수 있는 글자 깨짐, 폭 초과, 무전 표시 오류, 로딩 프리징 등의 문제를 반복 검증했습니다. <b>v1.03</b>에서는 v1.02의 <code>stage.dat</code> fixed-span 안정성 수정을 유지하면서 컨트롤러 포트 경고를 추가 한글화하고, 메릴·사이코 맨티스의 어투와 스네이크 대사 개행을 재검수했습니다. 또한 CODEC·컷신·VOX에서 문장 종결 뒤 다음 독립 문장이 붙는 런온을 전수 감사해 확실한 34건을 교정했습니다.</p>
+        <p>텍스트 삽입 이후 실제 플레이에서 발생할 수 있는 글자 깨짐, 폭 초과, 무전 표시 오류, 로딩 프리징 등의 문제를 반복 검증했습니다. <b>v1.03</b>에서는 v1.02의 <code>stage.dat</code> fixed-span 안정성 수정을 유지하면서 컨트롤러 포트·도그 태그 불러오기 완료 문구를 추가 한글화하고, 메릴·나오미·사이코 맨티스 대사와 PSG1/PSG1-T 설명 조판을 재검수했습니다. 또한 CODEC·컷신·VOX의 문장 경계 34건과 문장부호 뒤 붙은 어절 5건을 추가 교정했습니다.</p>
         <p>배포 ZIP에는 Disc 1·Disc 2용 xdelta 패치와 Windows용 적용 스크립트가 포함되어 있습니다. 원본의 MD5를 자동으로 판별한 뒤 해당 패치를 적용하고, 완성된 ISO의 SHA-256까지 검증하도록 구성했습니다. <b>원본 게임 데이터는 배포본에 포함되지 않으며</b>, 사용자가 소유한 지원 일본판 원본을 기준으로 패치를 적용해야 합니다.</p>
       </div>
     </section>
@@ -138,29 +138,40 @@
             <h3>미번역 시스템 문구 추가 교정</h3>
             <ul>
               <li>컨트롤러 포트 1 사용 안내를 <code>컨트롤러 포트 1의 / 컨트롤러를 사용해 주십시오.</code>로 한글화</li>
+              <li>도그 태그 불러오기에서 별도 소비되던 일본어 완료 문구를 추적해 <code>불러오기 완료.</code>로 한글화</li>
               <li>stage별 SAVE / LOAD common UI 복제본의 일본어 잔존 수정 유지</li>
               <li>Mission Log의 <code>Deepthroat</code> → <code>딥 스로트</code> 수정 유지</li>
-              <li>SOCOM 소음기 설명은 폭 안전성을 재확인해 불필요한 변경 없이 유지</li>
+            </ul>
+          </article>
+          <article>
+            <span>WEAPON DESCRIPTION QA</span>
+            <h3>PSG1 / PSG1-T 설명 조판 수정</h3>
+            <ul>
+              <li>PSG1은 <code>저격소총.</code> 뒤에 명시 줄바꿈을 추가해 어절 내부 자동 줄바꿈을 방지</li>
+              <li>PSG1-T도 <code>마취 저격소총.</code> 뒤에 같은 기준의 명시 줄바꿈 적용</li>
+              <li>두 무기 모두 다음 줄을 <code>1인칭 시점으로 조준하고</code>로 통일</li>
+              <li>SOCOM 소음기 설명은 최대 폭 15.75/16.75 cells로 안전함을 재확인</li>
             </ul>
           </article>
           <article>
             <span>CHARACTER / DIALOGUE QA</span>
-            <h3>메릴·사이코 맨티스 대사 재검수</h3>
+            <h3>메릴·나오미·사이코 맨티스 대사 재검수</h3>
             <ul>
-              <li>메릴은 반말 종결을 유지하되 스네이크를 직접 가리키는 2인칭을 <code>너/네</code> 대신 <code>당신</code>으로 통일</li>
-              <li><code>응? 나 좋아해?</code>, <code>끔찍해…</code>, <code>자, FOXHOUND 나리. 소장이 기다려</code> 등 메릴 대사 교정</li>
-              <li>사이코 맨티스의 목적·이상, 메릴 독심, 미래 관련 대사를 원문 문맥에 맞춰 교정</li>
+              <li>메릴은 반말 종결을 유지하되 스네이크를 직접 가리키는 2인칭을 <code>너/네</code> 대신 <code>당신</code>으로 통일하고 부상 장면까지 감사 범위를 확대</li>
+              <li><code>스네이크, 따라 와…</code>, <code>…사람을 좋아하도록 해</code>, <code>나 이렇게 됐지만…당신을 돕고 싶어!</code> 등 실기 피드백 대사 교정</li>
+              <li>메릴 지뢰밭 VOX는 다음 대사를 침범하지 않도록 <code>맨티스가 내 정신에 들어왔을 때 / 여기 지뢰가 보였어.</code>로 압축</li>
+              <li>나오미의 <code>너무 기다리게 하면 안 돼요.</code> 등 존댓말 누락과 사이코 맨티스 지정 대사를 추가 교정</li>
               <li>스네이크의 <code>전장에서밖에 자신의 의미를 / 찾지 못하는 남자야</code>를 의미 단위로 명시 개행</li>
             </ul>
           </article>
           <article>
-            <span>SENTENCE BOUNDARY AUDIT</span>
-            <h3>붙어 나오는 독립 문장 전수 교정</h3>
+            <span>SENTENCE / PUNCTUATION AUDIT</span>
+            <h3>문장 경계와 문장부호 전수 교정</h3>
             <ul>
               <li>종결 어미 뒤 다음 독립 문장이 문장부호 없이 이어지는 런온을 CODEC·컷신·VOX 대상으로 전수 후보화</li>
               <li>확실한 컷신 문장 경계 24건 + VOX 10건, 총 34건 수정</li>
-              <li><code>넌 인질이다. 제네바 협약도 관계없다</code> 등 문장 단위가 분명한 구간에 마침표 보강</li>
-              <li>도치·호격·연결 표현 등 실제 문장 경계가 아닌 후보는 오탐으로 분리해 보호</li>
+              <li><code>!</code>, <code>!!</code> 뒤 다음 어절이 공백 없이 붙은 5건을 추가 수정 — CODEC 1건 / 컷신 4건</li>
+              <li>도치·호격·연결 표현 등 실제 문장 경계가 아닌 후보는 오탐으로 분리해 보호하고 잔존 후보 0 확인</li>
             </ul>
           </article>
           <article>
@@ -170,17 +181,17 @@
               <li>벌컨 레이븐 전차전 직후 프리징을 해결한 retail 하한 보존 fixed-span 정책 그대로 유지</li>
               <li>Disc 1 압축 폴더 199개 / Disc 2 204개, descriptor 및 0x800-sector span shrink 0</li>
               <li>compressed offset/allocation change 0 / zlib error 0</li>
-              <li>v1.02 대비 각 디스크 변경 FST는 <code>demo.dat</code>, <code>stage.dat</code>, <code>shared/vox.dat</code> 3개</li>
+              <li>common UI duplicate audit 양쪽 각각 20 stage × 40행, retail duplicate 0 / mismatch 0</li>
             </ul>
           </article>
           <article>
             <span>RELEASE VALIDATION</span>
-            <h3>v1.03 최종 배포 검증</h3>
+            <h3>v1.03 재봉인 최종 배포 검증</h3>
             <ul>
-              <li>한국어 정적 글리프 510/510, missing 0</li>
+              <li>한국어 정적 글리프 510/510, missing 0 / CODEC 11,960 entries, layout overflow 0</li>
               <li>컷신 2,752 entries / 683 blocks, layout issue 0 / byte overflow block 0</li>
               <li>VOX 1,228/1,228 적용, oversize block 0 / group·block boundary-size change 0</li>
-              <li>프로젝트 자동 테스트 304/304 PASS / xdelta Disc 1·2 encode → decode byte-identical PASS</li>
+              <li>프로젝트 자동 테스트 310/310 PASS / xdelta Disc 1·2 encode → decode byte-identical PASS</li>
             </ul>
           </article>
         </div>
@@ -253,11 +264,11 @@
           <div class="release-card">
             <div class="release-top"><span>LATEST BUILD</span><span id="release-status">RELEASE</span></div>
             <h3 id="release-title">MGS_TTS_KO_v1.03_xdelta_windows.zip</h3>
-            <dl><div><dt>VERSION</dt><dd id="release-version">1.03</dd></div><div><dt>DATE</dt><dd id="release-date">2026-08-16</dd></div><div><dt>SIZE</dt><dd id="release-size">133.64 MiB / 140,134,834 bytes</dd></div><div><dt>PRIMARY</dt><dd id="release-provider">MEGA</dd></div></dl>
+            <dl><div><dt>VERSION</dt><dd id="release-version">1.03</dd></div><div><dt>DATE</dt><dd id="release-date">2026-08-16</dd></div><div><dt>SIZE</dt><dd id="release-size">133.64 MiB / 140,136,058 bytes</dd></div><div><dt>PRIMARY</dt><dd id="release-provider">MEGA</dd></div></dl>
             <div class="notice test-environment"><b>TESTED ENVIRONMENT</b><p>Dolphin Emulator 2606 — 실행 및 플레이 확인<br>Nintendo GameCube 실기 — 사용자 피드백 기준 주요 진행 확인<br>v1.03 최종 배포본 기준</p></div>
-            <a id="release-link" class="button download-button mega-download disabled" href="#" aria-disabled="true"><span class="download-icon mega-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="11" fill="#d9272e"/><path d="M5.8 8.2h2.8l3.4 4 3.4-4h2.8v7.6h-2.5v-4.2L12 15.7l-3.7-4.1v4.2H5.8z" fill="#fff"/></svg></span><span>DOWNLOAD — MEGA</span></a>
-            <a id="release-mirror" class="button download-button drive-download disabled" href="#" aria-disabled="true"><span class="download-icon drive-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M8.1 2.5h5.1l5.2 9H13z" fill="#2ca24c"/><path d="M8.1 2.5 2.7 12l2.6 4.5 5.3-9z" fill="#f6c344"/><path d="M5.3 16.5h10.4l2.7-5H8z" fill="#4285f4"/></svg></span><span>MIRROR — GOOGLE DRIVE</span></a>
-            <div class="hash-block"><span>SHA-256 / PATCH ZIP</span><code id="patch-hash">4096ea62dbb1f55cdd7ef830a56c5a7e658c541031eccc84bc2804bac35eead8</code></div>
+            <a id="release-link" class="button download-button mega-download" href="https://mega.nz/file/djlmRRAC#DmqlNevDLrqSsEsHN5oCAxJ01XsrbK9H6JrtEV0wj_Y" target="_blank" rel="noopener noreferrer"><span class="download-icon mega-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="11" fill="#d9272e"/><path d="M5.8 8.2h2.8l3.4 4 3.4-4h2.8v7.6h-2.5v-4.2L12 15.7l-3.7-4.1v4.2H5.8z" fill="#fff"/></svg></span><span>DOWNLOAD — MEGA</span></a>
+            <a id="release-mirror" class="button download-button drive-download" href="https://drive.google.com/file/d/1E-MtgvnhPWZFnklfRHpu8uxFdsdNNpsM/view?usp=sharing" target="_blank" rel="noopener noreferrer"><span class="download-icon drive-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M8.1 2.5h5.1l5.2 9H13z" fill="#2ca24c"/><path d="M8.1 2.5 2.7 12l2.6 4.5 5.3-9z" fill="#f6c344"/><path d="M5.3 16.5h10.4l2.7-5H8z" fill="#4285f4"/></svg></span><span>MIRROR — GOOGLE DRIVE</span></a>
+            <div class="hash-block"><span>SHA-256 / PATCH ZIP</span><code id="patch-hash">2879e80fe169a00645433a69d8ad1f0c184f2c0adf0c7016217be0b500c60e1d</code></div>
             <div class="hash-block"><span>SUPPORTED ORIGINAL / SHA-256</span><code id="source-hash">Disc 1: c514c3a672cf3587be87af9874629dfe31b21f92a46e760a9d7ba317f0399591 / Disc 2: e1fac2270a95eb40781af29db67d2c741931bc96e884931e42371c036e94a4e4</code></div>
           </div>
         </div>
@@ -279,7 +290,7 @@
     <span>본 프로젝트는 비공식 팬 번역 프로젝트이며 관련 권리자와 제휴·승인 관계가 없습니다.</span>
   </footer>
 
-  <script src="assets/js/site.js?v=20260816-v103"></script>
+  <script src="assets/js/site.js?v=20260816-v103-r2"></script>
   <script>document.querySelectorAll('.disabled-link').forEach(a=>a.addEventListener('click',e=>e.preventDefault()));</script>
 </body>
 </html>

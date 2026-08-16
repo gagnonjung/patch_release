@@ -25,13 +25,13 @@ Release archive:
 
 `MGS_TTS_KO_v1.03_xdelta_windows.zip`
 
-- Size: `140,134,834 bytes / 133.64 MiB`
-- SHA-256: `4096ea62dbb1f55cdd7ef830a56c5a7e658c541031eccc84bc2804bac35eead8`
+- Size: `140,136,058 bytes / 133.64 MiB`
+- SHA-256: `2879e80fe169a00645433a69d8ad1f0c184f2c0adf0c7016217be0b500c60e1d`
 - ZIP integrity: `13 entries / ISO 0 / SHA256SUMS.txt 12/12 PASS`
-- Primary download: temporarily disabled
-- Mirror: temporarily disabled
+- Primary download: `https://mega.nz/file/djlmRRAC#DmqlNevDLrqSsEsHN5oCAxJ01XsrbK9H6JrtEV0wj_Y`
+- Mirror: `https://drive.google.com/file/d/1E-MtgvnhPWZFnklfRHpu8uxFdsdNNpsM/view?usp=sharing`
 
-v1.03 keeps the v1.02 fixed-span stage stability fix and adds user-feedback QA for untranslated system text, Meryl/Psycho Mantis dialogue, semantic line breaks, and Korean run-on sentence boundaries. The final sentence-boundary audit corrected 24 cutscene cases and 10 VOX cases, for 34 fixes total.
+v1.03 keeps the v1.02 fixed-span stage stability fix and includes the latest user-feedback QA: the remaining dog-tag load completion message, Meryl/Naomi/Psycho Mantis dialogue, PSG1/PSG1-T description layout, 34 run-on sentence boundaries, and 5 missing spaces after `!`/`!!`. The final project test suite passes `310/310`.
 
 **v1.03 is not an incremental patch for v1.02.** Apply it directly to supported Japanese retail Disc 1 / Disc 2 images.
 
@@ -51,11 +51,11 @@ v1.03 keeps the v1.02 fixed-span stage stability fix and adds user-feedback QA f
 
 ### Disc 1
 
-- SHA-256: `472a22767df0d9efa3a5f027909a104f38f652213a1c4833df5accb5a29a591f`
+- SHA-256: `4d32884defc8fd550bdf9dadba340f114912ee253c5ba2ebcb4d3b2f1fa78d91`
 
 ### Disc 2
 
-- SHA-256: `e493addb95dd9e88b600b3839621c7929cdd08a19efba6921d0cab29513bb94d`
+- SHA-256: `7ceca2b04b4c5ffaec423c939de8fd083d5ed4cc83877634e3625b63085b83c9`
 
 Expected output filenames:
 
