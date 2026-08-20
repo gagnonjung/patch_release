@@ -1,13 +1,13 @@
 const release = {
-  status: "RELEASE",
-  title: "MGS_TTS_KO_v1.03_xdelta_windows.zip",
-  version: "1.03",
-  date: "2026-08-16",
-  size: "133.64 MiB / 140,136,058 bytes",
+  status: "FINAL RELEASE",
+  title: "MGS_TTS_KO_v1.1_xdelta_windows.zip",
+  version: "1.1",
+  date: "2026-08-21",
+  size: "133.64 MiB / 140,131,259 bytes",
   provider: "MEGA",
-  url: "https://mega.nz/file/djlmRRAC#DmqlNevDLrqSsEsHN5oCAxJ01XsrbK9H6JrtEV0wj_Y",
-  mirrorUrl: "https://drive.google.com/file/d/1E-MtgvnhPWZFnklfRHpu8uxFdsdNNpsM/view?usp=sharing",
-  patchSha256: "2879e80fe169a00645433a69d8ad1f0c184f2c0adf0c7016217be0b500c60e1d",
+  url: "https://mega.nz/file/Av0GHCYQ#c4F86nb_R14bPMNbpjz1Pn89MgYEJUjfOExeUsiZOe4",
+  mirrorUrl: "https://drive.google.com/file/d/1Ejo5skEyC9QniIZbN8xEFpcM4C3nIt0S/view?usp=sharing",
+  patchSha256: "5585366354ed0ba6244c4e9e290fed4b7136f0c8d7850c72d8d6f34472d2e127",
   sourceSha256: "Disc 1: c514c3a672cf3587be87af9874629dfe31b21f92a46e760a9d7ba317f0399591 / Disc 2: e1fac2270a95eb40781af29db67d2c741931bc96e884931e42371c036e94a4e4"
 };
 

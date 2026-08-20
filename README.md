@@ -4,7 +4,7 @@ Public release site for the Korean localization patch of **Metal Gear Solid: The
 
 - GitHub: `https://github.com/gagnonjung/patch_release`
 - GitHub Pages: `https://gagnonjung.github.io/patch_release/`
-- Current release: **v1.03**
+- Current release: **v1.1**
 
 ## Structure
 
@@ -19,21 +19,21 @@ Public release site for the Korean localization patch of **Metal Gear Solid: The
 
 ## Current release
 
-### Metal Gear Solid: The Twin Snakes Korean Patch v1.03
+### Metal Gear Solid: The Twin Snakes Korean Patch v1.1 Final
 
 Release archive:
 
-`MGS_TTS_KO_v1.03_xdelta_windows.zip`
+`MGS_TTS_KO_v1.1_xdelta_windows.zip`
 
-- Size: `140,136,058 bytes / 133.64 MiB`
-- SHA-256: `2879e80fe169a00645433a69d8ad1f0c184f2c0adf0c7016217be0b500c60e1d`
+- Size: `140,131,259 bytes / 133.64 MiB`
+- SHA-256: `5585366354ed0ba6244c4e9e290fed4b7136f0c8d7850c72d8d6f34472d2e127`
 - ZIP integrity: `13 entries / ISO 0 / SHA256SUMS.txt 12/12 PASS`
-- Primary download: `https://mega.nz/file/djlmRRAC#DmqlNevDLrqSsEsHN5oCAxJ01XsrbK9H6JrtEV0wj_Y`
-- Mirror: `https://drive.google.com/file/d/1E-MtgvnhPWZFnklfRHpu8uxFdsdNNpsM/view?usp=sharing`
+- Primary download: `https://mega.nz/file/Av0GHCYQ#c4F86nb_R14bPMNbpjz1Pn89MgYEJUjfOExeUsiZOe4`
+- Mirror: `https://drive.google.com/file/d/1Ejo5skEyC9QniIZbN8xEFpcM4C3nIt0S/view?usp=sharing`
 
-v1.03 keeps the v1.02 fixed-span stage stability fix and includes the latest user-feedback QA: the remaining dog-tag load completion message, Meryl/Naomi/Psycho Mantis dialogue, PSG1/PSG1-T description layout, 34 run-on sentence boundaries, and 5 missing spaces after `!`/`!!`. The final project test suite passes `310/310`.
+v1.1 is the final release. It integrates Mission Log `80/80` and Demo Theater `48/48` into the canonical source, reflows all Demo Theater descriptions to a maximum of `24.0 cells`, revalidates the Otacon-route ending and Campbell/Meryl speaker register, preserves two runtime-sensitive Ninja/Otacon cutscene record boundaries, and keeps the v1.02 fixed-span stage stability policy. The v1.1 core regression suite passes `23/23`.
 
-**v1.03 is not an incremental patch for v1.02.** Apply it directly to supported Japanese retail Disc 1 / Disc 2 images.
+**v1.1 is not an incremental patch for v1.03 or any earlier version.** Apply it directly to supported Japanese retail Disc 1 / Disc 2 images.
 
 ## Supported originals
 
@@ -51,11 +51,11 @@ v1.03 keeps the v1.02 fixed-span stage stability fix and includes the latest use
 
 ### Disc 1
 
-- SHA-256: `4d32884defc8fd550bdf9dadba340f114912ee253c5ba2ebcb4d3b2f1fa78d91`
+- SHA-256: `1865619d814f791544ed6e9aa79e23312fa97663ac1c561d78ac3964888c73ae`
 
 ### Disc 2
 
-- SHA-256: `7ceca2b04b4c5ffaec423c939de8fd083d5ed4cc83877634e3625b63085b83c9`
+- SHA-256: `1652bd924d7f07c04a6b11fc98d0ce54f06b46788c9c3301faf54ae3080b88fd`
 
 Expected output filenames:
 
