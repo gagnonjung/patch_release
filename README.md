@@ -31,7 +31,7 @@ Release archive:
 - Primary download: `https://mega.nz/file/Av0GHCYQ#c4F86nb_R14bPMNbpjz1Pn89MgYEJUjfOExeUsiZOe4`
 - Mirror: `https://drive.google.com/file/d/1Ejo5skEyC9QniIZbN8xEFpcM4C3nIt0S/view?usp=sharing`
 
-v1.1 is the final release. It integrates Mission Log `80/80` and Demo Theater `48/48` into the canonical source, reflows all Demo Theater descriptions to a maximum of `24.0 cells`, revalidates the Otacon-route ending and Campbell/Meryl speaker register, preserves two runtime-sensitive Ninja/Otacon cutscene record boundaries, and keeps the v1.02 fixed-span stage stability policy. The v1.1 core regression suite passes `23/23`.
+v1.1 is the final release. It integrates Mission Log `80/80` and Demo Theater `48/48` into the canonical source, reflows all Demo Theater descriptions to a maximum of `24.0 cells`, revalidates late-game dialogue and speaker register, preserves two runtime-sensitive cutscene record boundaries, and keeps the v1.02 fixed-span stage stability policy. The v1.1 core regression suite passes `23/23`.
 
 **v1.1 is not an incremental patch for v1.03 or any earlier version.** Apply it directly to supported Japanese retail Disc 1 / Disc 2 images.
 
