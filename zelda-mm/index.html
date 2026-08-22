@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="젤다의 전설 Nintendo 64 한국어 패치 페이지" />
   <title>젤다의 전설: 무쥬라의 가면 — 한마루 한글화 작업소</title>
-  <link rel="stylesheet" href="../assets/css/zelda-series.css?v=20260823-mm35" />
+  <link rel="stylesheet" href="../assets/css/zelda-series.css?v=20260823-mm36" />
 </head>
 <body data-active-game="mm">
   <header class="series-header">
@@ -336,40 +336,69 @@
               </div>
               <p class="logo-edition-note">다운로드 ZIP에는 두 버전이 함께 들어 있습니다. 압축을 푼 뒤 원하는 로고의 <code>apply_hyundai_comboy64.bat</code> 또는 <code>apply_nintendo64.bat</code>를 실행하면 됩니다.</p>
             </section>
-            <div class="ura-difference-callout">
-              <span>RELEASE HISTORY</span>
-              <strong>2026.01.10 / 최초 배포</strong>
-              <p>GameCube 일본판 우라를 기준으로 작업한 한국어 패치를 처음 공개했습니다. 별도의 버전 번호는 붙이지 않고 배포일을 기준으로 기록합니다.</p>
+            <div id="ura-install" class="ura-subsection-block">
+              <p class="ura-section-index">04-A / INSTALL GUIDE</p>
+              <h3>패치 적용 방법</h3>
+              <div class="ura-steps">
+                <div><b>01</b><div><h4>배포 ZIP 전체 압축 해제</h4><p><code>Zelda_OOT_Ura_KO_20260110_xdelta_windows.zip</code>의 모든 파일을 한 폴더에 압축 해제합니다.</p></div></div>
+                <div><b>02</b><div><h4>지원 GameCube 우라 ROM 준비</h4><p><code>Zelda no Densetsu - Toki no Ocarina GC Ura (Japan) (GameCube Edition)</code>의 BigEndian <code>.z64</code> 파일을 준비합니다. 원본 MD5는 <code>69895C5C78442260F6EAFB2506DC482A</code>입니다.</p></div></div>
+                <div><b>03</b><div><h4>원하는 시작 로고 버전 적용</h4><p>Nintendo 64 버전은 <code>apply_nintendo64.bat</code>, 현대 컴보이 64 버전은 <code>apply_hyundai_comboy64.bat</code>를 실행합니다. 원본 ROM을 BAT 위로 드래그 앤 드롭해도 됩니다.</p></div></div>
+                <div><b>04</b><div><h4>자동 해시 검증 후 완료</h4><p>패처가 원본 MD5/SHA-256과 완성된 ROM의 MD5/SHA-256을 모두 확인하고, 검증을 통과한 경우에만 최종 <code>.z64</code> 파일을 남깁니다.</p></div></div>
+              </div>
+              <div class="ura-notice"><b>TESTED ENVIRONMENT</b><p>Mupen / Project64 1.6 — 실행 및 플레이 확인<br>Nintendo 64 실기 — 테스트 완료<br>두 로고 버전은 시작 로고만 다르며 게임 내용은 동일합니다.</p></div>
             </div>
-            <div class="ura-meta-grid">
-              <article><span>SUPPORTED ORIGINAL / MD5</span><code>69895C5C78442260F6EAFB2506DC482A</code></article>
-              <article><span>PATCHED OUTPUT / MD5</span><code>0277759E35EE8C9326234DA96BAB92E3</code></article>
-              <article><span>PATCH CREDITS</span><strong>ZRET / 히힛마스터 · 명군 / 한마루</strong></article>
-              <article><span>TESTED</span><strong>Mupen / Project64 1.6 / Nintendo 64 실기</strong></article>
+
+            <div id="ura-license" class="ura-subsection-block ura-license-section">
+              <p class="ura-section-index">04-B / DISTRIBUTION LICENSE</p>
+              <h3>배포 라이센스</h3>
+              <p class="ura-license-intro">파일 다운로드 전에 아래 사항을 반드시 확인 바랍니다.</p>
+              <ol class="ura-license-list">
+                <li><b>A.</b><span>원칙적으로, 해당 기종의 원본 디스크 또는 카트리지를 보유한 분이 개인적으로만 이용한다는 전제 하에 본 한글패치 파일을 다운로드할 수 있습니다.</span></li>
+                <li><b>B.</b><span>상기 A항 조건에 해당하지 않는 분이 본 한글패치 파일을 다운로드하여 이용할 경우에 발생하는 모든 책임은 이용 당사자에게 있으며, 패치 제작자는 어떠한 책임도 지지 않습니다.</span></li>
+                <li><b>C.</b><span>본 한글패치 파일 자체를 제작자의 허가 없이 타 사이트에 재배포하지 말아 주시고, 재배포를 원하실 경우 패치원본 게시물의 링크를 공유해 주시기 바랍니다.(아카이빙 포함)</span></li>
+                <li><b>D.</b><span>본 게시물의 본문 글 일부 또는 전체를 무단으로 옮겨 작성하지 말아 주시기 바랍니다. 단, 타 사이트에서 발췌하거나 인용한 문구에 대해서는 예외로 합니다.</span></li>
+                <li><b>E.</b><span>본 한글패치 파일을 이용하여 금전적 이득을 취하는 모든 행위를 일절 금합니다. 해당 행위로 발생하는 모든 책임은 이용 당사자에게 있으며, 패치 제작자는 어떠한 책임도 지지 않습니다.(패치 파일 자체 및 패치 롬 파일 판매, 패치 롬 카트리지 제작 및 판매, 웹하드 등 상업적 사이트 업로드, 토렌트 사이트 공유 등)</span></li>
+                <li><b>F.</b><span>상기 C·D·E항의 금지 행위가 적발된 경우, 또는 본 한글패치 파일 공유로 인해 원저작자 및 유통사, 기관의 요청이 있을 경우 예고 없이 게시물이 비공개 처리될 수 있으며, 향후 작업 예정인 작품의 한글패치 파일도 공유하지 않을 수 있습니다.</span></li>
+              </ol>
             </div>
-            <div class="zelda-release-grid ura-release-layout">
-              <div class="zelda-release-copy">
-                <h3>패치 다운로드</h3>
-                <p>GameCube 일본판 우라를 기준으로 만든 Windows용 원클릭 xdelta 패치입니다. 원본 ROM의 MD5를 확인한 뒤 패치를 적용하고, 완성된 파일이 정상인지까지 확인합니다.</p>
-                <div class="zelda-feedback-box">
-                  <span>BUG REPORT / FEEDBACK</span>
-                  <h4>오류나 번역 문제를 발견하셨나요?</h4>
-                  <p>오탈자, 미번역, 문맥이 어색한 대사, 글자 깨짐, 화면 밖으로 넘어가는 문장, 진행 중 프리징 등 플레이 중 발견한 문제는 한식구 <b>검수/제보/피드백 게시판</b>에 남겨 주세요. 가능하다면 발생 장면과 스크린샷을 함께 첨부해 주시면 확인에 도움이 됩니다.</p>
-                  <a href="https://cafe.naver.com/f-e/cafes/16259867/menus/75" target="_blank" rel="noopener noreferrer">검수/제보/피드백 게시판 ↗</a>
+
+            <div id="ura-release" class="ura-subsection-block">
+              <p class="ura-section-index">04-C / RELEASE</p>
+              <div class="zelda-release-grid ura-release-layout">
+                <div class="zelda-release-copy">
+                  <h3>패치 다운로드</h3>
+                  <p>GameCube 일본판 우라를 기준으로 만든 Windows용 원클릭 xdelta 패치입니다. 최초 배포일은 <b>2026.01.10</b>이며, 2026.08.23에 Nintendo 64 / 현대 컴보이 64 시작 로고를 선택할 수 있도록 패키지를 갱신했습니다.</p>
+                  <div class="ura-source-grid">
+                    <article><span>SUPPORTED ORIGINAL</span><code>GameCube Ura / BigEndian .z64</code><span>MD5</span><code>69895C5C78442260F6EAFB2506DC482A</code></article>
+                    <article><span>NINTENDO 64 OUTPUT</span><code>MD5 0277759E35EE8C9326234DA96BAB92E3</code><span>HYUNDAI COMBOY 64 OUTPUT</span><code>MD5 1BF8F53BDE6005224AC1674E1F471514</code></article>
+                  </div>
+                  <div class="zelda-feedback-box">
+                    <span>BUG REPORT / FEEDBACK</span>
+                    <h4>오류나 번역 문제를 발견하셨나요?</h4>
+                    <p>오탈자, 미번역, 문맥이 어색한 대사, 글자 깨짐, 화면 밖으로 넘어가는 문장, 진행 중 프리징 등 플레이 중 발견한 문제는 한식구 <b>검수/제보/피드백 게시판</b>에 남겨 주세요. 가능하다면 발생 장면과 스크린샷을 함께 첨부해 주시면 확인에 도움이 됩니다.</p>
+                    <a href="https://cafe.naver.com/f-e/cafes/16259867/menus/75" target="_blank" rel="noopener noreferrer">검수/제보/피드백 게시판 ↗</a>
+                  </div>
+                </div>
+                <div class="ura-release-card zelda-release-card">
+                  <div>
+                    <span>PUBLIC RELEASE</span>
+                    <strong>2026.01.10</strong>
+                    <p><b>2026.08.23 패키지 갱신</b><br>두 가지 시작 로고 선택을 추가했으며 번역과 게임 내용은 기존 배포판과 동일합니다.</p>
+                  </div>
+                  <a href="https://drive.google.com/file/d/1bZwMcCzYiz3GrjmFNTb7Lvc_7ZFu8LzL/view?usp=sharing" target="_blank" rel="noopener noreferrer">DOWNLOAD — GOOGLE DRIVE</a>
                 </div>
               </div>
-              <div class="ura-release-card zelda-release-card">
-                <div>
-                  <span>ONE-CLICK XDELTA</span>
-                  <strong>Zelda_OOT_Ura_KO_20260110_xdelta_windows.zip</strong>
-                  <p>원본 ROM의 MD5를 확인한 뒤 xdelta를 적용하고, 완성된 파일이 정상인지까지 확인하는 Windows용 원클릭 패치입니다.</p>
-                </div>
-                <a href="https://drive.google.com/file/d/1bZwMcCzYiz3GrjmFNTb7Lvc_7ZFu8LzL/view?usp=sharing" target="_blank" rel="noopener noreferrer">DOWNLOAD — GOOGLE DRIVE</a>
-              </div>
             </div>
-            <div class="ura-footnote">
-              <span>SPECIAL THANKS / 젤다 OoT팀 · Zelda Reverse Engineering Team</span>
-              <span>RELEASE / 2026.01.10</span>
+
+            <div id="ura-credits" class="ura-subsection-block ura-credits-block">
+              <p class="ura-section-index">04-D / CREDITS</p>
+              <h3>Credits</h3>
+              <div class="ura-credits-grid">
+                <article><span>디컴파일</span><strong>Zelda Reverse Engineering Team</strong></article>
+                <article><span>폰트 제작 지원</span><strong>히힛마스터 · 명군</strong></article>
+                <article><span>번역 · 그래픽</span><strong>한마루</strong></article>
+                <article><span>초기 한국어화 당시 소속</span><strong>젤다 OoT팀</strong></article>
+              </div>
             </div>
           </section>
         </article>
