@@ -3,22 +3,114 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Metal Gear Solid: The Twin Snakes 한국어 패치 CALL" />
-  <title>CALL — MGS The Twin Snakes Korean Patch</title>
-  <link rel="stylesheet" href="assets/css/intro.css?v=20260812-click1" />
+  <meta name="description" content="한마루 한글화 작업소 게임별 한글패치 페이지" />
+  <title>한마루 한글화 작업소</title>
+  <link rel="stylesheet" href="assets/css/gallery.css?v=20260822-store2" />
 </head>
 <body>
-  <main class="codec-intro" aria-labelledby="call-title">
-    <audio id="codec-call-audio" src="assets/audio/codec-call-056.wav" preload="auto" autoplay loop playsinline></audio>
-    <audio id="codec-answer-audio" src="assets/audio/codec-answer-057.wav" preload="auto" playsinline></audio>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://hanmarus.tistory.com/" target="_blank" rel="noopener noreferrer">
+        <strong>한마루 한글화 작업소</strong>
+        <span>HANMARU KOREAN PATCH WORKSHOP</span>
+      </a>
+      <nav class="top-nav" aria-label="주요 메뉴">
+        <a class="support-link" href="https://litt.ly/hanmaru" target="_blank" rel="noopener noreferrer">후원하기</a>
+      </nav>
+    </div>
+  </header>
 
-    <button id="audio-toggle" class="audio-toggle" type="button" aria-pressed="false">음소거 / MUTE</button>
+  <main class="page-shell" id="games">
+    <aside class="platform-nav" aria-label="플랫폼 바로가기">
+      <h1>플랫폼</h1>
+      <nav>
+        <a href="#gamecube">
+          <img src="assets/images/platform-gamecube.png" alt="" aria-hidden="true" />
+          <span>Nintendo GameCube</span>
+          <small>1</small>
+        </a>
+        <a href="#nintendo64">
+          <img src="assets/images/platform-n64.png" alt="" aria-hidden="true" />
+          <span>Nintendo 64</span>
+          <small>3</small>
+        </a>
+      </nav>
+    </aside>
 
-    <button id="answer" class="call-button" type="button" aria-label="CALL 응답">
-      <span id="call-title" class="call-panel">CALL</span>
-      <span class="push-select">CLICK HERE</span>
-    </button>
+    <div class="catalog-content">
+    <section class="platform-section" id="gamecube" aria-labelledby="gamecube-title">
+      <div class="section-heading">
+        <h1 id="gamecube-title">Nintendo GameCube <span aria-hidden="true">›</span></h1>
+      </div>
+
+      <div class="game-grid">
+        <a class="game-card" href="intro.html">
+          <div class="platform-strip platform-gc" aria-label="Nintendo GameCube">
+            <img src="assets/images/platform-gamecube.png" alt="" aria-hidden="true" />
+          </div>
+          <div class="thumb-frame mgs-thumb">
+            <img src="assets/images/mgs-tts-package-cover.jpg" alt="메탈 기어 솔리드 더 트윈 스네이크 일본판 패키지" />
+          </div>
+          <div class="card-meta">
+            <time datetime="2026-08-21">패치 배포일 2026.08.21</time>
+            <h2>메탈 기어 솔리드:<br>더 트윈 스네이크</h2>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="platform-section" id="nintendo64" aria-labelledby="n64-title">
+      <div class="section-heading">
+        <h1 id="n64-title">Nintendo 64 <span aria-hidden="true">›</span></h1>
+      </div>
+
+      <div class="game-grid">
+        <a class="game-card" href="zelda-mm/?game=oot">
+          <div class="platform-strip platform-n64" aria-label="Nintendo 64">
+            <img src="assets/images/platform-n64.png" alt="" aria-hidden="true" />
+          </div>
+          <div class="thumb-frame">
+            <img src="assets/images/zelda/zelda_oot.webp" alt="젤다의 전설 시간의 오카리나 패키지" />
+          </div>
+          <div class="card-meta">
+            <time datetime="2026-01-10">패치 배포일 2026.01.10</time>
+            <h2>젤다의 전설:<br>시간의 오카리나</h2>
+          </div>
+        </a>
+
+        <a class="game-card" href="zelda-mm/?game=mm">
+          <div class="platform-strip platform-n64" aria-label="Nintendo 64">
+            <img src="assets/images/platform-n64.png" alt="" aria-hidden="true" />
+          </div>
+          <div class="thumb-frame">
+            <img src="assets/images/zelda/majora-mask-cover.webp" alt="젤다의 전설 무쥬라의 가면 패키지" />
+          </div>
+          <div class="card-meta">
+            <time>2026.08.23 · 한국어 패치 배포 중</time>
+            <h2>젤다의 전설:<br>무쥬라의 가면</h2>
+          </div>
+        </a>
+
+        <a class="game-card" href="zelda-mm/?game=ura">
+          <div class="platform-strip platform-n64" aria-label="Nintendo 64">
+            <img src="assets/images/platform-n64.png" alt="" aria-hidden="true" />
+          </div>
+          <div class="thumb-frame">
+            <img src="assets/images/zelda/zelda_ura.webp" alt="젤다의 전설 시간의 오카리나 우라 패키지" />
+          </div>
+          <div class="card-meta">
+            <time datetime="2026-01-10">패치 배포일 2026.01.10</time>
+            <h2>젤다의 전설:<br>시간의 오카리나 우라</h2>
+          </div>
+        </a>
+      </div>
+    </section>
+    </div>
   </main>
-  <script src="assets/js/intro.js"></script>
+
+  <footer class="site-footer">
+    <span>한마루 한글화 작업소</span>
+    <a href="https://hanmarus.tistory.com/" target="_blank" rel="noopener noreferrer">hanmarus.tistory.com</a>
+  </footer>
 </body>
 </html>
