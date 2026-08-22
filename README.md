@@ -4,7 +4,7 @@ Public release site for the Korean localization patch of **Metal Gear Solid: The
 
 - GitHub: `https://github.com/gagnonjung/patch_release`
 - GitHub Pages: `https://gagnonjung.github.io/patch_release/`
-- Current release: **v1.1**
+- Current release: **v1.11**
 
 ## Structure
 
@@ -19,21 +19,19 @@ Public release site for the Korean localization patch of **Metal Gear Solid: The
 
 ## Current release
 
-### Metal Gear Solid: The Twin Snakes Korean Patch v1.1 Final
+### Metal Gear Solid: The Twin Snakes Korean Patch v1.11
 
 Release archive:
 
-`MGS_TTS_KO_v1.1_xdelta_windows.zip`
+`MGS_TTS_KO_v1.11_xdelta_windows.zip`
 
-- Size: `140,131,259 bytes / 133.64 MiB`
-- SHA-256: `5585366354ed0ba6244c4e9e290fed4b7136f0c8d7850c72d8d6f34472d2e127`
-- ZIP integrity: `13 entries / ISO 0 / SHA256SUMS.txt 12/12 PASS`
-- Primary download: `https://mega.nz/file/Av0GHCYQ#c4F86nb_R14bPMNbpjz1Pn89MgYEJUjfOExeUsiZOe4`
-- Mirror: `https://drive.google.com/file/d/1Ejo5skEyC9QniIZbN8xEFpcM4C3nIt0S/view?usp=sharing`
+- Size: `139,977,986 bytes / 133.49 MiB`
+- SHA-256: `36dba5eb935a7a8f6f5b9f5a95a5af3af6760bb0ec940e780e273b589c10a7da`
+- Download: `https://drive.google.com/file/d/1dI9TfL_eiRmlsL2ldWLu5zeGzXoQHkyO/view?usp=sharing`
 
-v1.1 is the final release. It integrates Mission Log `80/80` and Demo Theater `48/48` into the canonical source, reflows all Demo Theater descriptions to a maximum of `24.0 cells`, revalidates late-game dialogue and speaker register, preserves two runtime-sensitive cutscene record boundaries, and keeps the v1.02 fixed-span stage stability policy. The v1.1 core regression suite passes `23/23`.
+v1.11 is a maintenance release that incorporates user-reported bug fixes after v1.1. It corrects text/display issues, speaker/register mismatches, and the ending message display issue while preserving the earlier Mission Log, Demo Theater, and stage stability work.
 
-**v1.1 is not an incremental patch for v1.03 or any earlier version.** Apply it directly to supported Japanese retail Disc 1 / Disc 2 images.
+**v1.11 is not an incremental patch for v1.1 or any earlier version.** Apply it directly to supported Japanese retail Disc 1 / Disc 2 images.
 
 ## Supported originals
 
@@ -51,11 +49,11 @@ v1.1 is the final release. It integrates Mission Log `80/80` and Demo Theater `4
 
 ### Disc 1
 
-- SHA-256: `1865619d814f791544ed6e9aa79e23312fa97663ac1c561d78ac3964888c73ae`
+- SHA-256: `8a29ec8617bb48ec8b98aca86ccac81af4410df4de4a77c280965717b8c6c18f`
 
 ### Disc 2
 
-- SHA-256: `1652bd924d7f07c04a6b11fc98d0ce54f06b46788c9c3301faf54ae3080b88fd`
+- SHA-256: `82a7dda78f4c4d4d6d55ca634ded63e93d80582848cd430cd0c5d28eaa83e96f`
 
 Expected output filenames:
 
