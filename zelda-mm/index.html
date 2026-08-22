@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="젤다의 전설 Nintendo 64 한국어 패치 페이지" />
   <title>젤다의 전설: 무쥬라의 가면 — 한마루 한글화 작업소</title>
-  <link rel="stylesheet" href="../assets/css/zelda-series.css?v=20260823-mm34" />
+  <link rel="stylesheet" href="../assets/css/zelda-series.css?v=20260823-mm35" />
 </head>
 <body data-active-game="mm">
   <header class="series-header">
@@ -213,8 +213,8 @@
 
             <div id="oot-release" class="oot-subsection-block oot-release-block">
               <p class="oot-section-index">04-D / RELEASE</p>
-              <div class="oot-release-grid">
-                <div>
+              <div class="oot-release-grid zelda-release-grid">
+                <div class="zelda-release-copy">
                   <h3>패치 다운로드</h3>
                   <p>현재 최신 배포본은 <b>v1.102</b>입니다. Windows 원클릭 패치는 원본 ROM의 MD5를 먼저 확인한 뒤 xdelta를 적용하고, 완성된 ROM의 MD5까지 맞는 경우에만 최종 파일을 남기도록 만들었습니다.</p>
                   <div class="oot-notice"><b>REQUIRED ORIGINAL</b><p><code>Zelda no Densetsu - Toki no Ocarina (Japan) (Rev 1)</code><br>BigEndian <code>.z64</code> / MD5 <code>1BF5F42B98C3E97948F01155F12E2D88</code></p></div>
@@ -225,7 +225,7 @@
                     <a href="https://cafe.naver.com/f-e/cafes/16259867/menus/75" target="_blank" rel="noopener noreferrer">검수/제보/피드백 게시판 ↗</a>
                   </div>
                 </div>
-                <div class="oot-release-card">
+                <div class="oot-release-card zelda-release-card">
                   <div><span>LATEST BUILD</span><span>RELEASE</span></div>
                   <h3>Zelda_OOT_KO_v1.102_xdelta_windows.zip</h3>
                   <dl><div><dt>VERSION</dt><dd>1.102</dd></div><div><dt>DATE</dt><dd>2026-01-10</dd></div><div><dt>SIZE</dt><dd>3.68 MiB / 3,863,818 bytes</dd></div><div><dt>FORMAT</dt><dd>ONE-CLICK XDELTA</dd></div></dl>
@@ -347,19 +347,25 @@
               <article><span>PATCH CREDITS</span><strong>ZRET / 히힛마스터 · 명군 / 한마루</strong></article>
               <article><span>TESTED</span><strong>Mupen / Project64 1.6 / Nintendo 64 실기</strong></article>
             </div>
-            <div class="ura-release-card">
-              <div>
-                <span>ONE-CLICK XDELTA</span>
-                <strong>Zelda_OOT_Ura_KO_20260110_xdelta_windows.zip</strong>
-                <p>원본 ROM의 MD5를 확인한 뒤 xdelta를 적용하고, 완성된 파일이 정상인지까지 확인하는 Windows용 원클릭 패치입니다.</p>
+            <div class="zelda-release-grid ura-release-layout">
+              <div class="zelda-release-copy">
+                <h3>패치 다운로드</h3>
+                <p>GameCube 일본판 우라를 기준으로 만든 Windows용 원클릭 xdelta 패치입니다. 원본 ROM의 MD5를 확인한 뒤 패치를 적용하고, 완성된 파일이 정상인지까지 확인합니다.</p>
+                <div class="zelda-feedback-box">
+                  <span>BUG REPORT / FEEDBACK</span>
+                  <h4>오류나 번역 문제를 발견하셨나요?</h4>
+                  <p>오탈자, 미번역, 문맥이 어색한 대사, 글자 깨짐, 화면 밖으로 넘어가는 문장, 진행 중 프리징 등 플레이 중 발견한 문제는 한식구 <b>검수/제보/피드백 게시판</b>에 남겨 주세요. 가능하다면 발생 장면과 스크린샷을 함께 첨부해 주시면 확인에 도움이 됩니다.</p>
+                  <a href="https://cafe.naver.com/f-e/cafes/16259867/menus/75" target="_blank" rel="noopener noreferrer">검수/제보/피드백 게시판 ↗</a>
+                </div>
               </div>
-              <a href="https://drive.google.com/file/d/1bZwMcCzYiz3GrjmFNTb7Lvc_7ZFu8LzL/view?usp=sharing" target="_blank" rel="noopener noreferrer">DOWNLOAD — GOOGLE DRIVE</a>
-            </div>
-            <div class="zelda-feedback-box">
-              <span>BUG REPORT / FEEDBACK</span>
-              <h4>오류나 번역 문제를 발견하셨나요?</h4>
-              <p>오탈자, 미번역, 문맥이 어색한 대사, 글자 깨짐, 화면 밖으로 넘어가는 문장, 진행 중 프리징 등 플레이 중 발견한 문제는 한식구 <b>검수/제보/피드백 게시판</b>에 남겨 주세요. 가능하다면 발생 장면과 스크린샷을 함께 첨부해 주시면 확인에 도움이 됩니다.</p>
-              <a href="https://cafe.naver.com/f-e/cafes/16259867/menus/75" target="_blank" rel="noopener noreferrer">검수/제보/피드백 게시판 ↗</a>
+              <div class="ura-release-card zelda-release-card">
+                <div>
+                  <span>ONE-CLICK XDELTA</span>
+                  <strong>Zelda_OOT_Ura_KO_20260110_xdelta_windows.zip</strong>
+                  <p>원본 ROM의 MD5를 확인한 뒤 xdelta를 적용하고, 완성된 파일이 정상인지까지 확인하는 Windows용 원클릭 패치입니다.</p>
+                </div>
+                <a href="https://drive.google.com/file/d/1bZwMcCzYiz3GrjmFNTb7Lvc_7ZFu8LzL/view?usp=sharing" target="_blank" rel="noopener noreferrer">DOWNLOAD — GOOGLE DRIVE</a>
+              </div>
             </div>
             <div class="ura-footnote">
               <span>SPECIAL THANKS / 젤다 OoT팀 · Zelda Reverse Engineering Team</span>
@@ -488,9 +494,9 @@
 
             <div id="mm-release" class="mm-subsection-block">
               <p class="mm-section-index">04-C / RELEASE</p>
-              <div class="mm-release-grid">
-                <div>
-                  <h3>한국어 패치 배포</h3>
+              <div class="mm-release-grid zelda-release-grid">
+                <div class="zelda-release-copy">
+                  <h3>패치 다운로드</h3>
                   <p>일본판 Rev A를 기준으로 다시 작업한 무쥬라의 가면 한국어 패치입니다. 아래 원본 ROM 정보가 맞는지 확인한 뒤 패치를 적용해 주세요.</p>
                   <div class="mm-source-card"><span>SUPPORTED ORIGINAL</span><code>Zelda no Densetsu - Mujura no Kamen (Japan) (Rev A).z64</code><span>MD5</span><code>C38A7F6F6B61862EA383A75CDF888279</code><span>BYTE ORDER</span><code>BigEndian .z64 / 32 MiB</code><span>TESTED ENVIRONMENT</span><code>Project64 1.6 / Mupen64Plus 2.6.0 / Nintendo 64 실기</code></div>
                   <div class="zelda-feedback-box">
@@ -500,7 +506,7 @@
                     <a href="https://cafe.naver.com/f-e/cafes/16259867/menus/75" target="_blank" rel="noopener noreferrer">검수/제보/피드백 게시판 ↗</a>
                   </div>
                 </div>
-                <div class="mm-status-panel">
+                <div class="mm-status-panel zelda-release-card">
                   <span>PUBLIC RELEASE</span>
                   <strong>2026.08.23</strong>
                   <dl><div><dt>대사 · 문구</dt><dd>4,529 / 4,529</dd></div><div><dt>ROM 확인</dt><dd>완료</dd></div><div><dt>플레이 검수</dt><dd>완료</dd></div><div><dt>공개 배포</dt><dd>최초 배포</dd></div></dl>
