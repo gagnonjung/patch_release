@@ -107,7 +107,7 @@
       const degrees = wrappedAngle * (180 / Math.PI);
       const faceDegrees = -degrees * 0.38;
       const frontness = Math.max(0, Math.min(1, (cos + 1) / 2));
-      const scale = 0.88 + (frontness * 0.12);
+      const scale = 0.885 + (frontness * 0.04);
       const opacity = 0.42 + (frontness * 0.58);
       const brightness = 0.72 + (frontness * 0.28);
       const saturation = 0.68 + (frontness * 0.32);
