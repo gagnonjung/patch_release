@@ -14,6 +14,8 @@
   const navOverview = document.getElementById('series-nav-overview');
   const navFeatures = document.getElementById('series-nav-features');
   const navDownload = document.getElementById('series-nav-download');
+  const actionOverview = document.getElementById('series-action-overview');
+  const actionDownload = document.getElementById('series-action-download');
   const hero = document.getElementById('game-detail');
   const heroTitle = document.getElementById('hero-title');
   const heroStatus = document.getElementById('hero-status');
@@ -156,6 +158,8 @@
     [navIntro, navOverview, navFeatures, navDownload].forEach((link, index) => {
       if (link && data.nav?.[index]) link.href = data.nav[index];
     });
+    if (actionOverview && data.nav?.[1]) actionOverview.href = data.nav[1];
+    if (actionDownload && data.nav?.[3]) actionDownload.href = data.nav[3];
     gamePages.forEach((page) => {
       const isActive = page.dataset.gamePage === game;
       page.hidden = !isActive;
