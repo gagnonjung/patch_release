@@ -6,8 +6,7 @@ const release = {
   size: "133.49 MiB / 139,977,986 bytes",
   provider: "GOOGLE DRIVE",
   url: "https://drive.google.com/file/d/1dI9TfL_eiRmlsL2ldWLu5zeGzXoQHkyO/view?usp=sharing",
-  patchSha256: "36dba5eb935a7a8f6f5b9f5a95a5af3af6760bb0ec940e780e273b589c10a7da",
-  sourceSha256: "Disc 1: c514c3a672cf3587be87af9874629dfe31b21f92a46e760a9d7ba317f0399591 / Disc 2: e1fac2270a95eb40781af29db67d2c741931bc96e884931e42371c036e94a4e4"
+  patchSha256: "36dba5eb935a7a8f6f5b9f5a95a5af3af6760bb0ec940e780e273b589c10a7da"
 };
 
 const setText = (id, value) => {
@@ -20,9 +19,7 @@ setText("release-title", release.title);
 setText("release-version", release.version);
 setText("release-date", release.date);
 setText("release-size", release.size);
-setText("release-provider", release.provider);
 setText("patch-hash", release.patchSha256);
-setText("source-hash", release.sourceSha256);
 
 const link = document.getElementById("release-link");
 if (link && release.url) {

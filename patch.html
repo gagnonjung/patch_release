@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Metal Gear Solid: The Twin Snakes 한국어 패치 배포 페이지" />
   <title>METAL GEAR SOLID: THE TWIN SNAKES — 한국어 패치</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=20260823-layout7" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20260823-layout9" />
 </head>
 <body>
   <div class="scanlines" aria-hidden="true"></div>
@@ -197,25 +197,7 @@
           <div class="step"><b>03</b><div><h3>MD5 자동 판별 · xdelta 적용</h3><p>BAT가 원본의 MD5를 계산해 Disc 1 / Disc 2를 자동 판별하고, 지원 원본과 일치할 때 해당 xdelta를 적용합니다.</p></div></div>
           <div class="step"><b>04</b><div><h3>완성된 ISO 확인</h3><p>완성된 ISO는 원본 파일과 같은 폴더에 <code>Metal Gear Solid - The Twin Snakes (Korea) (Disc 1).iso</code> 또는 <code>Metal Gear Solid - The Twin Snakes (Korea) (Disc 2).iso</code>로 만들어집니다. 마지막으로 SHA-256을 확인해 정상적으로 만들어진 파일만 남기도록 했습니다.</p></div></div>
         </div>
-        <div class="source-grid">
-          <article>
-            <span>DISC 1 / ORIGINAL IMAGE</span>
-            <code>Metal Gear Solid - The Twin Snakes (Japan) (En,Ja) (Disc 1).iso</code>
-            <span>MD5</span>
-            <code>796319a44e67e9d34e90482d36b26e18</code>
-            <span>SHA-256</span>
-            <code>c514c3a672cf3587be87af9874629dfe31b21f92a46e760a9d7ba317f0399591</code>
-          </article>
-          <article>
-            <span>DISC 2 / ORIGINAL IMAGE</span>
-            <code>Metal Gear Solid - The Twin Snakes (Japan) (En,Ja) (Disc 2).iso</code>
-            <span>MD5</span>
-            <code>4b0bc9bfe1c4098725bef272f5e03f4d</code>
-            <span>SHA-256</span>
-            <code>e1fac2270a95eb40781af29db67d2c741931bc96e884931e42371c036e94a4e4</code>
-          </article>
-        </div>
-        <div class="notice"><b>SUPPORTED ORIGINAL</b><p>일본판 retail Disc 1 / Disc 2, 각 1,459,978,240 bytes 기준입니다. <b>v1.11은 v1.1 등 이전 버전에 덧씌우는 증분 패치가 아니며 일본판 원본에 직접 적용합니다.</b> 패키지에는 Windows x86_64용 Xdelta 3.2.0이 포함되어 있습니다.</p></div>
+        <div class="notice install-notice"><b>SUPPORTED ORIGINAL</b><p>일본판 retail Disc 1 / Disc 2, 각 1,459,978,240 bytes 기준입니다. <b>v1.11은 v1.1 등 이전 버전에 덧씌우는 증분 패치가 아니며 일본판 원본에 직접 적용합니다.</b> 패키지에는 Windows x86_64용 Xdelta 3.2.0이 포함되어 있습니다.</p></div>
       </div>
 
       <div id="license" class="subsection-block license-section nested-license">
@@ -235,31 +217,46 @@
       <div class="subsection-block download-final">
         <p class="section-index">04-D / RELEASE</p>
         <div class="download-section embedded-download">
-          <div>
+          <div class="release-copy">
             <h3 class="subsection-title">패치 다운로드</h3>
             <p class="download-lead">현재 최신 배포본은 <b>v1.11</b>입니다. 다운로드 후 포함된 README와 지원 원본 해시를 확인해 주세요.</p>
-            <div class="notice">
+            <div class="required-originals">
               <b>REQUIRED ORIGINAL IMAGES</b>
-              <p>
-                Disc 1: <code>Metal Gear Solid - The Twin Snakes (Japan) (En,Ja) (Disc 1).iso</code><br>
-                Disc 2: <code>Metal Gear Solid - The Twin Snakes (Japan) (En,Ja) (Disc 2).iso</code>
-              </p>
+              <div class="source-grid release-source-grid">
+                <article>
+                  <span>DISC 1 / ORIGINAL IMAGE</span>
+                  <code>Metal Gear Solid - The Twin Snakes (Japan) (En,Ja) (Disc 1).iso</code>
+                  <span>MD5</span>
+                  <code>796319a44e67e9d34e90482d36b26e18</code>
+                  <span>SHA-256</span>
+                  <code>c514c3a672cf3587be87af9874629dfe31b21f92a46e760a9d7ba317f0399591</code>
+                </article>
+                <article>
+                  <span>DISC 2 / ORIGINAL IMAGE</span>
+                  <code>Metal Gear Solid - The Twin Snakes (Japan) (En,Ja) (Disc 2).iso</code>
+                  <span>MD5</span>
+                  <code>4b0bc9bfe1c4098725bef272f5e03f4d</code>
+                  <span>SHA-256</span>
+                  <code>e1fac2270a95eb40781af29db67d2c741931bc96e884931e42371c036e94a4e4</code>
+                </article>
+              </div>
             </div>
-            <div class="feedback-box">
+            <div class="feedback-box unified-feedback-box">
               <span>BUG REPORT / FEEDBACK</span>
               <h4>오류나 번역 문제를 발견하셨나요?</h4>
               <p>오탈자, 미번역, 문맥이 어색한 대사, 글자 깨짐, 화면 밖으로 넘어가는 문장, 진행 중 프리징 등 플레이 중 발견한 문제는 한식구 <b>검수/제보/피드백 게시판</b>에 남겨 주세요. 가능하다면 발생 장면과 스크린샷을 함께 첨부해 주시면 확인에 도움이 됩니다.</p>
               <a class="button ghost" href="https://cafe.naver.com/f-e/cafes/16259867/menus/75" target="_blank" rel="noopener noreferrer">검수/제보/피드백 게시판 ↗</a>
             </div>
           </div>
-          <div class="release-card">
+          <div class="release-card unified-release-card">
             <div class="release-top"><span>LATEST BUILD</span><span id="release-status">BUGFIX RELEASE</span></div>
             <h3 id="release-title">MGS_TTS_KO_v1.11_xdelta_windows.zip</h3>
-            <dl><div><dt>VERSION</dt><dd id="release-version">1.11</dd></div><div><dt>DATE</dt><dd id="release-date">2026-08-23</dd></div><div><dt>SIZE</dt><dd id="release-size">133.49 MiB / 139,977,986 bytes</dd></div><div><dt>DOWNLOAD</dt><dd id="release-provider">GOOGLE DRIVE</dd></div></dl>
-            <div class="notice test-environment"><b>VERIFICATION</b><p>v1.1 전 구간 플레이 검수 결과를 유지하며, v1.11 수정본은 Disc 1·2 xdelta 적용 및 최종 ISO readback을 다시 확인했습니다.</p></div>
+            <dl class="release-facts"><div><dt>VERSION</dt><dd id="release-version">1.11</dd></div><div><dt>RELEASE</dt><dd id="release-date">2026-08-23</dd></div><div><dt>SIZE</dt><dd id="release-size">133.49 MiB / 139,977,986 bytes</dd></div><div><dt>FORMAT</dt><dd>ONE-CLICK XDELTA</dd></div></dl>
+            <div class="notice test-environment release-verification"><b>VERIFICATION</b><p>v1.1 전 구간 플레이 검수 결과를 유지하며, v1.11 수정본은 Disc 1·2 xdelta 적용 및 최종 ISO readback을 다시 확인했습니다.</p></div>
             <a id="release-link" class="button download-button drive-download" href="https://drive.google.com/file/d/1dI9TfL_eiRmlsL2ldWLu5zeGzXoQHkyO/view?usp=sharing" target="_blank" rel="noopener noreferrer"><span class="download-icon drive-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M8.1 2.5h5.1l5.2 9H13z" fill="#2ca24c"/><path d="M8.1 2.5 2.7 12l2.6 4.5 5.3-9z" fill="#f6c344"/><path d="M5.3 16.5h10.4l2.7-5H8z" fill="#4285f4"/></svg></span><span>DOWNLOAD — GOOGLE DRIVE</span></a>
-            <div class="hash-block"><span>SHA-256 / PATCH ZIP</span><code id="patch-hash">36dba5eb935a7a8f6f5b9f5a95a5af3af6760bb0ec940e780e273b589c10a7da</code></div>
-            <div class="hash-block"><span>SUPPORTED ORIGINAL / SHA-256</span><code id="source-hash">Disc 1: c514c3a672cf3587be87af9874629dfe31b21f92a46e760a9d7ba317f0399591 / Disc 2: e1fac2270a95eb40781af29db67d2c741931bc96e884931e42371c036e94a4e4</code></div>
+            <div class="hash-block release-hash-block"><span>PATCH ZIP / SHA-256</span><code id="patch-hash">36dba5eb935a7a8f6f5b9f5a95a5af3af6760bb0ec940e780e273b589c10a7da</code></div>
+            <div class="hash-block release-hash-block"><span>DISC 1 OUTPUT / SHA-256</span><code>8a29ec8617bb48ec8b98aca86ccac81af4410df4de4a77c280965717b8c6c18f</code></div>
+            <div class="hash-block release-hash-block"><span>DISC 2 OUTPUT / SHA-256</span><code>82a7dda78f4c4d4d6d55ca634ded63e93d80582848cd430cd0c5d28eaa83e96f</code></div>
           </div>
         </div>
       </div>
@@ -267,7 +264,7 @@
       <div class="subsection-block credits-block">
         <p class="section-index">04-E / CREDITS</p>
         <h3 class="subsection-title">Credits</h3>
-        <div class="credits-grid">
+        <div class="credits-grid unified-credits-grid">
           <article><span>제작 · 번역 · 검수</span><strong>한마루</strong></article>
           <article><span>분석</span><strong>ChatGPT Codex</strong></article>
         </div>
@@ -304,7 +301,7 @@
     <span>본 프로젝트는 비공식 팬 번역 프로젝트이며 관련 권리자와 제휴·승인 관계가 없습니다.</span>
   </footer>
 
-  <script src="assets/js/site.js?v=20260823-banner2"></script>
+  <script src="assets/js/site.js?v=20260823-banner4"></script>
   <script>document.querySelectorAll('.disabled-link').forEach(a=>a.addEventListener('click',e=>e.preventDefault()));</script>
 </body>
 </html>

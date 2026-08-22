@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="젤다의 전설 Nintendo 64 한국어 패치 페이지" />
   <title>젤다의 전설: 무쥬라의 가면 — 한마루 한글화 작업소</title>
-  <link rel="stylesheet" href="../assets/css/zelda-series.css?v=20260823-mm36" />
+  <link rel="stylesheet" href="../assets/css/zelda-series.css?v=20260823-mm37" />
 </head>
 <body data-active-game="mm">
   <header class="series-header">
@@ -183,25 +183,21 @@
 
             <div id="oot-install" class="oot-subsection-block">
               <p class="oot-section-index">04-B / INSTALL GUIDE</p>
-              <h3>적용 방법</h3>
-              <div class="oot-steps">
-                <div><b>01</b><div><h4>패치 파일 준비</h4><p>배포 ZIP의 내용을 한 폴더에 압축 해제합니다.</p></div></div>
-                <div><b>02</b><div><h4>지원 일본판 ROM 확인</h4><p><code>Zelda no Densetsu - Toki no Ocarina (Japan) (Rev 1)</code>의 BigEndian <code>.z64</code> 파일을 준비합니다. <code>.v64</code>는 지원하지 않습니다.</p></div></div>
-                <div><b>03</b><div><h4>Xdelta 3.0 이상으로 적용</h4><p>지원 원본에 배포된 xdelta 패치를 적용합니다.</p></div></div>
-                <div><b>04</b><div><h4>패치 후 MD5 확인</h4><p>완성된 ROM의 MD5가 아래 패치 후 파일 정보와 일치하는지 확인합니다.</p></div></div>
+              <h3>패치 적용 방법</h3>
+              <div class="oot-steps zelda-install-steps">
+                <div><b>01</b><div><h4>배포 ZIP 전체 압축 해제</h4><p><code>Zelda_OOT_KO_v1.102_xdelta_windows.zip</code>의 모든 파일을 한 폴더에 압축 해제합니다.</p></div></div>
+                <div><b>02</b><div><h4>지원 일본판 Rev A ROM 준비</h4><p><code>Zelda no Densetsu - Toki no Ocarina (Japan) (Rev A)</code>의 BigEndian <code>.z64</code> 파일을 준비합니다.</p></div></div>
+                <div><b>03</b><div><h4>원하는 시작 로고 버전 적용</h4><p>Nintendo 64 버전은 <code>apply_nintendo64.bat</code>, 현대 컴보이 64 버전은 <code>apply_hyundai_comboy64.bat</code>를 실행합니다. 원본 ROM을 BAT 위로 드래그 앤 드롭해도 됩니다.</p></div></div>
+                <div><b>04</b><div><h4>자동 해시 검증 후 완료</h4><p>패처가 원본 MD5/SHA-256과 완성된 ROM의 MD5/SHA-256을 확인하고, 검증을 통과한 경우에만 최종 <code>.z64</code> 파일을 남깁니다.</p></div></div>
               </div>
-              <div class="oot-source-grid">
-                <article><span>SUPPORTED ORIGINAL / BIGENDIAN .Z64</span><code>Zelda no Densetsu - Toki no Ocarina (Japan) (Rev 1)</code><span>MD5</span><code>1BF5F42B98C3E97948F01155F12E2D88</code></article>
-                <article><span>PATCHED OUTPUT</span><code>Zelda no Densetsu - Toki no Ocarina (K) (Rev 1)</code><span>MD5</span><code>D4091F8260A0E1AA5EB8681F1021C314</code></article>
-              </div>
-              <div class="oot-notice"><b>TESTED ENVIRONMENT</b><p>Mupen / Project64 1.6 — 실행 및 플레이 확인<br>Nintendo 64 실기 — 테스트 완료<br>그 외 에뮬레이터 기기에서는 정상 플레이가 어려울 수 있습니다.</p></div>
+              <div class="oot-notice zelda-test-notice"><b>TESTED ENVIRONMENT</b><p>Mupen / Project64 1.6 — 실행 및 플레이 확인<br>Nintendo 64 실기 — 테스트 완료<br>두 로고 버전은 시작 로고만 다르며 게임 내용은 동일합니다.</p></div>
             </div>
 
             <div id="oot-license" class="oot-subsection-block oot-license-section">
               <p class="oot-section-index">04-C / DISTRIBUTION LICENSE</p>
               <h3>배포 라이센스</h3>
               <p class="oot-license-intro">파일 다운로드 전에 아래 사항을 반드시 확인 바랍니다.</p>
-              <ol class="oot-license-list">
+              <ol class="oot-license-list zelda-license-list">
                 <li><b>A.</b><span>원칙적으로, 해당 기종의 원본 디스크 또는 카트리지를 보유한 분이 개인적으로만 이용한다는 전제 하에 본 한글패치 파일을 다운로드할 수 있습니다.</span></li>
                 <li><b>B.</b><span>상기 A항 조건에 해당하지 않는 분이 본 한글패치 파일을 다운로드하여 이용할 경우에 발생하는 모든 책임은 이용 당사자에게 있으며, 패치 제작자는 어떠한 책임도 지지 않습니다.</span></li>
                 <li><b>C.</b><span>본 한글패치 파일 자체를 제작자의 허가 없이 타 사이트에 재배포하지 말아 주시고, 재배포를 원하실 경우 패치원본 게시물의 링크를 공유해 주시기 바랍니다.(아카이빙 포함)</span></li>
@@ -216,8 +212,11 @@
               <div class="oot-release-grid zelda-release-grid">
                 <div class="zelda-release-copy">
                   <h3>패치 다운로드</h3>
-                  <p>현재 최신 배포본은 <b>v1.102</b>입니다. Windows 원클릭 패치는 원본 ROM의 MD5를 먼저 확인한 뒤 xdelta를 적용하고, 완성된 ROM의 MD5까지 맞는 경우에만 최종 파일을 남기도록 만들었습니다.</p>
-                  <div class="oot-notice"><b>REQUIRED ORIGINAL</b><p><code>Zelda no Densetsu - Toki no Ocarina (Japan) (Rev 1)</code><br>BigEndian <code>.z64</code> / MD5 <code>1BF5F42B98C3E97948F01155F12E2D88</code></p></div>
+                  <p>현재 최신 배포본은 <b>v1.102</b>입니다. 2026.08.23 패키지 갱신으로 Nintendo 64 / 현대 컴보이 64 시작 로고를 선택할 수 있으며, 번역과 게임 내용은 기존 v1.102와 동일합니다.</p>
+                  <div class="zelda-required-original oot-required-original">
+                    <b>REQUIRED ORIGINAL</b>
+                    <article><span>JAPAN REV A / BIGENDIAN .Z64</span><code>Zelda no Densetsu - Toki no Ocarina (Japan) (Rev A)</code><span>MD5</span><code>1BF5F42B98C3E97948F01155F12E2D88</code><span>SHA-256</span><code>ADE86E53AD21CD69D751E019547DDBF413CB78DBD34F07ADE5F1DFBBD8904B5C</code></article>
+                  </div>
                   <div class="zelda-feedback-box">
                     <span>BUG REPORT / FEEDBACK</span>
                     <h4>오류나 번역 문제를 발견하셨나요?</h4>
@@ -226,13 +225,14 @@
                   </div>
                 </div>
                 <div class="oot-release-card zelda-release-card">
-                  <div><span>LATEST BUILD</span><span>RELEASE</span></div>
+                  <div class="zelda-release-top"><span>LATEST BUILD</span><span>RELEASE</span></div>
                   <h3>Zelda_OOT_KO_v1.102_xdelta_windows.zip</h3>
-                  <dl><div><dt>VERSION</dt><dd>1.102</dd></div><div><dt>DATE</dt><dd>2026-01-10</dd></div><div><dt>SIZE</dt><dd>3.68 MiB / 3,863,818 bytes</dd></div><div><dt>FORMAT</dt><dd>ONE-CLICK XDELTA</dd></div></dl>
-                  <a class="oot-download-button" href="https://drive.google.com/file/d/1AQDjDh93mQIL5cUQ1ioB5A4GZrdESAra/view?usp=sharing" target="_blank" rel="noopener noreferrer">DOWNLOAD — GOOGLE DRIVE</a>
-                  <div class="oot-hash-block"><span>PATCH ZIP / SHA-256</span><code>7288dcd2144f13acfbc27233b1b55b836cf48a404757a98cba2183716e254b0d</code></div>
-                  <div class="oot-hash-block"><span>SUPPORTED ORIGINAL / MD5</span><code>1BF5F42B98C3E97948F01155F12E2D88</code></div>
-                  <div class="oot-hash-block"><span>PATCHED OUTPUT / MD5</span><code>D4091F8260A0E1AA5EB8681F1021C314</code></div>
+                  <dl class="zelda-release-facts"><div><dt>VERSION</dt><dd>1.102</dd></div><div><dt>RELEASE</dt><dd>2026.01.10</dd></div><div><dt>PACKAGE</dt><dd>2026.08.23</dd></div><div><dt>FORMAT</dt><dd>ONE-CLICK XDELTA</dd></div></dl>
+                  <div class="zelda-release-verification">Nintendo 64 / 현대 컴보이 64 듀얼 로고 패키지 · 자동 원본/출력 해시 검증</div>
+                  <a class="oot-download-button zelda-download-button" href="https://drive.google.com/file/d/1AQDjDh93mQIL5cUQ1ioB5A4GZrdESAra/view?usp=sharing" target="_blank" rel="noopener noreferrer">DOWNLOAD — GOOGLE DRIVE</a>
+                  <div class="oot-hash-block zelda-hash-block"><span>PATCH ZIP / SHA-256</span><code>04E259A924395CC917BDE32E1C4754FB1F6D709DA8483BB00F3A2BDF3978546B</code></div>
+                  <div class="oot-hash-block zelda-hash-block"><span>NINTENDO 64 OUTPUT / MD5</span><code>D4091F8260A0E1AA5EB8681F1021C314</code></div>
+                  <div class="oot-hash-block zelda-hash-block"><span>HYUNDAI COMBOY 64 OUTPUT / MD5</span><code>EC21E96A884965E68926AC788C7A6DE5</code></div>
                 </div>
               </div>
             </div>
@@ -240,7 +240,7 @@
             <div id="oot-credits" class="oot-subsection-block oot-credits-block">
               <p class="oot-section-index">04-E / CREDITS</p>
               <h3>Credits</h3>
-              <div class="oot-credits-grid">
+              <div class="oot-credits-grid zelda-credits-grid">
                 <article><span>디컴파일</span><strong>Zelda Reverse Engineering Team</strong></article>
                 <article><span>폰트 제작 지원</span><strong>히힛마스터 · 명군</strong></article>
                 <article><span>번역 · 그래픽</span><strong>한마루</strong></article>
@@ -339,20 +339,20 @@
             <div id="ura-install" class="ura-subsection-block">
               <p class="ura-section-index">04-A / INSTALL GUIDE</p>
               <h3>패치 적용 방법</h3>
-              <div class="ura-steps">
+              <div class="ura-steps zelda-install-steps">
                 <div><b>01</b><div><h4>배포 ZIP 전체 압축 해제</h4><p><code>Zelda_OOT_Ura_KO_20260110_xdelta_windows.zip</code>의 모든 파일을 한 폴더에 압축 해제합니다.</p></div></div>
                 <div><b>02</b><div><h4>지원 GameCube 우라 ROM 준비</h4><p><code>Zelda no Densetsu - Toki no Ocarina GC Ura (Japan) (GameCube Edition)</code>의 BigEndian <code>.z64</code> 파일을 준비합니다. 원본 MD5는 <code>69895C5C78442260F6EAFB2506DC482A</code>입니다.</p></div></div>
                 <div><b>03</b><div><h4>원하는 시작 로고 버전 적용</h4><p>Nintendo 64 버전은 <code>apply_nintendo64.bat</code>, 현대 컴보이 64 버전은 <code>apply_hyundai_comboy64.bat</code>를 실행합니다. 원본 ROM을 BAT 위로 드래그 앤 드롭해도 됩니다.</p></div></div>
                 <div><b>04</b><div><h4>자동 해시 검증 후 완료</h4><p>패처가 원본 MD5/SHA-256과 완성된 ROM의 MD5/SHA-256을 모두 확인하고, 검증을 통과한 경우에만 최종 <code>.z64</code> 파일을 남깁니다.</p></div></div>
               </div>
-              <div class="ura-notice"><b>TESTED ENVIRONMENT</b><p>Mupen / Project64 1.6 — 실행 및 플레이 확인<br>Nintendo 64 실기 — 테스트 완료<br>두 로고 버전은 시작 로고만 다르며 게임 내용은 동일합니다.</p></div>
+              <div class="ura-notice zelda-test-notice"><b>TESTED ENVIRONMENT</b><p>Mupen / Project64 1.6 — 실행 및 플레이 확인<br>Nintendo 64 실기 — 테스트 완료<br>두 로고 버전은 시작 로고만 다르며 게임 내용은 동일합니다.</p></div>
             </div>
 
             <div id="ura-license" class="ura-subsection-block ura-license-section">
               <p class="ura-section-index">04-B / DISTRIBUTION LICENSE</p>
               <h3>배포 라이센스</h3>
               <p class="ura-license-intro">파일 다운로드 전에 아래 사항을 반드시 확인 바랍니다.</p>
-              <ol class="ura-license-list">
+              <ol class="ura-license-list zelda-license-list">
                 <li><b>A.</b><span>원칙적으로, 해당 기종의 원본 디스크 또는 카트리지를 보유한 분이 개인적으로만 이용한다는 전제 하에 본 한글패치 파일을 다운로드할 수 있습니다.</span></li>
                 <li><b>B.</b><span>상기 A항 조건에 해당하지 않는 분이 본 한글패치 파일을 다운로드하여 이용할 경우에 발생하는 모든 책임은 이용 당사자에게 있으며, 패치 제작자는 어떠한 책임도 지지 않습니다.</span></li>
                 <li><b>C.</b><span>본 한글패치 파일 자체를 제작자의 허가 없이 타 사이트에 재배포하지 말아 주시고, 재배포를 원하실 경우 패치원본 게시물의 링크를 공유해 주시기 바랍니다.(아카이빙 포함)</span></li>
@@ -367,10 +367,10 @@
               <div class="zelda-release-grid ura-release-layout">
                 <div class="zelda-release-copy">
                   <h3>패치 다운로드</h3>
-                  <p>GameCube 일본판 우라를 기준으로 만든 Windows용 원클릭 xdelta 패치입니다. 최초 배포일은 <b>2026.01.10</b>이며, 2026.08.23에 Nintendo 64 / 현대 컴보이 64 시작 로고를 선택할 수 있도록 패키지를 갱신했습니다.</p>
-                  <div class="ura-source-grid">
-                    <article><span>SUPPORTED ORIGINAL</span><code>GameCube Ura / BigEndian .z64</code><span>MD5</span><code>69895C5C78442260F6EAFB2506DC482A</code></article>
-                    <article><span>NINTENDO 64 OUTPUT</span><code>MD5 0277759E35EE8C9326234DA96BAB92E3</code><span>HYUNDAI COMBOY 64 OUTPUT</span><code>MD5 1BF8F53BDE6005224AC1674E1F471514</code></article>
+                  <p>GameCube 일본판 우라를 기준으로 만든 Windows용 원클릭 xdelta 패치입니다. 최초 배포일은 <b>2026.01.10</b>이며, 2026.08.23에 Nintendo 64 / 현대 컴보이 64 시작 로고 선택을 추가했습니다.</p>
+                  <div class="zelda-required-original ura-required-original">
+                    <b>REQUIRED ORIGINAL</b>
+                    <article><span>GAMECUBE URA / BIGENDIAN .Z64</span><code>Zelda no Densetsu - Toki no Ocarina GC Ura (Japan) (GameCube Edition)</code><span>MD5</span><code>69895C5C78442260F6EAFB2506DC482A</code><span>SHA-256</span><code>4EE156612F4A5C50E4966DD69798952342B081D60B1FB494CAC6B0EAFE39456E</code></article>
                   </div>
                   <div class="zelda-feedback-box">
                     <span>BUG REPORT / FEEDBACK</span>
@@ -380,12 +380,14 @@
                   </div>
                 </div>
                 <div class="ura-release-card zelda-release-card">
-                  <div>
-                    <span>PUBLIC RELEASE</span>
-                    <strong>2026.01.10</strong>
-                    <p><b>2026.08.23 패키지 갱신</b><br>두 가지 시작 로고 선택을 추가했으며 번역과 게임 내용은 기존 배포판과 동일합니다.</p>
-                  </div>
-                  <a href="https://drive.google.com/file/d/1bZwMcCzYiz3GrjmFNTb7Lvc_7ZFu8LzL/view?usp=sharing" target="_blank" rel="noopener noreferrer">DOWNLOAD — GOOGLE DRIVE</a>
+                  <div class="zelda-release-top"><span>LATEST BUILD</span><span>RELEASE</span></div>
+                  <h3>Zelda_OOT_Ura_KO_20260110_xdelta_windows.zip</h3>
+                  <dl class="zelda-release-facts"><div><dt>RELEASE</dt><dd>2026.01.10</dd></div><div><dt>PACKAGE</dt><dd>2026.08.23</dd></div><div><dt>FORMAT</dt><dd>ONE-CLICK XDELTA</dd></div><div><dt>LOGO</dt><dd>2 VERSIONS</dd></div></dl>
+                  <div class="zelda-release-verification">Nintendo 64 / 현대 컴보이 64 듀얼 로고 패키지 · 자동 원본/출력 해시 검증</div>
+                  <a class="zelda-download-button" href="https://drive.google.com/file/d/1bZwMcCzYiz3GrjmFNTb7Lvc_7ZFu8LzL/view?usp=sharing" target="_blank" rel="noopener noreferrer">DOWNLOAD — GOOGLE DRIVE</a>
+                  <div class="zelda-hash-block"><span>PATCH ZIP / SHA-256</span><code>E559ADFDFDD27B2F729CBF92F1D1AF4A9D5C69342625102E19C4D76A9E247B31</code></div>
+                  <div class="zelda-hash-block"><span>NINTENDO 64 OUTPUT / MD5</span><code>0277759E35EE8C9326234DA96BAB92E3</code></div>
+                  <div class="zelda-hash-block"><span>HYUNDAI COMBOY 64 OUTPUT / MD5</span><code>1BF8F53BDE6005224AC1674E1F471514</code></div>
                 </div>
               </div>
             </div>
@@ -393,7 +395,7 @@
             <div id="ura-credits" class="ura-subsection-block ura-credits-block">
               <p class="ura-section-index">04-D / CREDITS</p>
               <h3>Credits</h3>
-              <div class="ura-credits-grid">
+              <div class="ura-credits-grid zelda-credits-grid">
                 <article><span>디컴파일</span><strong>Zelda Reverse Engineering Team</strong></article>
                 <article><span>폰트 제작 지원</span><strong>히힛마스터 · 명군</strong></article>
                 <article><span>번역 · 그래픽</span><strong>한마루</strong></article>
@@ -498,20 +500,20 @@
             <div id="mm-install" class="mm-subsection-block">
               <p class="mm-section-index">04-A / INSTALL GUIDE</p>
               <h3>패치 적용 방법</h3>
-              <div class="mm-steps">
+              <div class="mm-steps zelda-install-steps">
                 <div><b>01</b><div><h4>배포 ZIP 전체 압축 해제</h4><p>다운로드한 ZIP의 내용을 한 폴더에 모두 압축 해제합니다.</p></div></div>
                 <div><b>02</b><div><h4>지원 일본판 Rev A ROM 준비</h4><p><code>Zelda no Densetsu - Mujura no Kamen (Japan) (Rev A).z64</code>의 BigEndian <code>.z64</code> 파일을 준비합니다. 원본 MD5는 <code>C38A7F6F6B61862EA383A75CDF888279</code>입니다.</p></div></div>
                 <div><b>03</b><div><h4>원하는 시작 로고 버전 적용</h4><p>현대 컴보이 64 버전은 <code>apply_hyundai_comboy64.bat</code>, 원본 Nintendo 64 로고 버전은 <code>apply_nintendo64.bat</code>를 실행해 지원 원본에 패치를 적용합니다.</p></div></div>
                 <div><b>04</b><div><h4>생성된 한국어 ROM 확인</h4><p>패치 적용이 완료되면 생성된 <code>.z64</code> 파일을 사용합니다. 두 버전은 시작 로고만 다르며 한국어 번역과 게임 내용은 동일합니다.</p></div></div>
               </div>
-              <div class="mm-notice"><b>TESTED ENVIRONMENT</b><p>Project64 1.6 / Mupen64Plus 2.6.0 — 실행 및 플레이 확인<br>Nintendo 64 실기 — 테스트 완료<br>지원 원본은 BigEndian <code>.z64</code> / 32 MiB 기준입니다.</p></div>
+              <div class="mm-notice zelda-test-notice"><b>TESTED ENVIRONMENT</b><p>Project64 1.6 / Mupen64Plus 2.6.0 — 실행 및 플레이 확인<br>Nintendo 64 실기 — 테스트 완료<br>지원 원본은 BigEndian <code>.z64</code> / 32 MiB 기준입니다.</p></div>
             </div>
 
             <div id="mm-license" class="mm-subsection-block mm-license-section">
               <p class="mm-section-index">04-B / DISTRIBUTION LICENSE</p>
               <h3>배포 라이센스</h3>
               <p class="mm-license-intro">파일 다운로드 전에 아래 사항을 반드시 확인 바랍니다.</p>
-              <ol class="mm-license-list">
+              <ol class="mm-license-list zelda-license-list">
                 <li><b>A.</b><span>원칙적으로, 해당 기종의 원본 디스크 또는 카트리지를 보유한 분이 개인적으로만 이용한다는 전제 하에 본 한글패치 파일을 다운로드할 수 있습니다.</span></li>
                 <li><b>B.</b><span>상기 A항 조건에 해당하지 않는 분이 본 한글패치 파일을 다운로드하여 이용할 경우에 발생하는 모든 책임은 이용 당사자에게 있으며, 패치 제작자는 어떠한 책임도 지지 않습니다.</span></li>
                 <li><b>C.</b><span>본 한글패치 파일 자체를 제작자의 허가 없이 타 사이트에 재배포하지 말아 주시고, 재배포를 원하실 경우 패치원본 게시물의 링크를 공유해 주시기 바랍니다.(아카이빙 포함)</span></li>
@@ -526,8 +528,11 @@
               <div class="mm-release-grid zelda-release-grid">
                 <div class="zelda-release-copy">
                   <h3>패치 다운로드</h3>
-                  <p>일본판 Rev A를 기준으로 다시 작업한 무쥬라의 가면 한국어 패치입니다. 아래 원본 ROM 정보가 맞는지 확인한 뒤 패치를 적용해 주세요.</p>
-                  <div class="mm-source-card"><span>SUPPORTED ORIGINAL</span><code>Zelda no Densetsu - Mujura no Kamen (Japan) (Rev A).z64</code><span>MD5</span><code>C38A7F6F6B61862EA383A75CDF888279</code><span>BYTE ORDER</span><code>BigEndian .z64 / 32 MiB</code><span>TESTED ENVIRONMENT</span><code>Project64 1.6 / Mupen64Plus 2.6.0 / Nintendo 64 실기</code></div>
+                  <p>일본판 Rev A를 기준으로 처음부터 다시 작업한 무쥬라의 가면 한국어 패치입니다. Nintendo 64 / 현대 컴보이 64 시작 로고 두 버전을 한 패키지에서 선택할 수 있습니다.</p>
+                  <div class="zelda-required-original mm-required-original">
+                    <b>REQUIRED ORIGINAL</b>
+                    <article><span>JAPAN REV A / BIGENDIAN .Z64</span><code>Zelda no Densetsu - Mujura no Kamen (Japan) (Rev A).z64</code><span>MD5</span><code>C38A7F6F6B61862EA383A75CDF888279</code><span>SHA-256</span><code>7F81367323B3FACE9DFF8961ABE1937DF9F87A13C558EC038838C25490029BF3</code></article>
+                  </div>
                   <div class="zelda-feedback-box">
                     <span>BUG REPORT / FEEDBACK</span>
                     <h4>오류나 번역 문제를 발견하셨나요?</h4>
@@ -536,11 +541,14 @@
                   </div>
                 </div>
                 <div class="mm-status-panel zelda-release-card">
-                  <span>PUBLIC RELEASE</span>
-                  <strong>2026.08.23</strong>
-                  <dl><div><dt>대사 · 문구</dt><dd>4,529 / 4,529</dd></div><div><dt>ROM 확인</dt><dd>완료</dd></div><div><dt>플레이 검수</dt><dd>완료</dd></div><div><dt>공개 배포</dt><dd>최초 배포</dd></div></dl>
-                  <a class="mm-download-button" href="https://drive.google.com/file/d/1VVyAU5LoksuQqck5F3kkAlTYOs-BiOes/view?usp=sharing" target="_blank" rel="noopener noreferrer">DOWNLOAD — GOOGLE DRIVE</a>
-                  <p>지원되는 일본판 Rev A 원본에 적용하는 한국어 패치입니다.</p>
+                  <div class="zelda-release-top"><span>LATEST BUILD</span><span>FINAL RELEASE</span></div>
+                  <h3>Zelda_MM_KO_xdelta_windows.zip</h3>
+                  <dl class="zelda-release-facts"><div><dt>RELEASE</dt><dd>2026.08.23</dd></div><div><dt>STATUS</dt><dd>FINAL</dd></div><div><dt>FORMAT</dt><dd>ONE-CLICK XDELTA</dd></div><div><dt>LOGO</dt><dd>2 VERSIONS</dd></div></dl>
+                  <div class="zelda-release-verification">대사 · 문구 4,529 / 4,529 · ROM 확인 · 플레이 검수 완료</div>
+                  <a class="mm-download-button zelda-download-button" href="https://drive.google.com/file/d/1VVyAU5LoksuQqck5F3kkAlTYOs-BiOes/view?usp=sharing" target="_blank" rel="noopener noreferrer">DOWNLOAD — GOOGLE DRIVE</a>
+                  <div class="zelda-hash-block"><span>PATCH ZIP / SHA-256</span><code>04A05E9C7EDB4A822909A59F81FE193EC12C54A1830F3E4930E6361F82C328DB</code></div>
+                  <div class="zelda-hash-block"><span>NINTENDO 64 OUTPUT / MD5</span><code>34F8F57AD76CDF5FC0B38DEAD7DF2655</code></div>
+                  <div class="zelda-hash-block"><span>HYUNDAI COMBOY 64 OUTPUT / MD5</span><code>D151F919C6E3C8DA25876E5A8E9B472C</code></div>
                 </div>
               </div>
             </div>
@@ -548,7 +556,7 @@
             <div id="mm-credits" class="mm-subsection-block mm-credits-block">
               <p class="mm-section-index">04-D / CREDITS</p>
               <h3>Credits</h3>
-              <div class="mm-credits-grid">
+              <div class="mm-credits-grid zelda-credits-grid">
                 <article><span>제작 · 번역 · 검수</span><strong>한마루</strong></article>
                 <article><span>분석</span><strong>ChatGPT Codex</strong></article>
               </div>
