@@ -64,6 +64,12 @@ Expected output filenames:
 
 Release metadata and external download links are defined at the top of `assets/js/site.js`. Keep the corresponding fallback values in `patch.html` synchronized so the page remains correct even before JavaScript runs.
 
+Catalog `NEW` tag policy:
+
+- New title / first public release: use the default red `NEW` tag.
+- Existing patch version update: also add a `NEW` tag, but use the green `.is-update` variant so updates are visually distinct from first releases.
+- Apply the version-update tag whenever a published patch version is incremented, starting with Majora's Mask v1.01 (2026-08-26).
+
 When changing the page, preserve the existing CODEC-inspired visual language and the current download section order:
 
 1. `04-A / PATCH NOTES`
