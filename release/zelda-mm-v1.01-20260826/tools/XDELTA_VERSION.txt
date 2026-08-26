@@ -1,0 +1,8 @@
+Xdelta version: 3.2.0
+Upstream: jmacd/xdelta
+Official release asset: xdelta3-3.2.0-windows-x86_64.zip
+Official release asset SHA-256: af8ef036cb077a48df080c9a8ac1be4a6e7511c32d11f8bec89b6803a9e52576
+
+Bundled executables:
+xdelta3.exe SHA-256: 53d90226615f217d3380c39892833311b4e24acd863e1ca01f14b5e772e2e6d0
+xdelta3decode.exe SHA-256: e3a62e37b2fb517a2f99f2ae562e19c9c71fdcd28ff3d45f62af3815c14ca5b0

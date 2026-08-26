@@ -1,0 +1,57 @@
+{
+  "version": "1.01",
+  "date": "2026-08-26",
+  "correction_batch": "102_runtime_font_charmap_recovery_20260826",
+  "incident": "INCIDENT_2026-08-26_CHARMAP_FONT_MISMATCH.md",
+  "source": {
+    "file": "Zelda no Densetsu - Mujura no Kamen (Japan) (Rev A).z64",
+    "md5": "c38a7f6f6b61862ea383a75cdf888279",
+    "sha256": "7f81367323b3face9dff8961abe1937df9f87a13c558ec038838c25490029bf3"
+  },
+  "canonical": {
+    "nintendo64": {
+      "sha256": "63fa649670fe07086bd42a2c370d634a3d17b6bb32a03a186daea68363c08d1e",
+      "md5": "9b109731bc9202514514a5c34257f868"
+    },
+    "hyundai_comboy64": {
+      "sha256": "f9041331dba2966df2544333c2ca3e8b26bd8ab1531e3837263c65f8ed8c99de",
+      "md5": "c8dda397c0adae03d736117bf2fde918"
+    }
+  },
+  "runtime_font_charmap_pair": {
+    "dma6_sha256": "deb7ff44768ee7fe966b14361c15d43e7160d1b0d44d4191a111b5b9e3a1e862",
+    "charmap_file": "translation/runtime_charmap.json",
+    "charmap_sha256": "20917c6b857b123c0becf1e404d7acebcc614adc4d62358f3781f92685c72168",
+    "mapping_count": 1039,
+    "preflight_nintendo64": true,
+    "preflight_hyundai_comboy64": true
+  },
+  "xdelta": {
+    "nintendo64_file": "mm_ko_v1.01_nintendo64.xdelta",
+    "nintendo64_sha256": "b3dc77c59210892a21dd3f0458d5afa799db2f3919718acb7dfad956e62ba4a3",
+    "hyundai_comboy64_file": "mm_ko_v1.01_hyundai_comboy64.xdelta",
+    "hyundai_comboy64_sha256": "567d5ad9bc330db12993730843e89079f69ae4086de1479fd3c6faad34a52a67",
+    "decode_byte_exact": true
+  },
+  "package": {
+    "file": "Zelda_MM_KO_v1.01_xdelta_windows.zip",
+    "sha256": "5c7901f6dff5310c256f00ef0decda1a7f018a5c1fad9e1f9b3f04324469dd26",
+    "zip_integrity": true,
+    "combined_variants": ["Nintendo64", "HyundaiComboy64"]
+  },
+  "invariants": {
+    "message_count": 4529,
+    "layout_hard_failures": 0,
+    "message_compile_pass": true,
+    "yaz0_roundtrip_byte_exact": true,
+    "segment32_sha256": "234550647dc1d3a2fdadd97bff876060923968bf287dcfd31f9a67e49241dc8d",
+    "gold_skulltula_bytes": "3405885d",
+    "owl_warp_table_byte_exact_vs_batch101": true,
+    "decoded_code_byte_exact_vs_batch101": true
+  },
+  "archives": [
+    "archive-before-truth-mask-fix-20260826",
+    "archive-before-charmap-fix-20260826"
+  ],
+  "status": "PASS"
+}
