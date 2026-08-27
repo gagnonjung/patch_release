@@ -44,10 +44,10 @@
     mm: {
       name: '무쥬라의 가면',
       status: '배포 중',
-      date: '2026.08.26',
+      date: '2026.08.27',
       patchTitle: '무쥬라의 가면 한국어 패치',
       patchState: '한국어 패치 배포 중',
-      patchText: '사용자 제보와 후속 QA를 반영한 v1.01 한국어 패치를 배포합니다.',
+      patchText: '번역 자연화와 용어·레이아웃 QA를 추가 반영한 v1.02 한국어 패치를 배포합니다.',
       theme: 'mm',
       nav: ['#mm-game-intro', '#mm-overview', '#mm-features', '#mm-download']
     },
