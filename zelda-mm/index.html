@@ -416,8 +416,8 @@
               </div>
               <dl>
                 <div><dt>상태</dt><dd>배포 중</dd></div>
-                <div><dt>버전</dt><dd>v1.02</dd></div>
-                <div><dt>패치 배포일</dt><dd>2026.08.27</dd></div>
+                <div><dt>버전</dt><dd>v1.03</dd></div>
+                <div><dt>패치 배포일</dt><dd>2026.08.23</dd></div>
                 <div><dt>플랫폼</dt><dd>Nintendo 64</dd></div>
               </dl>
             </div>
@@ -504,6 +504,18 @@
               <h3>업데이트 내역</h3>
               <div class="mm-update-notes">
                 <article>
+                  <span>2026.08.29 / v1.03</span>
+                  <h4>동적 UI · 활공의 노래 · 런타임 표시 보정</h4>
+                  <ul>
+                    <li>동적 카운터의 단위 <b>번째 / 명 / 마리</b>가 상황에 맞게 표시되도록 런타임 처리를 보정했습니다.</li>
+                    <li>봄버즈 수첩의 <b>현재 시각</b> 표시를 복구하고, <b>대폭탄</b> 명칭과 관련 메시지의 일관성을 다시 맞췄습니다.</li>
+                    <li>활공의 노래 문구와 목적지 11곳을 한국어화하고 정렬을 보정했으며, 목적지 내부 공백도 안전한 반각 폭으로 표시되도록 수정했습니다.</li>
+                    <li>해안 황금 스탈튤라 하우스의 동적 색상 <b>빨강 / 파랑 / 노랑 / 초록</b> 표시를 바로잡았습니다.</li>
+                    <li>데크 공주 관련 호칭과 조사를 추가 수정하고, 한국어 문장에 남아 있던 일본식 inline SHIFT 간격을 전수 정리했습니다.</li>
+                    <li>전체 4,529개 메시지와 14,729개 레이아웃 라인을 다시 검증해 hard failure 0을 확인하고, 두 xdelta의 최종 ROM 바이트 일치와 ZIP/SHA-256 무결성 검증을 완료했습니다.</li>
+                  </ul>
+                </article>
+                <article>
                   <span>2026.08.27 / v1.02</span>
                   <h4>번역 자연화 · 용어 통일 · 레이아웃 QA</h4>
                   <ul>
@@ -560,7 +572,7 @@
               <div class="mm-release-grid zelda-release-grid">
                 <div class="zelda-release-copy">
                   <h3>패치 다운로드</h3>
-                  <p>일본판 Rev A를 기준으로 처음부터 다시 작업한 무쥬라의 가면 한국어 패치입니다. <b>v1.02</b>에서는 번역 자연화, 용어 통일, 인물 관계 말투와 아이템 문구 레이아웃을 추가 검수했으며, Nintendo 64 / 현대 컴보이 64 시작 로고 두 버전을 한 패키지에서 선택할 수 있습니다.</p>
+                  <p>일본판 Rev A를 기준으로 처음부터 다시 작업한 무쥬라의 가면 한국어 패치입니다. <b>v1.03</b>에서는 동적 카운터, 봄버즈 수첩, 활공의 노래와 일부 런타임 표시를 추가 보정했으며, Nintendo 64 / 현대 컴보이 64 시작 로고 두 버전을 한 패키지에서 선택할 수 있습니다.</p>
                   <div class="zelda-required-original mm-required-original">
                     <b>REQUIRED ORIGINAL</b>
                     <article><span>JAPAN REV A / BIGENDIAN .Z64</span><code>Zelda no Densetsu - Mujura no Kamen (Japan) (Rev A).z64</code><span>MD5</span><code>C38A7F6F6B61862EA383A75CDF888279</code><span>SHA-256</span><code>7F81367323B3FACE9DFF8961ABE1937DF9F87A13C558EC038838C25490029BF3</code></article>
@@ -573,16 +585,16 @@
                   </div>
                 </div>
                 <div class="mm-status-panel zelda-release-card">
-                  <div class="zelda-release-top"><span>LATEST BUILD</span><span>v1.02 UPDATE</span></div>
-                  <h3>Zelda_MM_KO_v1.02_xdelta_windows.zip</h3>
-                  <dl class="zelda-release-facts"><div><dt>VERSION</dt><dd>1.02</dd></div><div><dt>RELEASE</dt><dd>2026.08.27</dd></div><div><dt>FORMAT</dt><dd>ONE-CLICK XDELTA</dd></div><div><dt>LOGO</dt><dd>2 VERSIONS</dd></div></dl>
-                  <div class="zelda-release-verification">대사 · 문구 4,529 / 4,529 · 번역 자연화 · 용어/레이아웃 QA · xdelta byte-exact 검증 완료</div>
-                  <a class="mm-download-button zelda-download-button" href="https://drive.google.com/file/d/1zqvIOn0hyTGaJ1ara6mEJ_3mB4OcDdXS/view?usp=sharing" target="_blank" rel="noopener noreferrer">DOWNLOAD — GOOGLE DRIVE</a>
-                  <div class="zelda-hash-block"><span>PATCH ZIP / SHA-256</span><code>7D24592D6A4D9E1F18B812E6286ACD691531CF36C1814834C7C0707409588B17</code></div>
-                  <div class="zelda-hash-block"><span>NINTENDO 64 OUTPUT / MD5</span><code>5ACA49FBFDA62EAD8945899B29C67E3A</code></div>
-                  <div class="zelda-hash-block"><span>NINTENDO 64 OUTPUT / SHA-256</span><code>A7FE9BA2EECA2DCBA009953E8CEF0180C1095C9FEED92B6016703FF0D8ABE5DB</code></div>
-                  <div class="zelda-hash-block"><span>HYUNDAI COMBOY 64 OUTPUT / MD5</span><code>075DFAD8D5624560A5DAAE5A86E88C57</code></div>
-                  <div class="zelda-hash-block"><span>HYUNDAI COMBOY 64 OUTPUT / SHA-256</span><code>7FF328D0ED40562540F3D5841A7D4C849D915372F4DDEE6DCBF3F83E9C735F4E</code></div>
+                  <div class="zelda-release-top"><span>LATEST BUILD</span><span>v1.03 UPDATE</span></div>
+                  <h3>Zelda_MM_KO_v1.03_xdelta_windows.zip</h3>
+                  <dl class="zelda-release-facts"><div><dt>VERSION</dt><dd>1.03</dd></div><div><dt>RELEASE</dt><dd>2026.08.29</dd></div><div><dt>FORMAT</dt><dd>ONE-CLICK XDELTA</dd></div><div><dt>LOGO</dt><dd>2 VERSIONS</dd></div></dl>
+                  <div class="zelda-release-verification">대사 · 문구 4,529 / 4,529 · 동적 UI/활공/수첩 보정 · 정적/바이너리 QA · xdelta byte-exact 검증 완료</div>
+                  <a class="mm-download-button zelda-download-button" href="https://drive.google.com/file/d/1ELcZeFOWHG93IH9o5bES8mjfsUUglAJw/view?usp=sharing" target="_blank" rel="noopener noreferrer">DOWNLOAD — GOOGLE DRIVE</a>
+                  <div class="zelda-hash-block"><span>PATCH ZIP / SHA-256</span><code>C42465FB12ED7A36E320558FA9A875D0ABD4A1246949BF21C672331F01F99459</code></div>
+                  <div class="zelda-hash-block"><span>NINTENDO 64 OUTPUT / MD5</span><code>2AA08B2BFA36F45BB283A3E8C30B3190</code></div>
+                  <div class="zelda-hash-block"><span>NINTENDO 64 OUTPUT / SHA-256</span><code>0478FCDFFD8061E3CB4C1D2B2E10360F5D989C7A31317AECE3331B8133C1AEEE</code></div>
+                  <div class="zelda-hash-block"><span>HYUNDAI COMBOY 64 OUTPUT / MD5</span><code>80E6CDF7707E36488F0D277008730AE4</code></div>
+                  <div class="zelda-hash-block"><span>HYUNDAI COMBOY 64 OUTPUT / SHA-256</span><code>8BAB85BA18319188F13FBB2184BBC89EDEFD6A6C2AC7EBF2BFD3C59220DB0331</code></div>
                 </div>
               </div>
             </div>
@@ -606,6 +618,6 @@
     <span>THE LEGEND OF ZELDA / NINTENDO 64</span>
   </footer>
 
-  <script src="../assets/js/zelda-coverflow.js?v=20260827-v102"></script>
+  <script src="../assets/js/zelda-coverflow.js?v=20260829-v103"></script>
 </body>
 </html>
