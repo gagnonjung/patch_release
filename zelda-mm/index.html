@@ -416,7 +416,7 @@
               </div>
               <dl>
                 <div><dt>상태</dt><dd>배포 중</dd></div>
-                <div><dt>버전</dt><dd>v1.03</dd></div>
+                <div><dt>버전</dt><dd>v1.032</dd></div>
                 <div><dt>패치 배포일</dt><dd>2026.08.23</dd></div>
                 <div><dt>플랫폼</dt><dd>Nintendo 64</dd></div>
               </dl>
@@ -504,6 +504,27 @@
               <h3>업데이트 내역</h3>
               <div class="mm-update-notes">
                 <article>
+                  <span>2026.08.30 / v1.032</span>
+                  <h4>날짜 텔롭 · 브레멘 가면 문구 수정</h4>
+                  <ul>
+                    <li>첫날 아침 텔롭을 <b>첫째 날 아침</b>으로 수정해 날짜 표현을 자연스럽게 정리했습니다.</li>
+                    <li>브레멘 가면 획득 메시지의 <b>동물 새끼들에게 써 보자</b>를 <b>아기 동물들에게 써 보자</b>로 수정했습니다.</li>
+                    <li>다음 날 아침, 마지막 날 아침, 새로운 날 아침과 남은 시간 표시는 기존 v1.031 상태를 그대로 유지했습니다.</li>
+                    <li>Nintendo 64 / 현대 컴보이 64 두 xdelta를 Windows PowerShell 적용기로 실제 적용해 정식 v1.032 ROM 해시와 바이트 단위 일치를 확인했습니다.</li>
+                  </ul>
+                </article>
+                <article>
+                  <span>2026.08.30 / v1.031</span>
+                  <h4>봄버즈 수첩 표시 수정</h4>
+                  <ul>
+                    <li>봄버즈 수첩의 <b>A로 수첩 보기</b> 문구에 적용되는 폰트와 간격을 바로잡았습니다.</li>
+                    <li>수첩의 <b>현재 시각</b> 표시를 일본판 Rev A의 실제 그래픽 배치에 맞춰 복구했습니다.</li>
+                    <li>현재 시각 옆의 시간 숫자와 콜론이 깨지지 않고 정상적으로 표시되도록 수정했습니다.</li>
+                    <li>수정된 수첩 화면은 실제 런타임 테스트에서 정상 표시를 확인했습니다.</li>
+                    <li>Nintendo 64 / 현대 컴보이 64 두 xdelta가 정식 v1.031 ROM과 바이트 단위로 일치하고, ZIP 무결성·내부 SHA-256·Windows PowerShell 적용 검증을 모두 통과했습니다.</li>
+                  </ul>
+                </article>
+                <article>
                   <span>2026.08.29 / v1.03</span>
                   <h4>동적 UI · 활공의 노래 · 런타임 표시 보정</h4>
                   <ul>
@@ -572,7 +593,7 @@
               <div class="mm-release-grid zelda-release-grid">
                 <div class="zelda-release-copy">
                   <h3>패치 다운로드</h3>
-                  <p>일본판 Rev A를 기준으로 처음부터 다시 작업한 무쥬라의 가면 한국어 패치입니다. <b>v1.03</b>에서는 동적 카운터, 봄버즈 수첩, 활공의 노래와 일부 런타임 표시를 추가 보정했으며, Nintendo 64 / 현대 컴보이 64 시작 로고 두 버전을 한 패키지에서 선택할 수 있습니다.</p>
+                  <p>일본판 Rev A를 기준으로 처음부터 다시 작업한 무쥬라의 가면 한국어 패치입니다. <b>v1.032</b>에서는 첫째 날 아침 텔롭과 브레멘 가면 획득 문구를 자연스럽게 다듬었으며, Nintendo 64 / 현대 컴보이 64 시작 로고 두 버전을 한 패키지에서 선택할 수 있습니다.</p>
                   <div class="zelda-required-original mm-required-original">
                     <b>REQUIRED ORIGINAL</b>
                     <article><span>JAPAN REV A / BIGENDIAN .Z64</span><code>Zelda no Densetsu - Mujura no Kamen (Japan) (Rev A).z64</code><span>MD5</span><code>C38A7F6F6B61862EA383A75CDF888279</code><span>SHA-256</span><code>7F81367323B3FACE9DFF8961ABE1937DF9F87A13C558EC038838C25490029BF3</code></article>
@@ -585,16 +606,16 @@
                   </div>
                 </div>
                 <div class="mm-status-panel zelda-release-card">
-                  <div class="zelda-release-top"><span>LATEST BUILD</span><span>v1.03 UPDATE</span></div>
-                  <h3>Zelda_MM_KO_v1.03_xdelta_windows.zip</h3>
-                  <dl class="zelda-release-facts"><div><dt>VERSION</dt><dd>1.03</dd></div><div><dt>RELEASE</dt><dd>2026.08.29</dd></div><div><dt>FORMAT</dt><dd>ONE-CLICK XDELTA</dd></div><div><dt>LOGO</dt><dd>2 VERSIONS</dd></div></dl>
-                  <div class="zelda-release-verification">대사 · 문구 4,529 / 4,529 · 동적 UI/활공/수첩 보정 · 정적/바이너리 QA · xdelta byte-exact 검증 완료</div>
-                  <a class="mm-download-button zelda-download-button" href="https://drive.google.com/file/d/1ELcZeFOWHG93IH9o5bES8mjfsUUglAJw/view?usp=sharing" target="_blank" rel="noopener noreferrer">DOWNLOAD — GOOGLE DRIVE</a>
-                  <div class="zelda-hash-block"><span>PATCH ZIP / SHA-256</span><code>C42465FB12ED7A36E320558FA9A875D0ABD4A1246949BF21C672331F01F99459</code></div>
-                  <div class="zelda-hash-block"><span>NINTENDO 64 OUTPUT / MD5</span><code>2AA08B2BFA36F45BB283A3E8C30B3190</code></div>
-                  <div class="zelda-hash-block"><span>NINTENDO 64 OUTPUT / SHA-256</span><code>0478FCDFFD8061E3CB4C1D2B2E10360F5D989C7A31317AECE3331B8133C1AEEE</code></div>
-                  <div class="zelda-hash-block"><span>HYUNDAI COMBOY 64 OUTPUT / MD5</span><code>80E6CDF7707E36488F0D277008730AE4</code></div>
-                  <div class="zelda-hash-block"><span>HYUNDAI COMBOY 64 OUTPUT / SHA-256</span><code>8BAB85BA18319188F13FBB2184BBC89EDEFD6A6C2AC7EBF2BFD3C59220DB0331</code></div>
+                  <div class="zelda-release-top"><span>LATEST BUILD</span><span>v1.032 UPDATE</span></div>
+                  <h3>Zelda_MM_KO_v1.032_xdelta_windows.zip</h3>
+                  <dl class="zelda-release-facts"><div><dt>VERSION</dt><dd>1.032</dd></div><div><dt>RELEASE</dt><dd>2026.08.30</dd></div><div><dt>FORMAT</dt><dd>ONE-CLICK XDELTA</dd></div><div><dt>LOGO</dt><dd>2 VERSIONS</dd></div></dl>
+                  <div class="zelda-release-verification">대사 · 문구 4,529 / 4,529 · 날짜 텔롭/브레멘 가면 문구 수정 · xdelta byte-exact · Windows 적용 검증 완료</div>
+                  <a class="mm-download-button zelda-download-button" href="https://drive.google.com/file/d/1FoaIiT1apWZk3wpo2iCRFKQ2Omf75Ed-/view?usp=sharing" target="_blank" rel="noopener noreferrer">DOWNLOAD — GOOGLE DRIVE</a>
+                  <div class="zelda-hash-block"><span>PATCH ZIP / SHA-256</span><code>063C24CC73A0006CB5C57D3F4266DAF4E51493D2AEE3F7E9D63FC8992C75C092</code></div>
+                  <div class="zelda-hash-block"><span>NINTENDO 64 OUTPUT / MD5</span><code>6E6F00FC8842361BCC4FB0DB8A5FC768</code></div>
+                  <div class="zelda-hash-block"><span>NINTENDO 64 OUTPUT / SHA-256</span><code>FD39989C8ED29AB4E65AF553073C8289FF1140DDAE954F730049C791A79E609F</code></div>
+                  <div class="zelda-hash-block"><span>HYUNDAI COMBOY 64 OUTPUT / MD5</span><code>D781C849C32538A5FC0050030E9E82DA</code></div>
+                  <div class="zelda-hash-block"><span>HYUNDAI COMBOY 64 OUTPUT / SHA-256</span><code>CE588245F1F97F8AEEC5534609C11E80FEA24B4087EC90BAF52C1F43C6326373</code></div>
                 </div>
               </div>
             </div>
@@ -619,6 +640,6 @@
     <span>THE LEGEND OF ZELDA / NINTENDO 64</span>
   </footer>
 
-  <script src="../assets/js/zelda-coverflow.js?v=20260829-v103"></script>
+  <script src="../assets/js/zelda-coverflow.js?v=20260830-v1032"></script>
 </body>
 </html>
