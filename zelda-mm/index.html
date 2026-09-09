@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="젤다의 전설 Nintendo 64 한국어 패치 페이지" />
   <title>젤다의 전설: 무쥬라의 가면 — 한마루 한글화 작업소</title>
-  <link rel="stylesheet" href="../assets/css/zelda-series.css?v=20260827-mmupdate2" />
+  <link rel="stylesheet" href="../assets/css/zelda-series.css?v=20260909-video1" />
 </head>
-<body data-active-game="mm">
+<body data-active-game="mm" data-selected-game="mm">
   <header class="series-header">
     <div class="header-primary">
       <a class="archive-mark" href="#top" aria-label="젤다 Nintendo 64 패치 페이지 상단">
@@ -37,6 +37,17 @@
 
   <main id="top">
     <section class="series-switcher" aria-label="젤다 시리즈 게임 선택">
+      <div class="zelda-video-bg" aria-hidden="true">
+        <iframe
+          id="zelda-hero-video"
+          src="https://www.youtube.com/embed/zKiREZnU0dI?autoplay=1&amp;mute=1&amp;controls=0&amp;rel=0&amp;playsinline=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fgagnonjung.github.io"
+          title="The Legend of Zelda background video"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          referrerpolicy="strict-origin-when-cross-origin"
+          tabindex="-1">
+        </iframe>
+      </div>
+      <div class="zelda-video-dim" aria-hidden="true"></div>
       <div class="coverflow" id="coverflow" tabindex="0" aria-label="젤다 시리즈 게임 선택">
         <button class="cover-item" type="button" data-game="oot" data-index="0" aria-label="젤다의 전설 시간의 오카리나 선택">
           <span class="series-banner series-banner-oot">
@@ -640,6 +651,7 @@
     <span>THE LEGEND OF ZELDA / NINTENDO 64</span>
   </footer>
 
-  <script src="../assets/js/zelda-coverflow.js?v=20260830-v1032"></script>
+  <script src="../assets/js/zelda-coverflow.js?v=20260909-video1"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
 </body>
 </html>

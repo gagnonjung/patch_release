@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Metal Gear Solid: The Twin Snakes 한국어 패치 배포 페이지" />
   <title>METAL GEAR SOLID: THE TWIN SNAKES — 한국어 패치</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=20260825-support1" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20260909-mgs-video1" />
 </head>
 <body>
   <div class="scanlines" aria-hidden="true"></div>
@@ -36,6 +36,17 @@
 
   <main id="top">
     <section class="hero mgs-logo-hero">
+      <div class="mgs-video-bg" aria-hidden="true">
+        <iframe
+          id="mgs-hero-video"
+          src="https://www.youtube.com/embed/PL5GS4Kzmxk?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=PL5GS4Kzmxk&amp;rel=0&amp;playsinline=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fgagnonjung.github.io"
+          title="Metal Gear Solid The Twin Snakes background video"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          referrerpolicy="strict-origin-when-cross-origin"
+          tabindex="-1">
+        </iframe>
+      </div>
+      <div class="mgs-video-dim" aria-hidden="true"></div>
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="mgs-banner-shell" aria-label="메탈 기어 솔리드 더 트윈 스네이크">
         <div class="mgs-platform-strip"><img src="assets/images/platform-gamecube.png" alt="" aria-hidden="true" /><b>NINTENDO GAMECUBE</b></div>
@@ -296,6 +307,34 @@
     <span>본 프로젝트는 비공식 팬 번역 프로젝트이며 관련 권리자와 제휴·승인 관계가 없습니다.</span>
   </footer>
 
+  <script>
+    let mgsHeroPlayer;
+
+    function startMgsHeroVideo(player){
+      if(!player) return;
+      player.mute();
+      player.playVideo();
+    }
+
+    function onYouTubeIframeAPIReady(){
+      mgsHeroPlayer=new YT.Player("mgs-hero-video",{
+        events:{
+          onReady(event){startMgsHeroVideo(event.target)},
+          onStateChange(event){
+            if(event.data===YT.PlayerState.ENDED) startMgsHeroVideo(event.target);
+          }
+        }
+      });
+    }
+
+    function resumeMgsHeroVideo(){
+      if(mgsHeroPlayer) startMgsHeroVideo(mgsHeroPlayer);
+    }
+
+    document.addEventListener("pointerdown",resumeMgsHeroVideo,{once:true,passive:true});
+    document.addEventListener("keydown",resumeMgsHeroVideo,{once:true});
+  </script>
+  <script src="https://www.youtube.com/iframe_api"></script>
   <script src="assets/js/site.js?v=20260823-banner4"></script>
   <script>document.querySelectorAll('.disabled-link').forEach(a=>a.addEventListener('click',e=>e.preventDefault()));</script>
 </body>

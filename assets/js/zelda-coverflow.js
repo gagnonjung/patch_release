@@ -76,6 +76,66 @@
   let dragMoved = false;
   let suppressClick = false;
 
+  const heroVideoIds = {
+    oot: 'eGI-gIMSQMQ',
+    mm: 'zKiREZnU0dI'
+  };
+  let heroVideoPlayer = null;
+  let heroVideoReady = false;
+  let pendingHeroVideoGame = initialGame;
+
+  function startHeroVideo(player) {
+    if (!player) return;
+    player.mute();
+    player.playVideo();
+  }
+
+  function syncHeroVideo(game) {
+    pendingHeroVideoGame = game;
+    if (!heroVideoReady || !heroVideoPlayer) return;
+
+    const videoId = heroVideoIds[game];
+    if (!videoId) {
+      heroVideoPlayer.pauseVideo();
+      return;
+    }
+
+    const currentVideoId = heroVideoPlayer.getVideoData?.().video_id;
+    heroVideoPlayer.mute();
+    if (currentVideoId !== videoId) {
+      heroVideoPlayer.loadVideoById(videoId);
+    } else {
+      heroVideoPlayer.playVideo();
+    }
+  }
+
+  window.onYouTubeIframeAPIReady = () => {
+    const target = document.getElementById('zelda-hero-video');
+    if (!target || !window.YT) return;
+
+    heroVideoPlayer = new YT.Player('zelda-hero-video', {
+      events: {
+        onReady(event) {
+          heroVideoReady = true;
+          syncHeroVideo(pendingHeroVideoGame);
+        },
+        onStateChange(event) {
+          if (event.data === YT.PlayerState.ENDED) {
+            event.target.seekTo(0, true);
+            startHeroVideo(event.target);
+          }
+        }
+      }
+    });
+  };
+
+  function resumeHeroVideo() {
+    if (heroVideoIds[pendingHeroVideoGame]) startHeroVideo(heroVideoPlayer);
+  }
+
+  document.addEventListener('pointerdown', resumeHeroVideo, { once: true, passive: true });
+  document.addEventListener('keydown', resumeHeroVideo, { once: true });
+
   function modulo(value, divisor) {
     return ((value % divisor) + divisor) % divisor;
   }
@@ -148,6 +208,7 @@
 
     updateSelectedTitle(game);
     document.body.dataset.selectedGame = data.theme;
+    syncHeroVideo(game);
     document.title = `젤다의 전설: ${data.name} — 한마루 한글화 작업소`;
     if (heroTitle) heroTitle.textContent = data.name;
     if (heroStatus) heroStatus.textContent = data.status;
