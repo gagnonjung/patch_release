@@ -78,6 +78,7 @@
 
   const heroVideoIds = {
     oot: 'eGI-gIMSQMQ',
+    ura: 'eGI-gIMSQMQ',
     mm: 'zKiREZnU0dI'
   };
   let heroVideoPlayer = null;
