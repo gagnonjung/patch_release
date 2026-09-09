@@ -30,7 +30,8 @@
     <section class="hero getter-hero">
       <div class="getter-video-bg" aria-hidden="true">
         <iframe
-          src="https://www.youtube.com/embed/IdL5l5o1pDM?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=IdL5l5o1pDM&amp;modestbranding=1&amp;rel=0&amp;playsinline=1"
+          id="getter-hero-video"
+          src="https://www.youtube.com/embed/IdL5l5o1pDM?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=IdL5l5o1pDM&amp;rel=0&amp;playsinline=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fgagnonjung.github.io"
           title="Getter Robo background video"
           allow="autoplay; encrypted-media; picture-in-picture"
           referrerpolicy="strict-origin-when-cross-origin"
@@ -263,5 +264,34 @@
     <span>한마루 한글화 작업소</span>
     <span>GETTER ROBO DAIKESSEN! / PLAYSTATION</span>
   </footer>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script>
+    let getterHeroPlayer;
+
+    function startGetterHeroVideo(player){
+      if(!player) return;
+      player.mute();
+      player.playVideo();
+    }
+
+    function onYouTubeIframeAPIReady(){
+      getterHeroPlayer=new YT.Player("getter-hero-video",{
+        events:{
+          onReady(event){startGetterHeroVideo(event.target)},
+          onStateChange(event){
+            if(event.data===YT.PlayerState.ENDED) startGetterHeroVideo(event.target);
+          }
+        }
+      });
+    }
+
+    function resumeGetterHeroVideo(){
+      if(getterHeroPlayer) startGetterHeroVideo(getterHeroPlayer);
+    }
+
+    document.addEventListener("pointerdown",resumeGetterHeroVideo,{once:true,passive:true});
+    document.addEventListener("keydown",resumeGetterHeroVideo,{once:true});
+  </script>
 </body>
 </html>
