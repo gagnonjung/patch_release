@@ -47,14 +47,14 @@
         </div>
       </div>
       <div class="hero-copy getter-hero-copy">
-        <p class="kicker">KOREAN LOCALIZATION / v1.0 / RELEASE PAUSED</p>
+        <p class="kicker">KOREAN LOCALIZATION / v1.0</p>
         <div class="hero-actions">
-          <a class="button primary patch-cta disabled" href="#release" aria-disabled="true"><span class="update-dot" aria-hidden="true"></span><span>배포 일시 중지</span><span class="update-badge">BUGFIX</span></a>
+          <a class="button primary patch-cta" href="#release"><span class="update-dot" aria-hidden="true"></span><span>패치 받기</span><span class="update-badge">v1.0</span></a>
           <a class="button ghost" href="#overview">패치 개요</a>
           <a class="button ghost" href="#secret-feature">숨겨진 특징</a>
         </div>
-        <p class="hero-description">스토리와 전투 대사, 시스템 UI, 그래픽, 오프닝과 다음 화 예고 영상 자막까지 한국어화한 <b>겟타로보 대결전!</b> 한국어 패치입니다. 현재 v1.0에서 확인된 버그를 수정하기 위해 배포를 일시 중지했습니다.</p>
-        <div class="status-row"><span>PLATFORM / PLAYSTATION</span><span>REGION / JAPAN</span><span class="status-active">STATUS / DISTRIBUTION PAUSED</span><span>RELEASE / BUGFIXING</span></div>
+        <p class="hero-description">스토리와 전투 대사, 시스템 UI, 그래픽, 오프닝과 다음 화 예고 영상 자막까지 한국어화한 <b>겟타로보 대결전!</b> 한국어 패치입니다. 실기에서 확인된 동영상 재생 문제를 수정하고 재검증한 v1.0 배포본입니다.</p>
+        <div class="status-row"><span>PLATFORM / PLAYSTATION</span><span>REGION / JAPAN</span><span class="status-active">STATUS / v1.0</span><span>RELEASE / 2026.09.10</span></div>
       </div>
     </section>
 
@@ -80,7 +80,7 @@
           <div><span>PLATFORM</span><strong>SONY PLAYSTATION</strong></div>
           <div><span>REGION</span><strong>JAPAN</strong></div>
           <div><span>JAPAN RELEASE</span><strong>1999.09.09</strong></div>
-          <div><span>PATCH RELEASE</span><strong>v1.0 / DISTRIBUTION PAUSED</strong></div>
+          <div><span>PATCH RELEASE</span><strong>2026.09.10 / v1.0</strong></div>
         </aside>
       </div>
     </section>
@@ -192,7 +192,7 @@
           <p>한국어 자막이 필요한 영상에는 자막을 넣었지만, 대사가 없거나 자막이 필요하지 않은 영상은 원본 그대로 유지했습니다. 불필요하게 영상을 재가공하지 않고 원작 화면을 보존했습니다.</p>
         </article>
       </div>
-      <p class="getter-limitations-note">※ v1.0은 전체 정적 QA와 에뮬레이터 기반 런타임 검증 후 공개했으나, 배포 후 수정이 필요한 버그를 확인해 현재 배포를 일시 중지했습니다. 실제 PlayStation 실기 테스트는 진행하지 못했습니다.</p>
+      <p class="getter-limitations-note">※ v1.0은 전체 정적 QA와 에뮬레이터 기반 런타임 검증을 완료했습니다. 전체 구간의 PlayStation 실기 플레이 검수는 진행하지 않았지만, 문제가 확인됐던 C02 동영상 재생은 실기에서 PASS를 확인했습니다.</p>
     </section>
 
     <section id="download" class="section major-section getter-section">
@@ -205,7 +205,7 @@
           <p class="section-note">최신 버전부터 위로 표시</p>
         </div>
         <div class="release-notes-grid getter-release-placeholder">
-          <article><span>v1.0 / DISTRIBUTION PAUSED</span><h3>버그 수정으로 배포 일시 중지</h3><ul><li>v1.0 배포 후 수정이 필요한 버그를 확인해 다운로드를 일시 중지했습니다.</li><li>수정 및 재검증이 끝난 뒤 새 배포본으로 다시 공개할 예정입니다.</li><li>기존 QA 기록과 패치 검증 결과는 유지하되, 현재 v1.0은 배포 중단 상태입니다.</li></ul></article>
+          <article><span>v1.0 / 2026.09.10</span><h3>실기 동영상 재생 안정화 · 배포 재개</h3><ul><li>실기에서 확인된 C02 동영상 멈춤 및 사운드 반복 문제를 수정했습니다.</li><li>교체 STR 14개 전 Mode2 섹터의 EDC/ECC를 목적 LBA 기준으로 재생성했습니다.</li><li>문제 구간 C02 동영상 재생을 실제 PlayStation에서 PASS 확인했습니다.</li><li>최종 디스크 fixed-extent · directory · unused-tail 검증 PASS</li><li>Xdelta direct replay로 일본판 원본 → 최종 한국어판 BIN byte-identical PASS</li></ul></article>
         </div>
       </div>
 
@@ -231,19 +231,19 @@
         <div class="download-section embedded-download">
           <div class="release-copy">
             <h3 class="subsection-title">패치 다운로드</h3>
-            <p class="download-lead">현재 v1.0에서 수정이 필요한 버그를 확인해 배포를 일시 중지했습니다. 수정 및 재검증이 끝날 때까지 다운로드를 제공하지 않습니다.</p>
+            <p class="download-lead">실기 동영상 재생 안정화 수정과 재검증을 반영한 v1.0 Windows용 Xdelta 패키지입니다. 아래 해시와 정확히 일치하는 일본판 BIN만 지원합니다.</p>
             <div class="required-originals">
               <b>REQUIRED ORIGINAL IMAGE</b>
               <div class="source-grid release-source-grid"><article><span>JAPAN / PLAYSTATION</span><code>Getter Robo Daikessen! (Japan).bin</code><span>SIZE</span><code>663111120 bytes</code><span>MD5</span><code>73FE5C7C386984AC14956766019E63B1</code><span>SHA-256</span><code>08F189C914FA753AF0BA690579712636F1D8B21EB7777C89B6FC10041C725807</code></article></div>
             </div>
           </div>
           <div class="release-card unified-release-card getter-release-card">
-            <div class="release-top"><span>LATEST BUILD</span><span>PAUSED</span></div>
+            <div class="release-top"><span>LATEST BUILD</span><span>v1.0</span></div>
             <h3>Getter_Robo_Daikessen_KO_v1.0_xdelta_windows.zip</h3>
-            <dl class="release-facts"><div><dt>VERSION</dt><dd>v1.0</dd></div><div><dt>STATUS</dt><dd>DISTRIBUTION PAUSED</dd></div><div><dt>FORMAT</dt><dd>XDELTA / WINDOWS</dd></div><div><dt>MEDIA</dt><dd>BIN / CUE</dd></div></dl>
-            <a class="button primary download-button disabled" href="#release" aria-disabled="true">DOWNLOAD — PAUSED FOR BUGFIX</a>
-            <div class="hash-block release-hash-block"><span>PATCH ZIP / SHA-256</span><code>51E321808E820F69C3C04C59217C7DDD3D34AADE51DD133458F673728E12BD6B</code></div>
-            <div class="hash-block release-hash-block"><span>PATCHED IMAGE / SHA-256</span><code>F9B234F1416CEDEEDE5DF92EBDCE3BCBC28A216D881E0374AAB681B4E01D81A4</code></div>
+            <dl class="release-facts"><div><dt>VERSION</dt><dd>v1.0</dd></div><div><dt>RELEASE</dt><dd>2026.09.10</dd></div><div><dt>FORMAT</dt><dd>XDELTA / WINDOWS</dd></div><div><dt>MEDIA</dt><dd>BIN / CUE</dd></div></dl>
+            <a class="button primary download-button drive-download" href="https://drive.google.com/file/d/1xVA86Lxp-rS8icn4c5vzT0TznmVrLibT/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">DOWNLOAD — GOOGLE DRIVE</a>
+            <div class="hash-block release-hash-block"><span>PATCH ZIP / SHA-256</span><code>E2683167BEB6D77721A943854A088370DD8F577EC4E7FB50FA59FA4D6AED2D27</code></div>
+            <div class="hash-block release-hash-block"><span>PATCHED IMAGE / SHA-256</span><code>46169676121F73A4678F0DB66B042AFA6A5447153119E65D33D34AA0D5FBD225</code></div>
           </div>
         </div>
       </div>
