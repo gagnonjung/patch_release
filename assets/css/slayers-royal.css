@@ -37,11 +37,11 @@ body.slayers-page{
   background:#090816;
 }
 .slayers-hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden;background:#06050d}
-.slayers-hero-bg img{
-  position:absolute;inset:50% auto auto 50%;
-  width:max(100%,1180px);height:auto;min-height:100%;
-  transform:translate(-50%,-50%) scale(1.45);
-  object-fit:cover;image-rendering:auto;
+.slayers-hero-bg iframe{
+  position:absolute;top:50%;left:50%;
+  width:max(100%,177.78vh);height:max(100%,56.25vw);
+  transform:translate(-50%,-50%) scale(1.04);
+  border:0;pointer-events:none;
   filter:saturate(.9) contrast(1.08) brightness(.54);
 }
 .slayers-hero-dim{position:absolute;inset:0;z-index:1;background:
