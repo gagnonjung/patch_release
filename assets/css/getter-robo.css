@@ -35,7 +35,7 @@ body.getter-page{
     linear-gradient(180deg,rgba(18,11,8,.98),rgba(8,6,5,.98));
 }
 .getter-video-bg{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:#080605}
-.getter-video-bg iframe{position:absolute;top:50%;left:50%;display:block;width:177.78vh;height:56.25vw;min-width:100%;min-height:100%;transform:translate(-50%,-50%);border:0;pointer-events:none;filter:grayscale(.08) brightness(.43)}
+.getter-video-bg iframe{position:absolute;top:50%;left:50%;display:block;width:177.78vh;height:56.25vw;min-width:100%;min-height:100%;transform:translate(-50%,-50%) scale(1.34);transform-origin:center;border:0;pointer-events:none;filter:grayscale(.08) brightness(.43)}
 .getter-video-dim{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(8,6,5,.60),rgba(8,6,5,.76)),radial-gradient(circle at 50% 35%,rgba(240,106,63,.12),transparent 38%)}
 .getter-hero .hero-grid{z-index:2}
 .getter-hero::before,.getter-hero::after{content:"";position:absolute;pointer-events:none;z-index:2}
