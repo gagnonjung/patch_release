@@ -66,15 +66,10 @@ body.slayers-page{
 .slayers-platform-strip b{font:900 9px/1 Arial,sans-serif;letter-spacing:.17em;color:#f1f2ff}
 .slayers-title-lockup{
   position:relative;display:grid;place-items:center;
-  min-height:245px;padding:34px 24px 30px;text-align:center;
-  background:
-    radial-gradient(circle at 50% 44%,rgba(226,91,116,.16),transparent 34%),
-    repeating-linear-gradient(135deg,transparent 0 30px,rgba(214,182,92,.03) 30px 31px),
-    linear-gradient(180deg,#100d24,#080712);
+  min-height:245px;padding:12px 22px 18px;text-align:center;
+  background:#000;
 }
-.slayers-title-lockup span{font:900 clamp(22px,3vw,36px)/1 Arial,sans-serif;letter-spacing:.18em;color:#ffdb5f;text-shadow:0 3px 0 #6d294d}
-.slayers-title-lockup strong{margin-top:12px;font-size:clamp(34px,4.2vw,58px);line-height:1.03;letter-spacing:-.075em;color:#fff0ce;text-shadow:0 4px 0 #742c58,0 12px 30px rgba(0,0,0,.55)}
-.slayers-title-lockup em{margin-top:18px;font:800 9px/1 Consolas,monospace;letter-spacing:.18em;color:#c7b9e4;font-style:normal}
+.slayers-title-lockup img{display:block;width:min(100%,304px);height:auto;object-fit:contain}
 .slayers-hero-copy{position:relative;z-index:3;max-width:920px;text-align:center}
 .slayers-hero-copy .hero-actions,.slayers-hero-copy .status-row{justify-content:center}
 .slayers-hero-copy .kicker{color:#d6b65c}

@@ -53,9 +53,10 @@ a.game-card:hover{transform:translateY(-2px)}
 .thumb-frame{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#111}
 .thumb-frame>img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .2s ease}
 .mgs-thumb>img{object-position:center 31%}
-.slayers-thumb{background:#fff}
-.slayers-thumb>img{object-fit:contain;background:#fff}
+.slayers-thumb{background:#111}
+.slayers-thumb>img{object-fit:cover;object-position:center 48%;transform:scale(1.12)}
 a.game-card:hover .thumb-frame>img{transform:scale(1.02)}
+a.game-card:hover .slayers-thumb>img{transform:scale(1.17)}
 .thumb-placeholder{display:flex;flex-direction:column;justify-content:flex-end;padding:14px 16px;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.55)}
 .thumb-placeholder:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 18%,rgba(0,0,0,.62) 100%)}
 .thumb-placeholder span,.thumb-placeholder strong{position:relative;z-index:1}
