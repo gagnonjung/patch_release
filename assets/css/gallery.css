@@ -8,6 +8,7 @@
   --gc:#6543b5;
   --n64:#252525;
   --ps1:#5c626d;
+  --saturn:#334985;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -49,6 +50,7 @@ a.game-card:hover{transform:translateY(-2px)}
 .platform-gc{background:var(--gc)}
 .platform-n64{background:var(--n64)}
 .platform-ps1{background:linear-gradient(90deg,#777d87,#505660)}
+.platform-saturn{background:linear-gradient(90deg,#4b61a3,#27335f)}
 .platform-wordmark{color:#fff;font:800 11px/1 Arial,sans-serif;letter-spacing:.04em}
 .thumb-frame{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#111}
 .thumb-frame>img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .2s ease}

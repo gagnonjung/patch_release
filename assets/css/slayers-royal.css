@@ -1,0 +1,159 @@
+body.slayers-page{
+  --bg:#090816;
+  --panel:#111024;
+  --panel2:#17132f;
+  --text:#f1edff;
+  --muted:#aca5c3;
+  --line:#302954;
+  --green:#d6b65c;
+  --green2:#755aa8;
+  --amber:#f4cf69;
+  --danger:#d56773;
+  background:
+    radial-gradient(circle at 18% 0%,rgba(116,83,180,.22),transparent 29%),
+    radial-gradient(circle at 82% 18%,rgba(226,91,116,.10),transparent 24%),
+    linear-gradient(180deg,#090816 0%,#070610 100%);
+}
+.slayers-page .scanlines{opacity:.07}
+.slayers-page .site-header{border-bottom-color:rgba(181,145,225,.22);background:rgba(9,8,22,.9)}
+.slayers-page .archive-mark{color:#e4dcf2}
+.slayers-page .archive-dot{border-color:#d6b65c;box-shadow:0 0 14px rgba(214,182,92,.6)}
+.slayers-page .button.primary{background:#d6b65c;color:#171020;border-color:#ead17f}
+.slayers-page .button.primary:hover{background:#ecd783}
+.slayers-page .button.ghost{border-color:#584477;background:rgba(255,255,255,.025);color:#d1c7e2}
+.slayers-page .update-dot{background:#ff6d78;box-shadow:0 0 0 3px rgba(255,109,120,.12),0 0 12px rgba(255,109,120,.45)}
+.slayers-page code{word-break:break-all}
+
+.slayers-hero{
+  position:relative;
+  isolation:isolate;
+  grid-template-columns:minmax(300px,.82fr) minmax(0,1.18fr);
+  min-height:660px;
+  gap:5vw;
+  align-items:center;
+  padding:88px 7vw 74px;
+  overflow:hidden;
+  background:#090816;
+}
+.slayers-hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden;background:#06050d}
+.slayers-hero-bg img{
+  position:absolute;inset:50% auto auto 50%;
+  width:max(100%,1180px);height:auto;min-height:100%;
+  transform:translate(-50%,-50%) scale(1.45);
+  object-fit:cover;image-rendering:auto;
+  filter:saturate(.9) contrast(1.08) brightness(.54);
+}
+.slayers-hero-dim{position:absolute;inset:0;z-index:1;background:
+  linear-gradient(90deg,rgba(7,6,16,.78),rgba(7,6,16,.57) 52%,rgba(7,6,16,.79)),
+  linear-gradient(180deg,rgba(7,6,16,.18),rgba(7,6,16,.72));
+}
+.slayers-hero .hero-grid{z-index:2}
+.slayers-hero-card{
+  position:relative;z-index:3;
+  width:min(430px,100%);
+  border:1px solid #725ca0;
+  border-radius:10px;
+  overflow:hidden;
+  background:rgba(7,6,16,.88);
+  box-shadow:0 30px 80px rgba(0,0,0,.48);
+}
+.slayers-platform-strip{
+  display:flex;align-items:center;justify-content:center;gap:9px;
+  height:36px;border-bottom:1px solid #514172;
+  background:linear-gradient(90deg,#4b61a3,#27335f);
+}
+.slayers-platform-strip b{font:900 9px/1 Arial,sans-serif;letter-spacing:.17em;color:#f1f2ff}
+.slayers-title-lockup{
+  position:relative;display:grid;place-items:center;
+  min-height:245px;padding:34px 24px 30px;text-align:center;
+  background:
+    radial-gradient(circle at 50% 44%,rgba(226,91,116,.16),transparent 34%),
+    repeating-linear-gradient(135deg,transparent 0 30px,rgba(214,182,92,.03) 30px 31px),
+    linear-gradient(180deg,#100d24,#080712);
+}
+.slayers-title-lockup span{font:900 clamp(22px,3vw,36px)/1 Arial,sans-serif;letter-spacing:.18em;color:#ffdb5f;text-shadow:0 3px 0 #6d294d}
+.slayers-title-lockup strong{margin-top:12px;font-size:clamp(34px,4.2vw,58px);line-height:1.03;letter-spacing:-.075em;color:#fff0ce;text-shadow:0 4px 0 #742c58,0 12px 30px rgba(0,0,0,.55)}
+.slayers-title-lockup em{margin-top:18px;font:800 9px/1 Consolas,monospace;letter-spacing:.18em;color:#c7b9e4;font-style:normal}
+.slayers-hero-copy{position:relative;z-index:3;max-width:860px}
+.slayers-hero-copy .kicker{color:#d6b65c}
+.slayers-hero-copy .hero-description{max-width:760px;color:#d5cee3}
+.slayers-hero-copy .hero-description b{color:#f3d67a}
+.slayers-hero-copy .status-row span{border-color:#40345f;background:rgba(17,13,36,.56);color:#bdb2cf}
+.slayers-hero-copy .status-row .status-active{color:#f4d36d;border-color:#806740}
+
+.slayers-section{position:relative}
+.slayers-section::before{content:"";position:absolute;left:0;top:0;width:72px;height:1px;background:#7a5bad}
+.slayers-page .section-index{color:#c2a2f0}
+.slayers-page .game-intro-section{background:radial-gradient(circle at 78% 16%,rgba(121,86,178,.12),transparent 28%),linear-gradient(180deg,rgba(13,11,29,.97),rgba(8,7,18,.99))}
+.slayers-intro-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(300px,.55fr);gap:28px;align-items:start}
+.slayers-intro-grid .prologue-card{grid-row:1/span 2}
+.slayers-page .prologue-card{border-top-color:#564275}
+.slayers-page .prologue-card>span{color:#c2a2f0}
+.slayers-shot-card{margin:0;border:1px solid #493766;background:#070611;overflow:hidden}
+.slayers-shot-card img{display:block;width:100%;height:100%;min-height:260px;object-fit:cover;image-rendering:auto}
+.slayers-reference-shot img{object-fit:contain;background:#080711;padding:16px}
+.slayers-shot-card figcaption{padding:10px 12px;border-top:1px solid #34284d;color:#8f7cab;font:9px Consolas,monospace;letter-spacing:.12em}
+.slayers-page .game-facts{border-color:#40345f;background:#0d0b1c}
+.slayers-page .game-facts div{border-bottom-color:#2b2343}
+.slayers-page .game-facts span{color:#9c7fd0}
+.slayers-page .game-facts strong{color:#e6dff3}
+.slayers-showcase-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
+.slayers-showcase-grid figure{margin:0;border:1px solid #493766;background:#070611;overflow:hidden;box-shadow:0 18px 42px rgba(0,0,0,.22)}
+.slayers-showcase-grid img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;image-rendering:auto}
+.slayers-showcase-grid figcaption{padding:10px 12px;border-top:1px solid #34284d;color:#9d8cae;font:9px Consolas,monospace;letter-spacing:.12em}
+
+.slayers-overview-copy{max-width:800px}
+.slayers-overview-copy p{margin:0;color:#bbb2c9;line-height:1.88}
+.slayers-overview-copy p+p{margin-top:18px}
+.slayers-overview-copy .slayers-overview-lead{padding-left:18px;border-left:2px solid #9a76c8;color:#eee7f5;font-size:17px}
+.slayers-overview-copy b{color:#f0d27b}
+
+.slayers-scope-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.slayers-page .patch-scope-card{border-color:#3c3159;background:linear-gradient(150deg,rgba(118,85,177,.09),rgba(255,255,255,.012))}
+.slayers-page .patch-scope-media{border-color:#3c3159;background:#080711}
+.slayers-page .patch-scope-media img{image-rendering:auto}
+.slayers-page .patch-scope-copy>span,.slayers-page .patch-scope-list li:before{color:#c3a0ef}
+.slayers-page .patch-scope-list li{border-color:rgba(195,160,239,.14);color:#c9bfd7}
+
+.slayers-page .release-notes-grid article{border-color:#3c3159;background:linear-gradient(155deg,rgba(118,85,177,.065),rgba(255,255,255,.01))}
+.slayers-page .release-notes-grid article:before{background:#c4a1ef}
+.slayers-page .release-notes-grid article>span{color:#c4a1ef}
+.slayers-release-notes{grid-template-columns:minmax(0,1fr)}
+.slayers-page .required-originals>b{color:#f0d27b}
+.slayers-page .source-grid.release-source-grid article{border-color:#4a3c5e;background:linear-gradient(155deg,rgba(118,85,177,.055),rgba(255,255,255,.01))}
+.slayers-page .source-grid.release-source-grid span{color:#cfb2f1}
+.slayers-page .feedback-box{border-color:#493766;background:linear-gradient(155deg,rgba(118,85,177,.08),rgba(255,255,255,.01))}
+.slayers-page .feedback-box>span{color:#c4a1ef}
+.slayers-page .release-card{border-color:#55416f;background:#0d0a1b}
+.slayers-page .release-top{color:#d2b3f3}
+.slayers-page .release-card .download-button{background:#d6b65c!important;color:#171020!important;border-color:#ead17f!important}
+.slayers-page .release-card .download-button:hover{background:#efd980!important}
+.slayers-page #download .unified-credits-grid article{border-color:#3c3159;background:rgba(118,85,177,.045)}
+
+.slayers-known-issues{background:linear-gradient(180deg,rgba(13,9,24,.98),rgba(8,7,17,.98))}
+.slayers-issue-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+.slayers-issue-grid article{padding:20px;border:1px solid #654d56;background:rgba(133,62,78,.075)}
+.slayers-issue-grid span{display:block;margin-bottom:14px;font:800 9px/1 Consolas,monospace;letter-spacing:.14em;color:#ef9eab}
+.slayers-issue-grid p{margin:0;color:#c1b2c0;font-size:13px;line-height:1.72}
+.slayers-release-card .hash-block code{word-break:break-all}
+
+@media(max-width:1100px){
+  .slayers-intro-grid{grid-template-columns:1fr}
+  .slayers-intro-grid .prologue-card{grid-row:auto}
+  .slayers-intro-grid .game-facts{grid-column:auto}
+}
+@media(max-width:980px){
+  .slayers-hero{grid-template-columns:1fr;min-height:auto;padding-top:70px}
+  .slayers-hero-card{width:min(100%,520px)}
+  .slayers-scope-grid{grid-template-columns:1fr 1fr}
+  .slayers-showcase-grid{grid-template-columns:1fr 1fr}
+  .slayers-issue-grid{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .slayers-hero{padding-top:54px}
+  .slayers-title-lockup{min-height:205px}
+  .slayers-intro-grid{grid-template-columns:1fr}
+  .slayers-showcase-grid{grid-template-columns:1fr}
+  .slayers-intro-grid .game-facts{grid-column:auto}
+  .slayers-scope-grid{grid-template-columns:1fr}
+}
