@@ -19,9 +19,9 @@ a{color:inherit}nav{background:#181d2b;border-bottom:1px solid var(--line)}
 .lead{font-size:15px;color:#e4e4ee;line-height:1.85;margin:0 0 22px}
 .state{display:inline-flex;align-items:center;gap:9px;background:#624459;border:1px solid #bc839c;color:#ffe7ef;border-radius:9px;padding:10px 15px;font-size:13px;font-weight:800}
 .state::before{content:"";width:8px;height:8px;border-radius:50%;background:#f4bdc8;box-shadow:0 0 9px #e89eaf}
-.hero-preview{min-width:0;margin:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;align-self:stretch;background:#121724;border:1px solid #564a60;border-radius:14px;padding:22px 15px}
-.hero-preview img{display:block;width:100%;height:auto;max-height:260px;object-fit:contain;image-rendering:auto}
-.hero-preview figcaption{color:#9fa8c3;font-size:11px;text-align:center;line-height:1.6}
+.hero-preview{min-width:0;margin:0;align-self:center;aspect-ratio:500/508;overflow:hidden;background:#121724;border:1px solid #564a60;border-radius:14px;padding:0}
+.hero-preview img{display:block;width:100%;height:100%;max-height:none;object-fit:cover;object-position:center;image-rendering:auto}
+
 .body{padding:36px clamp(22px,5.5vw,62px) 48px}.sep{border:0;border-top:1px solid #3e465b;margin:33px 0}.section{margin:0 0 24px}.section h2{font-size:21px;line-height:1.3;margin:0 0 15px;letter-spacing:-.025em}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}.fact{border-bottom:1px solid #343e55;padding:12px 0;display:grid;grid-template-columns:106px minmax(0,1fr);gap:9px}.fact span{font-size:12px;color:#aab1c7}.fact strong{font-size:13px;font-weight:600;overflow-wrap:anywhere}
 .description{font-size:15px;color:#cbd1df;line-height:1.9;margin:0}
@@ -49,7 +49,7 @@ footer{max-width:980px;margin:0 auto 40px;padding:0 24px;display:flex;justify-co
 <p class="lead">스마루시의 소문이 현실이 되는 세계를 한국어로 만날 수 있도록, 본편 대사·시스템 UI·타이틀 그래픽과 일부 영상 자막을 작업한 비공식 팬 패치입니다.</p>
 <span class="state">v0.5b 배포 준비 중</span>
 </header>
-<figure class="hero-preview"><img src="../assets/images/persona2/persona2-cover.jpg" alt="페르소나 2 죄 일본판 커버 아트" loading="eager"><figcaption>페르소나 2 죄 일본판 커버 아트</figcaption></figure>
+<figure class="hero-preview"><img src="../assets/images/persona2/persona2-cover.jpg" alt="페르소나 2 죄 일본판 커버 아트" loading="eager"></figure>
 </section>
 <div class="body">
 <section id="game" class="section"><h2>게임 정보</h2>
