@@ -1,0 +1,28 @@
+/* Getter Robo Daikessen — streamlined release layout (2026-10-10) */
+body.getter-page{background:#101522;color:#e8e9f0}
+.getter-page .scanlines,.getter-page .hero-grid,.getter-page .getter-video-bg,.getter-page .getter-video-dim{display:none!important}
+.getter-page .site-header{background:#161c2bdc;backdrop-filter:blur(15px);border-bottom:1px solid #354056}
+.getter-page main{max-width:1160px;margin:0 auto}
+.getter-page .getter-hero{min-height:auto!important;background:linear-gradient(135deg,#202945,#141b2d 62%,#111627)!important;border:1px solid #36425e;border-radius:24px;margin:30px 22px 22px;padding:48px 5%!important;display:flex;flex-wrap:wrap;gap:24px;align-items:center;box-shadow:0 18px 55px #04091045}
+.getter-page .getter-hero-visual{position:relative!important;inset:auto!important;transform:none!important;min-height:190px;flex:1 1 300px;background:none!important}
+.getter-page .getter-logo-slot{position:static!important;transform:none!important;max-width:100%!important}
+.getter-page .getter-logo-slot img{max-width:100%;height:auto;object-fit:contain}
+.getter-page .getter-hero-copy{position:relative!important;inset:auto!important;transform:none!important;flex:1 1 370px;max-width:none!important;padding:0!important;margin:0!important;text-align:left!important}
+.getter-page .getter-hero .kicker{color:#c7b2e4;letter-spacing:.13em}
+.getter-page .getter-hero .hero-description{max-width:62ch;line-height:1.8;color:#d1d5e2}
+.getter-page .getter-hero .status-row{display:flex;flex-wrap:wrap;gap:9px}
+.getter-page .getter-hero .status-row span{border:1px solid #4d5774;border-radius:50px;padding:6px 10px;font-size:11px}
+.getter-page .major-section{margin:20px 22px!important;border:1px solid #2f394f;border-radius:20px;background:#171e2d;padding:34px clamp(20px,4vw,48px)!important}
+.getter-page .section-index{color:#baa8db}
+.getter-page .major-section h2{font-size:clamp(24px,3vw,34px);letter-spacing:-.03em}
+.getter-page .game-intro-grid,.getter-page .download-section{gap:24px}
+.getter-page .prologue-card,.getter-page .game-facts,.getter-page .release-card,.getter-page .required-originals,.getter-page .release-notes-grid article,.getter-page .patch-scope-card,.getter-page .subsection-block{border-radius:15px}
+.getter-page .getter-dev-story-grid,.getter-page .getter-compare-grid{gap:14px}
+.getter-page .getter-page-facts{margin-top:16px}
+.getter-page .getter-disclaimer{border:1px solid #4e5971;border-radius:14px;padding:24px;background:#111827}
+.getter-page .getter-disclaimer ol{padding-left:1.6em;margin:15px 0 0;display:grid;gap:14px;line-height:1.8}
+.getter-page .getter-disclaimer li{padding-left:.35em;overflow-wrap:anywhere}
+.getter-page .getter-disclaimer .lead{color:#d5c3ef;font-weight:700}
+.getter-page .required-originals code,.getter-page .hash-block code{overflow-wrap:anywhere;word-break:break-all}
+.getter-page .getter-hero .hero-actions{justify-content:flex-start}
+@media(max-width:720px){.getter-page .getter-hero{padding:27px 20px!important;margin:12px}.getter-page .major-section{margin:12px!important;padding:24px 17px!important}.getter-page .getter-hero-visual{min-height:115px}.getter-page .getter-hero-copy{flex-basis:100%}}
