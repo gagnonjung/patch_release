@@ -35,6 +35,20 @@ a{color:inherit}nav{background:#181d2b;border-bottom:1px solid var(--line)}
 footer{max-width:980px;margin:0 auto 40px;padding:0 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#939fb7;font-size:12px}
 @media(max-width:760px){.hero-banner{grid-template-columns:minmax(0,1fr);min-height:0;gap:25px;padding:28px 22px}.hero-preview{width:min(100%,380px);margin:0 auto;align-self:auto;padding:14px}.hero-preview img{max-height:340px}.hero-copy h1{font-size:clamp(31px,8vw,40px)}}
 @media(max-width:680px){.shell{margin:0 auto 24px;border-left:0;border-right:0;border-radius:0}.body{padding:26px 22px 36px}.grid,.scope{grid-template-columns:1fr}.fact{grid-template-columns:106px minmax(0,1fr)}.nav-inner{justify-content:center}.links{justify-content:center;gap:12px}.legal{padding:16px}}
+.download .filename{margin:9px 0 12px;font-size:12px;line-height:1.7;color:#dce3f1;font-family:ui-monospace,Consolas,monospace;overflow-wrap:anywhere}
+.patch-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:13px 0 4px}
+.patch-meta div{padding:10px 13px;border:1px solid #4b5570;border-radius:9px;background:#1c2538}
+.patch-meta span{display:block;color:#b7bfd0;font-size:11px}
+.patch-meta strong{font-size:13px}
+.release-hashes{margin-top:14px}
+.hash-row+.hash-row{padding-top:13px;margin-top:12px;border-top:1px solid #35415a}
+.steps{padding-left:23px;color:#d9dfe9;font-size:14px;line-height:1.95}
+.steps li{padding-left:4px;margin-bottom:6px}
+.steps code{font-size:12px;overflow-wrap:anywhere}
+.beta-note{margin-top:15px;padding:17px 19px;border:1px solid #685a78;border-radius:11px;background:#232337;color:#dce0ed}
+.beta-note strong{color:#f0c5d1}
+.beta-note p{font-size:13px;margin:6px 0 0;line-height:1.8}
+@media(max-width:520px){.patch-meta{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -85,17 +99,34 @@ footer{max-width:980px;margin:0 auto 40px;padding:0 24px;display:flex;justify-co
 <div class="hash"><label>원본 대상 파일 · Japan Rev 1</label><code>Persona 2 - Tsumi - Innocent Sin (Japan) (Rev 1).bin</code><label>원본 SHA-256</label><code>a129b3bdd884aafe26be8ed52258d3fa40d126ff5fe5891b7c90bf88c6dd28d6</code></div>
 <p class="muted">지원 원본은 일본판 Rev 1 단일 트랙 BIN/CUE입니다. 원본의 SHA-256이 다르면 자동 패치가 적용되지 않습니다. 이미 한국어화된 BIN에 중복 적용하지 마세요.</p></section>
 <hr class="sep">
-<section id="release" class="section"><h2>v0.5b 패치 다운로드</h2>
-<div class="download"><div class="release">BETA RELEASE / v0.5b · 2026.10.10</div><h3>페르소나 2 죄 한국어 패치 v0.5b (베타)</h3>
-<p>Windows 자동 패치 방식입니다. ZIP을 모두 압축 해제한 뒤 <strong>00_AUTO_PATCH.cmd</strong>를 더블클릭하고 보유한 일본판 Rev 1 원본 BIN을 선택하세요. 원본·패치·출력 파일의 해시를 자동 검증하며, xdelta3는 동봉되어 있습니다.</p>
-<a class="download-link" href="https://drive.google.com/file/d/1isIQ1U8uCqytnDh3OzcPV-ZlrFJ9yt-0/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" aria-label="페르소나 2 죄 v0.5b 베타 패치 ZIP 구글 드라이브 다운로드">패치 다운로드 (Google Drive) ↗</a>
-<p class="checksum"><strong>배포 ZIP:</strong> Persona 2 - Tsumi - Innocent Sin (Korea) [0.5b Beta] PATCH.zip · 9,796,647 bytes</p>
-<p class="checksum"><strong>ZIP SHA-256:</strong> <code>2f89e0e7387ca20837f140a83c937565787a4dc4c90a92cdc558b6dde3996c4e</code></p>
-<p class="checksum"><strong>Xdelta SHA-256:</strong> <code>974a15589510167595dc44506c0f02027c3c49ddf5bab3354c3a19a27c00bdc6</code></p>
-<p class="checksum"><strong>패치 후 BIN SHA-256:</strong> <code>420ee037cfa76c251e243a5bea7cbcf0a3689f06939eea29939e98d55b909793</code></p>
-<p>패치 과정에서 원본 BIN을 덮어쓰지 않습니다. 적용 후 동봉된 <strong>Persona 2 - Tsumi - Innocent Sin (Korea).cue</strong>로 실행하세요.</p>
-<p><strong>베타 안내:</strong> 정적 QA와 자동 적용 검증은 통과했지만, 전체 스토리 진행·실기·세이브 호환성 검증은 완료되지 않았습니다. 플레이 중 오류가 발생할 수 있으니 원본과 저장 데이터를 보관하세요.</p>
-</div></section>
+<section id="release" class="section">
+<h2>패치 다운로드</h2>
+<div class="download">
+<div class="release">BETA RELEASE · v0.5b · 2026.10.10</div>
+<h3>페르소나 2 죄 한국어 패치 v0.5b (베타)</h3>
+<p class="filename">Persona 2 - Tsumi - Innocent Sin (Korea) [0.5b Beta] PATCH.zip</p>
+<div class="patch-meta"><div><span>크기</span><strong>9,796,647 bytes</strong></div><div><span>형식</span><strong>Windows 자동 Xdelta · BIN/CUE</strong></div></div>
+<a class="download-link" href="https://drive.google.com/file/d/1isIQ1U8uCqytnDh3OzcPV-ZlrFJ9yt-0/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" aria-label="페르소나 2 죄 v0.5b 베타 패치 ZIP 구글 드라이브 다운로드">Google Drive에서 패치 받기 ↗</a>
+<p class="muted">압축 파일에는 Windows 자동 패치 실행 스크립트와 Xdelta3 도구, 패치 데이터 및 CUE가 포함됩니다. 원본 게임 BIN이나 패치 완료 BIN은 제공하지 않습니다.</p>
+</div>
+<div class="hash release-hashes">
+<div class="hash-row"><label>배포 ZIP · SHA-256</label><code>2f89e0e7387ca20837f140a83c937565787a4dc4c90a92cdc558b6dde3996c4e</code></div>
+<div class="hash-row"><label>Xdelta · SHA-256</label><code>974a15589510167595dc44506c0f02027c3c49ddf5bab3354c3a19a27c00bdc6</code></div>
+<div class="hash-row"><label>패치 후 BIN · SHA-256</label><code>420ee037cfa76c251e243a5bea7cbcf0a3689f06939eea29939e98d55b909793</code></div>
+</div>
+</section>
+<hr class="sep">
+<section id="install" class="section">
+<h2>패치 적용 방법</h2>
+<ol class="steps">
+<li>배포 ZIP <code>Persona 2 - Tsumi - Innocent Sin (Korea) [0.5b Beta] PATCH.zip</code>의 모든 파일을 한 폴더에 압축 해제합니다.</li>
+<li>지원 원본 <code>Persona 2 - Tsumi - Innocent Sin (Japan) (Rev 1).bin</code>을 준비합니다. 이미 패치된 BIN이 아닌 일본판 Rev 1 원본을 사용해야 합니다.</li>
+<li><code>00_AUTO_PATCH.cmd</code>를 실행하고 일본판 원본 BIN을 선택합니다. 동봉된 Xdelta3를 사용하므로 별도 패처 설치는 필요하지 않습니다.</li>
+<li>패처가 원본·패치·출력 파일의 해시를 자동 확인합니다. 정상 완료 후 생성된 한국어판 BIN과 동봉된 <code>Persona 2 - Tsumi - Innocent Sin (Korea).cue</code>로 실행합니다.</li>
+</ol>
+<p class="muted">자동 패치는 원본 BIN을 덮어쓰지 않습니다. 원본 게임 이미지와 세이브 데이터는 별도로 보관해 주세요.</p>
+<div class="beta-note"><strong>v0.5b 베타 검수 안내</strong><p>정적 QA와 자동 적용 검증은 통과했지만, 전체 스토리 진행·PlayStation 실기 동작·세이브 호환성 검증은 아직 완료되지 않았습니다. 플레이 중 문제가 발생할 수 있습니다.</p></div>
+</section>
 <hr class="sep">
 <section id="notice" class="section"><h2>파일 이용에 관한 권리 및 책임 고지</h2><div class="legal"><p><strong>파일 다운로드 전에 아래 사항을 반드시 확인 바랍니다.</strong></p><ol type="A">
 <li>원칙적으로, 해당 기종의 원본 디스크 또는 카트리지를 보유한 분이 개인적으로만 이용한다는 전제 하에 본 한글패치 파일을 다운로드할 수 있습니다.</li>
