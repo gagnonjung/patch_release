@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="페르소나 2 죄 (Persona 2: Innocent Sin) PS1 한국어 패치 v0.5b 배포 준비 안내">
+<title>페르소나 2 죄 — 한국어 패치 v0.5b 준비 중</title>
+<style>
+:root{color-scheme:dark;--bg:#101520;--card:#1b2231;--surface:#131b2b;--line:#354058;--text:#edeff5;--sub:#bdc5d5;--accent:#e7b2bc}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#292130 0,#111521 620px);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.75}
+a{color:inherit}nav{background:#181d2b;border-bottom:1px solid var(--line)}
+.nav-inner{max-width:980px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{font-size:13px;font-weight:800;letter-spacing:.08em;text-decoration:none}.brand span{color:#a2abc2;font-weight:400}
+.links{display:flex;align-items:center;flex-wrap:wrap;gap:18px}.links a{text-decoration:none;font-size:13px;color:#c4cbda}.links a:hover{color:#fff}
+.shell{max-width:980px;margin:28px auto 55px;background:var(--card);border:1px solid #42455e;border-radius:22px;overflow:hidden;box-shadow:0 20px 54px #0004}
+.hero-banner{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(260px,.92fr);gap:clamp(24px,4vw,48px);align-items:center;padding:clamp(28px,4.5vw,52px);min-height:375px;background:linear-gradient(125deg,#372335 0%,#25283b 57%,#1b2433 100%);border-bottom:1px solid #5b4960}
+.hero-copy{min-width:0}.eyebrow{font-size:12px;line-height:1.5;font-weight:800;letter-spacing:.1em;color:#f3b8c8}.hero-copy h1{margin:12px 0 6px;font-size:clamp(32px,4vw,46px);letter-spacing:-.05em;line-height:1.2}.english{font-size:17px;line-height:1.45;color:#d2d5e0;margin:0 0 22px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 23px}.pills span{font-size:12px;color:#e1e3ee;background:#372d43;border:1px solid #716078;padding:5px 11px;border-radius:99px}
+.lead{font-size:15px;color:#e4e4ee;line-height:1.85;margin:0 0 22px}
+.state{display:inline-flex;align-items:center;gap:9px;background:#624459;border:1px solid #bc839c;color:#ffe7ef;border-radius:9px;padding:10px 15px;font-size:13px;font-weight:800}
+.state::before{content:"";width:8px;height:8px;border-radius:50%;background:#f4bdc8;box-shadow:0 0 9px #e89eaf}
+.hero-preview{min-width:0;margin:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;align-self:stretch;background:#121724;border:1px solid #564a60;border-radius:14px;padding:22px 15px}
+.hero-preview img{display:block;width:100%;height:auto;max-height:260px;object-fit:contain;image-rendering:auto}
+.hero-preview figcaption{color:#9fa8c3;font-size:11px;text-align:center;line-height:1.6}
+.body{padding:36px clamp(22px,5.5vw,62px) 48px}.sep{border:0;border-top:1px solid #3e465b;margin:33px 0}.section{margin:0 0 24px}.section h2{font-size:21px;line-height:1.3;margin:0 0 15px;letter-spacing:-.025em}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}.fact{border-bottom:1px solid #343e55;padding:12px 0;display:grid;grid-template-columns:106px minmax(0,1fr);gap:9px}.fact span{font-size:12px;color:#aab1c7}.fact strong{font-size:13px;font-weight:600;overflow-wrap:anywhere}
+.description{font-size:15px;color:#cbd1df;line-height:1.9;margin:0}
+.scope{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.scope article{min-width:0;background:#131a2b;border:1px solid #3f485e;border-radius:12px;padding:18px}.scope strong{font-size:15px;color:#f0e5ee}.scope p{font-size:13px;line-height:1.8;color:#bfcbdd;margin:10px 0 0}
+.muted{color:#b7bfd0;font-size:13px;line-height:1.85}
+.qa{padding:21px;border:1px solid #4c506b;border-radius:12px;background:#141c2c}.qa p{margin:0 0 12px;font-size:14px;color:#d4d7e3}.qa p:last-child{margin-bottom:0}.qa b{color:#f2c0cb}
+.pending{margin:13px 0 0;padding-left:21px;color:#c8cdda;font-size:13px;line-height:1.9}
+.hash{border:1px solid #404b65;border-radius:12px;background:#111a2a;padding:18px}.hash label{display:block;color:#9faed0;font-size:11px;letter-spacing:.06em}.hash code{display:block;font:12px/1.8 ui-monospace,Consolas,monospace;color:#eff3fb;overflow-wrap:anywhere;margin-top:4px}
+.download{padding:23px;background:#252c43;border:1px solid #616783;border-radius:13px}.download .release{font-size:12px;color:#edb7c6;font-weight:800;letter-spacing:.07em}.download h3{font-size:20px;margin:9px 0}.download p{margin:10px 0 0;font-size:14px;color:#d5d9e7}.download .unavailable{display:inline-flex;padding:12px 20px;border-radius:10px;margin-top:18px;background:#394156;color:#bcc3d4;font-size:14px;font-weight:800;cursor:not-allowed;border:1px solid #616a7c}
+.legal{background:#151c2b;border:1px solid #49536b;border-radius:12px;padding:21px}.legal ol{padding-left:23px;font-size:13px;display:grid;gap:12px;line-height:1.85}.legal li{padding-left:4px;overflow-wrap:anywhere}
+footer{max-width:980px;margin:0 auto 40px;padding:0 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#939fb7;font-size:12px}
+@media(max-width:760px){.hero-banner{grid-template-columns:minmax(0,1fr);min-height:0;gap:24px;padding:29px 22px}.hero-preview{width:min(100%,410px);margin:0 auto}.hero-copy h1{font-size:clamp(31px,8vw,40px)}}
+@media(max-width:680px){.shell{margin:0 auto 24px;border-left:0;border-right:0;border-radius:0}.body{padding:26px 22px 36px}.grid,.scope{grid-template-columns:1fr}.fact{grid-template-columns:106px minmax(0,1fr)}.nav-inner{justify-content:center}.links{justify-content:center;gap:12px}.legal{padding:16px}}
+</style>
+</head>
+<body>
+<nav><div class="nav-inner"><a class="brand" href="../index.html">HANMARU <span>/ PATCH ARCHIVE</span></a><div class="links"><a href="../index.html">전체 게임</a><a href="#overview">게임 소개</a><a href="#features">패치 내용</a><a href="#release">배포 상태</a></div></div></nav>
+<main class="shell">
+<section class="hero-banner" aria-label="페르소나 2 죄 한국어 패치 소개">
+<header class="hero-copy">
+<div class="eyebrow">PLAYSTATION · KOREAN LOCALIZATION</div>
+<h1>페르소나 2 죄</h1>
+<p class="english">Persona 2: Innocent Sin</p>
+<div class="pills"><span>PS1</span><span>Japan Rev 1</span><span>v0.5b 예정</span><span>PREVIEW</span></div>
+<p class="lead">스마루시의 소문이 현실이 되는 세계를 한국어로 만날 수 있도록, 본편 대사·시스템 UI·타이틀 그래픽과 일부 영상 자막을 작업한 비공식 팬 패치입니다.</p>
+<span class="state">v0.5b 배포 준비 중</span>
+</header>
+<figure class="hero-preview"><img src="../assets/images/persona2/persona2-ko-title-preview.png" alt="페르소나 2 죄 한국어 타이틀 이미지 미리보기" loading="eager"><figcaption>게임 한국어 타이틀 작업 이미지 · 패키지 커버 아트 아님</figcaption></figure>
+</section>
+<div class="body">
+<section id="game" class="section"><h2>게임 정보</h2>
+<div class="grid">
+<div class="fact"><span>게임명</span><strong>페르소나 2 죄 / Persona 2: Innocent Sin</strong></div>
+<div class="fact"><span>플랫폼</span><strong>Sony PlayStation</strong></div>
+<div class="fact"><span>대상</span><strong>일본판 Rev 1 · SLPS_021.00</strong></div>
+<div class="fact"><span>장르</span><strong>롤플레잉 게임 (RPG)</strong></div>
+<div class="fact"><span>패치 버전</span><strong>v0.5b (배포 예정)</strong></div>
+<div class="fact"><span>공개 상태</span><strong>런타임 검수 및 배포 준비 중</strong></div>
+</div></section>
+<hr class="sep">
+<section id="overview" class="section"><h2>게임 소개</h2><p class="description">《페르소나 2 죄》는 스마루시를 무대로, 퍼져 나간 소문이 현실에 영향을 미치는 사건을 따라가는 RPG입니다. 타츠야 일행의 이야기와 동료들 간의 관계, 악마와의 컨택, 페르소나를 중심으로 전개되는 전투를 경험할 수 있습니다. 이 한국어화는 대사와 시스템의 자연스러운 표현뿐 아니라 화면상의 폰트·정렬·표기까지 함께 다듬는 것을 목표로 하고 있습니다.</p></section>
+<hr class="sep">
+<section id="features" class="section"><h2>한국어화 작업 범위</h2>
+<div class="scope">
+<article><strong>스토리·대사</strong><p>본편 이벤트 대사, 선택지와 컨택, 주요 인물별 말투·고유명사·줄바꿈 및 띄어쓰기 검수</p></article>
+<article><strong>메뉴·시스템</strong><p>아이템·이름·설명, 전투 메뉴와 이름 카드, 상점·월드맵 등 UI 및 한글 글리프 작업</p></article>
+<article><strong>타이틀·영상</strong><p>메인 타이틀 다섯 변형의 한국어 그래픽, 오프닝 F0142와 F0157 영상의 한국어 표현·자막</p></article>
+</div><p class="muted">영상 자막은 현재 확인된 적용 범위를 기재했습니다. 모든 게임 내 영상의 한국어 자막이 완료됐다는 뜻은 아닙니다.</p></section>
+<hr class="sep">
+<section id="progress" class="section"><h2>현재 검수 현황</h2>
+<div class="qa">
+<p><b>정적 통합 QA:</b> 최신 개발 빌드 기준 PASS · 427개 Stage 파일 readback 불일치 0</p>
+<p><b>디스크 구조:</b> LBA·인덱스·폰트·글리프, Mode2 Form1 EDC/ECC 검사 PASS</p>
+<p><b>패치 준비:</b> 일본판 Rev 1 원본에 대한 Xdelta 왕복 검증 PASS</p>
+<p><b>런타임:</b> 최신 수정분 게임 내 재확인 필요 · 최종 배포 승인 전</p>
+</div>
+<p class="muted">남은 확인: 전투 HUD·컨택 이름 표시, 월드맵 일부 글리프와 장비 항목 미번역, 타이틀 전환 연출, 영상 재생 및 진행 중 프리징 회귀 검수. 실제 런타임 통과 후 최종 배포본을 확정할 예정입니다.</p>
+</section>
+<hr class="sep">
+<section id="source" class="section"><h2>원본 이미지 기준</h2>
+<div class="hash"><label>원본 대상 파일 · Japan Rev 1</label><code>Persona 2 - Tsumi - Innocent Sin (Japan) (Rev 1).bin</code><label>원본 SHA-256</label><code>a129b3bdd884aafe26be8ed52258d3fa40d126ff5fe5891b7c90bf88c6dd28d6</code></div>
+<p class="muted">원본과 버전이 다른 디스크에는 패치가 정상 적용되지 않을 수 있습니다. v0.5b의 배포 ZIP/Xdelta 체크섬은 최종 패키지 확정 후 별도로 공개합니다.</p></section>
+<hr class="sep">
+<section id="release" class="section"><h2>v0.5b 패치 다운로드</h2>
+<div class="download"><div class="release">RELEASE PREPARATION / v0.5b</div><h3>배포 준비 중</h3>
+<p>현재 웹페이지는 미리보기입니다. 게임 내 테스트가 완료되기 전까지 다운로드 링크를 열지 않습니다.</p>
+<span class="unavailable" aria-disabled="true">다운로드 준비 중</span>
+</div></section>
+<hr class="sep">
+<section id="notice" class="section"><h2>파일 이용에 관한 권리 및 책임 고지</h2>
+<div class="legal"><p><strong>정식 파일 다운로드가 시작되면 아래 사항을 확인해 주세요.</strong></p>
+<ol type="A">
+<li>해당 기종의 원본 게임 디스크를 정당하게 보유한 이용자의 개인적 이용을 전제로 한국어 패치를 제공합니다.</li>
+<li>앞 항의 조건에 부합하지 않는 이용으로 발생하는 책임은 이용 당사자에게 있으며, 패치 제작자는 그 책임을 지지 않습니다.</li>
+<li>한국어 패치 파일의 무단 재배포를 금하며, 소개할 때는 원본 배포 게시물의 링크를 공유해 주세요.</li>
+<li>배포 글의 본문을 무단 전재하지 말아 주세요. 짧은 발췌·출처를 명시한 인용은 예외입니다.</li>
+<li>패치 파일·패치 적용 게임 이미지의 판매 및 상업적 유통 등 이를 이용한 금전적 이득을 금지합니다.</li>
+<li>앞 항목의 위반이나 권리자·기관의 요청 등이 발생할 경우 배포를 중단하거나 비공개 처리할 수 있습니다.</li>
+</ol><p class="muted">원본 게임 이미지 및 패치 적용 이미지 전체는 배포하지 않습니다. 본 페이지의 게임·브랜드 관련 권리는 각 권리자에게 있습니다.</p></div>
+</section>
+</div></main>
+<footer><span>한마루 한글화 작업소</span><span>PERSONA 2: INNOCENT SIN / PLAYSTATION</span></footer>
+</body></html>
