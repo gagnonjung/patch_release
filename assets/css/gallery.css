@@ -53,6 +53,8 @@ a.game-card:hover{transform:translateY(-2px)}
 .thumb-frame{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#111}
 .thumb-frame>img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .2s ease}
 .mgs-thumb>img{object-position:center 31%}
+.persona-thumb{background:radial-gradient(circle at 50% 38%,#59405f 0%,#34283e 40%,#141b2a 100%)}
+.persona-thumb>img{object-fit:contain!important;padding:8px 12px}
 .slayers-thumb{background:#111}
 .slayers-thumb>img{object-fit:cover;object-position:center 48%;transform:scale(1.12)}
 a.game-card:hover .thumb-frame>img{transform:scale(1.02)}
