@@ -1,28 +1,40 @@
-/* Getter Robo Daikessen — streamlined release layout (2026-10-10) */
-body.getter-page{background:#101522;color:#e8e9f0}
-.getter-page .scanlines,.getter-page .hero-grid,.getter-page .getter-video-bg,.getter-page .getter-video-dim{display:none!important}
-.getter-page .site-header{background:#161c2bdc;backdrop-filter:blur(15px);border-bottom:1px solid #354056}
-.getter-page main{max-width:1160px;margin:0 auto}
-.getter-page .getter-hero{min-height:auto!important;background:linear-gradient(135deg,#202945,#141b2d 62%,#111627)!important;border:1px solid #36425e;border-radius:24px;margin:30px 22px 22px;padding:48px 5%!important;display:flex;flex-wrap:wrap;gap:24px;align-items:center;box-shadow:0 18px 55px #04091045}
-.getter-page .getter-hero-visual{position:relative!important;inset:auto!important;transform:none!important;min-height:190px;flex:1 1 300px;background:none!important}
-.getter-page .getter-logo-slot{position:static!important;transform:none!important;max-width:100%!important}
-.getter-page .getter-logo-slot img{max-width:100%;height:auto;object-fit:contain}
-.getter-page .getter-hero-copy{position:relative!important;inset:auto!important;transform:none!important;flex:1 1 370px;max-width:none!important;padding:0!important;margin:0!important;text-align:left!important}
-.getter-page .getter-hero .kicker{color:#c7b2e4;letter-spacing:.13em}
-.getter-page .getter-hero .hero-description{max-width:62ch;line-height:1.8;color:#d1d5e2}
-.getter-page .getter-hero .status-row{display:flex;flex-wrap:wrap;gap:9px}
-.getter-page .getter-hero .status-row span{border:1px solid #4d5774;border-radius:50px;padding:6px 10px;font-size:11px}
-.getter-page .major-section{margin:20px 22px!important;border:1px solid #2f394f;border-radius:20px;background:#171e2d;padding:34px clamp(20px,4vw,48px)!important}
-.getter-page .section-index{color:#baa8db}
-.getter-page .major-section h2{font-size:clamp(24px,3vw,34px);letter-spacing:-.03em}
-.getter-page .game-intro-grid,.getter-page .download-section{gap:24px}
-.getter-page .prologue-card,.getter-page .game-facts,.getter-page .release-card,.getter-page .required-originals,.getter-page .release-notes-grid article,.getter-page .patch-scope-card,.getter-page .subsection-block{border-radius:15px}
-.getter-page .getter-dev-story-grid,.getter-page .getter-compare-grid{gap:14px}
-.getter-page .getter-page-facts{margin-top:16px}
-.getter-page .getter-disclaimer{border:1px solid #4e5971;border-radius:14px;padding:24px;background:#111827}
-.getter-page .getter-disclaimer ol{padding-left:1.6em;margin:15px 0 0;display:grid;gap:14px;line-height:1.8}
-.getter-page .getter-disclaimer li{padding-left:.35em;overflow-wrap:anywhere}
-.getter-page .getter-disclaimer .lead{color:#d5c3ef;font-weight:700}
-.getter-page .required-originals code,.getter-page .hash-block code{overflow-wrap:anywhere;word-break:break-all}
-.getter-page .getter-hero .hero-actions{justify-content:flex-start}
-@media(max-width:720px){.getter-page .getter-hero{padding:27px 20px!important;margin:12px}.getter-page .major-section{margin:12px!important;padding:24px 17px!important}.getter-page .getter-hero-visual{min-height:115px}.getter-page .getter-hero-copy{flex-basis:100%}}
+/* Getter Robo layout v2 — distinct image-led release treatment */
+body.getter-page{background:#0e1321!important;color:#edf0f6!important;font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif!important}
+.getter-page .scanlines,.getter-page .getter-video-bg,.getter-page .getter-video-dim,.getter-page .hero-grid{display:none!important}
+.getter-page .site-header{background:#101728!important;border-bottom:1px solid #38445f!important;position:sticky;top:0;z-index:20;backdrop-filter:blur(14px)}
+.getter-page main{max-width:1100px!important;margin:0 auto!important}
+.getter-page .getter-hero{position:relative!important;display:flex!important;flex-direction:column!important;justify-content:flex-end!important;align-items:flex-start!important;min-height:610px!important;margin:22px 18px 0!important;padding:40px clamp(24px,5vw,58px)!important;border-radius:22px!important;overflow:hidden!important;background:linear-gradient(90deg,#101726 0%,#101726ee 35%,#10172655 76%),url('../images/getter/getter-cover-20260909.svg') right center/auto 100% no-repeat,#141b2a!important;border:1px solid #3b4a69!important;box-shadow:0 18px 56px #0005!important}
+.getter-page .getter-hero::after{content:"PLAYSTATION  /  KOREAN PATCH";position:absolute;top:35px;left:45px;letter-spacing:.24em;font-size:11px;color:#c4b0df;z-index:2}
+.getter-page .getter-hero-visual{position:relative!important;inset:auto!important;transform:none!important;display:block!important;width:min(440px,90%)!important;min-height:auto!important;margin:0 0 30px!important;background:none!important;z-index:2}
+.getter-page .getter-hero-visual .getter-platform-strip{display:none!important}
+.getter-page .getter-logo-slot{position:relative!important;inset:auto!important;transform:none!important;width:100%!important;max-width:100%!important;background:none!important}
+.getter-page .getter-logo-slot img{width:100%!important;max-width:100%!important;height:auto!important;filter:drop-shadow(0 8px 15px #0006)}
+.getter-page .getter-hero-copy{position:relative!important;inset:auto!important;transform:none!important;display:block!important;width:min(640px,100%)!important;max-width:none!important;flex:none!important;padding:0!important;margin:0!important;text-align:left!important;z-index:2}
+.getter-page .getter-hero-copy .kicker{color:#cab8e4!important;letter-spacing:.16em!important;font-size:12px!important}
+.getter-page .getter-hero-copy .hero-description{font-size:16px!important;line-height:1.9!important;color:#e4e4ed!important;text-shadow:0 1px 3px #000}
+.getter-page .getter-hero .hero-actions{justify-content:flex-start!important;margin:24px 0!important}
+.getter-page .getter-hero .button{border-radius:10px!important;padding:12px 20px!important}
+.getter-page .getter-hero .status-row{display:flex!important;justify-content:flex-start!important;flex-wrap:wrap!important;gap:9px!important}
+.getter-page .getter-hero .status-row span{background:#1b253b!important;border:1px solid #52617b!important;border-radius:40px!important;padding:6px 12px!important;font-size:11px!important;color:#d1d8e7!important}
+.getter-page .major-section{position:relative!important;margin:18px!important;padding:40px clamp(22px,4vw,48px)!important;background:#171f30!important;border:1px solid #303e58!important;border-radius:20px!important;box-shadow:none!important;max-width:none!important}
+.getter-page .major-section h2{font-size:clamp(25px,3.1vw,36px)!important;letter-spacing:-.03em!important;margin-bottom:22px!important}
+.getter-page .section-index{font-size:11px!important;letter-spacing:.15em!important;color:#cab3ed!important}
+.getter-page .game-intro-grid{display:grid!important;grid-template-columns:1.3fr .8fr!important;gap:24px!important;align-items:start!important}
+.getter-page .game-intro-grid .prologue-card{grid-column:1!important;grid-row:1/3!important}
+.getter-page .game-intro-grid .getter-package-shot{grid-column:2!important;grid-row:1!important}
+.getter-page .game-intro-grid .game-facts{grid-column:2!important;grid-row:2!important}
+.getter-page .prologue-card,.getter-page .game-facts,.getter-page .release-notes-grid article,.getter-page .patch-scope-card,.getter-page .download-section .release-card,.getter-page .subsection-block{border-radius:15px!important}
+.getter-page .getter-dev-story,.getter-page .getter-secret-section{display:none!important}
+.getter-page .getter-overview-copy{max-width:720px!important}
+.getter-page .patch-scope-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:15px!important}
+.getter-page .patch-scope-card{background:#111827!important;border:1px solid #374660!important;overflow:hidden}
+.getter-page .patch-scope-media img{width:100%;height:165px;object-fit:cover}
+.getter-page .release-notes-grid article:not(:first-child){display:none!important}
+.getter-page .required-originals,.getter-page .release-card{background:#111a2c!important;border:1px solid #465777!important}
+.getter-page .source-grid code,.getter-page .hash-block code{overflow-wrap:anywhere!important;word-break:break-all!important;font-size:12px!important}
+.getter-page .getter-disclaimer{border:1px solid #485777!important;border-radius:15px!important;padding:27px!important;background:#101829!important}
+.getter-page .getter-disclaimer ol{padding-left:1.5em!important;display:grid!important;gap:15px!important;line-height:1.85!important}
+.getter-page .getter-disclaimer li{overflow-wrap:anywhere}
+.getter-page .getter-disclaimer .lead{color:#e1ccef!important;font-weight:700}
+.getter-page footer{background:#101728!important}
+@media(max-width:790px){.getter-page .getter-hero{min-height:570px!important;background:linear-gradient(0deg,#111727 6%,#111727d9 45%,#11172744 100%),url('../images/getter/getter-cover-20260909.svg') center top/100% auto no-repeat,#111727!important;padding:70px 22px 25px!important;margin:12px!important}.getter-page .getter-hero::after{left:24px;top:24px}.getter-page .major-section{margin:12px!important;padding:28px 20px!important}.getter-page .game-intro-grid{display:block!important}.getter-page .game-intro-grid>*{margin-bottom:20px!important}.getter-page .patch-scope-grid{grid-template-columns:1fr!important}}
