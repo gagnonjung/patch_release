@@ -6,16 +6,23 @@
 :root{--theme-accent:#d18a86}
 body{background:linear-gradient(180deg,#25191f 0,#101520 650px)!important}
 .shell{border-color:#37435e!important;box-shadow:0 14px 50px #0003!important}
-.hero-art{height:clamp(225px,34vw,350px)!important;position:relative!important;overflow:hidden!important;border:0!important;border-bottom:1px solid #414a5e!important;background:url('../assets/images/getter/getter-cover-20260909.svg') center 38%/cover no-repeat,#25191f!important}
-.hero-art::before,.hero-art::after{content:none!important;display:none!important}
+.hero-banner{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(260px,.88fr);gap:clamp(22px,4vw,48px);align-items:center;padding:clamp(26px,4.5vw,50px);background:linear-gradient(118deg,#301d25 0%,#232331 58%,#1b2432 100%);border-bottom:1px solid #4c4351;min-height:390px}
+.hero-banner .hero-copy{min-width:0;text-align:left}
+.hero-banner .eyebrow{font-size:12px;line-height:1.5;color:#e7c3c0!important;letter-spacing:.11em;font-weight:700}
+.hero-banner h1{font-size:clamp(30px,3.8vw,42px);line-height:1.18;letter-spacing:-.045em;margin:12px 0 6px}
+.hero-banner .english{font-size:18px;line-height:1.4;color:#d5dae7;margin:0 0 20px}
+.hero-banner .pills{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+.hero-banner .pills span{border:1px solid #746475!important;background:#332b3a;color:#e6e8f0;border-radius:999px;padding:5px 11px;font-size:12px}
+.hero-banner .lead{font-size:15px;line-height:1.85;color:#e0e3ed;margin:0 0 23px;max-width:52ch}
+.hero-banner .action{background:var(--theme-accent)!important;color:#171820!important;border-radius:10px}
+.hero-cover{margin:0;min-width:0;display:flex;align-items:center;justify-content:center;align-self:stretch;padding:16px;border:1px solid #544752;background:#171d2a;border-radius:15px;box-shadow:0 12px 30px #0004}
+.hero-cover img{display:block;width:100%;height:auto;max-height:350px;object-fit:contain}
 .eyebrow,.release{color:var(--theme-accent)!important}
-.action,.series-link a[aria-current="page"]{background:var(--theme-accent)!important;color:#111827!important}
-.pills span{border-color:#59647e!important}
 .download{border:1px solid #596781!important;background:#283248!important}
-@media(max-width:680px){.hero-art{height:225px!important;background-position:center 35%!important}}
+@media(max-width:760px){.hero-banner{grid-template-columns:minmax(0,1fr);gap:25px;padding:28px 22px;min-height:0}.hero-cover{width:min(100%,380px);margin:0 auto;align-self:auto;padding:14px}.hero-cover img{max-height:340px}.hero-banner h1{font-size:clamp(29px,8vw,38px)}}
 </style></head>
 <body><nav><div class="nav-inner"><a class="brand" href="../index.html">HANMARU <span> / KOREAN PATCH ARCHIVE</span></a><div class="links"><a href="#game">게임 정보</a><a href="#patch">패치 내용</a><a href="#hash">원본 파일</a><a href="#download">다운로드</a><a href="#notice">이용 고지</a></div></div></nav>
-<main class="shell"><div class="hero-art" role="img" aria-label="겟타로보 대결전! 패키지 일러스트"></div><div class="body"><header class="hero-copy"><div class="eyebrow">PLAYSTATION · KOREAN LOCALIZATION</div><h1>겟타로보 대결전!</h1><p class="english">Getter Robo Daikessen!</p><div class="pills"><span>PS1</span><span>Japan</span><span>v1.12</span><span>2026.10.07</span></div><p class="lead">스토리·전투 대사부터 메뉴와 시스템 UI, 그래픽, 오프닝 및 영상 자막까지 한국어화한 비공식 팬 패치입니다.</p><a href="#download" class="action">패치 다운로드 ↓</a></header>
+<main class="shell"><section class="hero-banner" aria-label="겟타로보 대결전 한국어 패치"><header class="hero-copy"><div class="eyebrow">PLAYSTATION · KOREAN LOCALIZATION</div><h1>겟타로보 대결전!</h1><p class="english">Getter Robo Daikessen!</p><div class="pills"><span>PS1</span><span>Japan</span><span>v1.12</span><span>2026.10.07</span></div><p class="lead">스토리·전투 대사부터 메뉴와 시스템 UI, 그래픽, 오프닝 및 영상 자막까지 한국어화한 비공식 팬 패치입니다.</p><a href="#download" class="action">패치 다운로드 ↓</a></header><figure class="hero-cover"><img src="../assets/images/getter/getter-cover-20260909.svg" alt="겟타로보 대결전! 일본판 PlayStation 커버" loading="eager"></figure></section><div class="body">
 <hr class="sep"><section id="game" class="section"><h2>게임 정보</h2><div class="grid"><div class="fact"><span>게임명</span><strong>겟타로보 대결전!</strong></div><div class="fact"><span>플랫폼</span><strong>Sony PlayStation</strong></div><div class="fact"><span>장르</span><strong>전술 시뮬레이션 RPG</strong></div><div class="fact"><span>개발</span><strong>TechnoSoft</strong></div><div class="fact"><span>유통</span><strong>Bandai Visual</strong></div><div class="fact"><span>발매일</span><strong>1999년 9월 9일</strong></div></div><p class="muted">다양한 시대의 겟타로보와 파일럿이 등장하는 크로스오버 작품입니다. 사오토메 연구소의 견습 파일럿이 되어 턴제 전투와 이벤트를 진행합니다.</p></section>
 <hr class="sep"><section id="patch" class="section"><h2>한국어화 주요 내용</h2><div class="scope"><article><img src="../assets/images/getter/getter-title-20260909.svg" alt="한국어 타이틀"><div class="caption"><strong>이미지·그래픽</strong><p>타이틀, 에피소드 제목, 결과 화면, 이름 입력 UI</p></div></article><article><img src="../assets/images/getter/getter-battle-20260909.svg" alt="한국어 전투 화면"><div class="caption"><strong>대사·시스템</strong><p>스토리·전투 대사, 메뉴, 기술명, 선택지</p></div></article><article><img src="../assets/images/getter/getter-subtitle-20260909.svg" alt="한국어 영상 자막"><div class="caption"><strong>영상 자막</strong><p>오프닝과 본편 영상, 다음 화 예고</p></div></article></div><p class="muted"><strong>v1.12 변경 사항:</strong> 제9화 및 제15화 분기의 누락된 에피소드 제목 이미지 3건을 한국어화했습니다. 이전 버전의 한국어 이름 입력과 숨겨진 <strong>겐키</strong> 조건은 유지됩니다. 신규 제목 이미지의 해당 장면 실기 검증은 아직 대기 중입니다.</p></section>
 <hr class="sep"><section class="section"><h2>패치 제작 및 테스트</h2><div class="grid"><div class="fact"><span>분석</span><strong>ChatGPT Codex</strong></div><div class="fact"><span>번역 · 그래픽</span><strong>한마루</strong></div><div class="fact"><span>검수</span><strong>한마루</strong></div><div class="fact"><span>테스트</span><strong>PlayStation 실기 확인 (v1.1) · DuckStation 최신 버전</strong></div></div><p class="muted">v1.12: 전체 VFS readback, EXE 동기화, EDC/ECC 및 Xdelta 재적용 정적 검증 통과. 다른 에뮬레이터·기기에서의 정상 동작까지 보증하지는 않습니다.</p></section>
