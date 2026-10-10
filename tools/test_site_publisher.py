@@ -56,6 +56,22 @@ class SitePublisherTest(unittest.TestCase):
         self.assertTrue(file.is_file())
         self.assertEqual([], audit_page(file.read_text(encoding="utf-8")))
 
+    def test_coffee_banner_on_all_pages_and_generated_template(self):
+        root = Path(__file__).resolve().parent.parent
+        expected_url = 'href="https://litt.ly/hanmaru"'
+        expected_icon = 'bmc-yellow-button-941f96a1.png'
+        for name in ("getter-robo-daikessen/index.html", "slayers-royal/index.html",
+                     "persona-2-innocent-sin/index.html", "zelda-mm/index.html", "patch.html"):
+            with self.subTest(name=name):
+                text = (root / name).read_text(encoding="utf-8")
+                self.assertEqual(1, text.count(expected_url))
+                self.assertEqual(1, text.count(expected_icon))
+                self.assertEqual(1, text.count("support-banner.css?v=20261010"))
+        sample = render_page(validate(self.data))
+        self.assertEqual(1, sample.count(expected_url))
+        self.assertEqual(1, sample.count(expected_icon))
+        self.assertEqual(1, sample.count("support-banner.css?v=20261010"))
+
     def test_invalid_fields(self):
         for val in ("../danger", "a/b", "UPPER", "", "a..b"):
             with self.subTest(val=val):

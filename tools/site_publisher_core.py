@@ -186,8 +186,8 @@ def render_page(data: dict, images: dict[str, str] | None = None) -> str:
     return f"""<!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="{h(d['title_ko'])} 한국어 패치 {h(d['patch_version'])} 안내">
-<title>{h(d['title_ko'])} — 한국어 패치 {h(d['patch_version'])}</title><style>{STYLES}</style></head>
-<body><nav class="nav"><div class="nav-inner"><a href="../index.html">한마루 한글화 작업소</a><a href="#release">패치 다운로드</a></div></nav>
+<title>{h(d['title_ko'])} — 한국어 패치 {h(d['patch_version'])}</title><style>{STYLES}</style><link rel="stylesheet" href="../assets/css/support-banner.css?v=20261010"></head>
+<body><nav class="nav"><div class="nav-inner"><a href="../index.html">한마루 한글화 작업소</a><a href="#release">패치 다운로드</a><a class="support-coffee" href="https://litt.ly/hanmaru" target="_blank" rel="noopener noreferrer" aria-label="후원하기"><img src="https://www.owlstown.com/assets/icons/bmc-yellow-button-941f96a1.png" alt="후원하기" loading="eager"></a></div></nav>
 <main class="shell"><section class="hero"><div><span class="eyebrow">{h(d['platform']).upper()} · KOREAN LOCALIZATION</span>
 <h1>{h(d['title_ko'])}</h1><p class="subtitle">{h(d['title_en'])}</p>
 <div class="pills"><span>{h(d['region'])}</span><span>{h(d['patch_version'])}</span><span>{h(d['status'])}</span></div>

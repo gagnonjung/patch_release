@@ -1,0 +1,6 @@
+/* Shared detail-page support banner (same asset and URL as index.html). */
+.nav-inner .support-coffee{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;padding:0;border:0;background:transparent;line-height:0;text-decoration:none;box-shadow:none}
+.nav-inner .support-coffee:hover{border:0;background:transparent}
+.nav-inner .support-coffee img{display:block;width:auto;height:34px;max-width:160px;object-fit:contain}
+.nav-inner .support-coffee:focus-visible{outline:2px solid #f5d3e1;outline-offset:4px;border-radius:4px}
+@media(max-width:760px){.nav-inner .support-coffee img{height:30px}.nav-inner .support-coffee{margin-inline:auto}}
