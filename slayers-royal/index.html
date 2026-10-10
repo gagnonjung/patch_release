@@ -25,6 +25,27 @@
     .slayers-page .slayers-release-cover{margin:0;min-width:0;align-self:stretch;display:flex;align-items:center;justify-content:center;padding:16px;border:1px solid #735763;background:#171d2a;border-radius:15px;box-shadow:0 12px 30px #0004}
     .slayers-page .slayers-release-cover img{display:block;width:100%;height:auto;max-height:350px;object-fit:contain}
     @media(max-width:760px){.slayers-page .slayers-release-banner{grid-template-columns:minmax(0,1fr)!important;gap:25px;margin:16px 12px 24px;padding:28px 22px;min-height:0}.slayers-page .slayers-release-cover{width:min(100%,380px);margin:0 auto;align-self:auto;padding:14px}.slayers-page .slayers-release-cover img{max-height:340px}}
+
+    /* Shared, seamless release-frame layout: matches Getter/MGS/Zelda pages. */
+    .slayers-page main#top.slayers-page-shell{display:block;width:min(980px,calc(100% - 40px));max-width:980px;min-width:0;margin:28px auto 55px;background:#1b2231;border:1px solid #37435e;border-radius:22px;overflow:hidden;box-shadow:0 24px 60px #0003}
+    .slayers-page main#top.slayers-page-shell > .slayers-release-banner{width:100%;max-width:none;margin:0!important;min-height:390px;border:0;border-bottom:1px solid #414a5e;border-radius:0;box-shadow:none}
+    .slayers-page main#top.slayers-page-shell > .section{box-sizing:border-box;width:100%;max-width:none;min-width:0;margin:0;padding:36px clamp(20px,5.5vw,62px) 28px;border:0;background:transparent;box-shadow:none}
+    .slayers-page main#top.slayers-page-shell > .section + .section{border-top:1px solid #414a5e}
+    .slayers-page main#top.slayers-page-shell > .section h2{font-size:clamp(23px,3vw,32px);font-weight:600;line-height:1.3;letter-spacing:-.025em;margin:8px 0 22px}
+    .slayers-page main#top.slayers-page-shell > .section .subsection-title{font-size:clamp(22px,2.6vw,30px)}
+    .slayers-page main#top.slayers-page-shell > .section .game-intro-tagline{margin:0 0 24px}
+    .slayers-page main#top.slayers-page-shell .slayers-section::before{display:none}
+    .slayers-page main#top.slayers-page-shell .slayers-intro-grid{grid-template-columns:minmax(0,1fr) minmax(180px,.55fr);gap:24px}
+    .slayers-page main#top.slayers-page-shell .slayers-intro-grid > .prologue-card{grid-column:1;grid-row:1 / 3}
+    .slayers-page main#top.slayers-page-shell .slayers-intro-grid > .slayers-reference-shot{grid-column:2;grid-row:1}
+    .slayers-page main#top.slayers-page-shell .slayers-intro-grid > .game-facts{grid-column:2;grid-row:2}
+    @media(max-width:760px){
+      .slayers-page main#top.slayers-page-shell{width:100%;max-width:none;margin:0 auto 24px;border-left:0;border-right:0;border-radius:0}
+      .slayers-page main#top.slayers-page-shell > .slayers-release-banner{margin:0!important;padding:28px 22px;min-height:0}
+      .slayers-page main#top.slayers-page-shell > .section{padding:30px 22px 22px}
+      .slayers-page main#top.slayers-page-shell .slayers-intro-grid{display:block}
+      .slayers-page main#top.slayers-page-shell .slayers-intro-grid > *{margin-bottom:20px}
+    }
   </style>
 </head>
 <body class="slayers-page">
@@ -44,7 +65,7 @@
     </nav>
   </header>
 
-  <main id="top">
+  <main id="top" class="slayers-page-shell">
     <section class="slayers-release-banner" aria-label="슬레이어즈 로얄 한국어 패치 소개">
       <header class="slayers-release-copy">
         <p class="slayers-release-eyebrow">SEGA SATURN · KOREAN LOCALIZATION</p>
