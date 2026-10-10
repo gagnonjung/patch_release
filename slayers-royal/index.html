@@ -8,6 +8,24 @@
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../assets/css/platform-saturn.css?v=20261007" />
   <link rel="stylesheet" href="../assets/css/slayers-royal.css?v=20261008-video3" />
+  <style id="slayers-release-split-20261010">
+    .slayers-page{background:linear-gradient(180deg,#32202b 0%,#151a27 700px)!important}
+    .slayers-page .scanlines{display:none!important}
+    .slayers-page .slayers-release-banner{display:grid!important;grid-template-columns:minmax(0,1.12fr) minmax(250px,.88fr);gap:clamp(22px,4vw,48px);align-items:center;max-width:980px;min-height:390px;margin:26px auto 30px;padding:clamp(26px,4.5vw,50px);background:linear-gradient(118deg,#412632 0%,#262337 60%,#1d2535 100%);border:1px solid #67505d;border-radius:20px;box-shadow:0 14px 50px #0004;box-sizing:border-box}
+    .slayers-page .slayers-release-copy{min-width:0;text-align:left}
+    .slayers-page .slayers-release-eyebrow{font-size:12px;line-height:1.5;color:#f1c6a9;letter-spacing:.11em;font-weight:700;margin:0}
+    .slayers-page .slayers-release-copy h1{color:#f4edf1;font-size:clamp(30px,3.8vw,42px);line-height:1.2;letter-spacing:-.045em;margin:12px 0 6px}
+    .slayers-page .slayers-release-english{font-size:18px;line-height:1.4;color:#d5dae7;margin:0 0 20px}
+    .slayers-page .slayers-release-pills{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+    .slayers-page .slayers-release-pills span{border:1px solid #806977;background:#ffffff0b;color:#e6e8f0;border-radius:999px;padding:5px 11px;font-size:12px}
+    .slayers-page .slayers-release-lead{font-size:15px;line-height:1.85;color:#e5e3ed;margin:0 0 23px;max-width:52ch}
+    .slayers-page .slayers-release-action{display:inline-flex;align-items:center;justify-content:center;padding:12px 21px;background:#e5b292;color:#171820;border-radius:10px;text-decoration:none;font-size:14px;font-weight:800}
+    .slayers-page .slayers-release-action:hover{background:#f4cba8}
+    .slayers-page .slayers-release-note{font-size:12px;color:#c5b9c7;line-height:1.65;margin:16px 0 0}
+    .slayers-page .slayers-release-cover{margin:0;min-width:0;align-self:stretch;display:flex;align-items:center;justify-content:center;padding:16px;border:1px solid #735763;background:#171d2a;border-radius:15px;box-shadow:0 12px 30px #0004}
+    .slayers-page .slayers-release-cover img{display:block;width:100%;height:auto;max-height:350px;object-fit:contain}
+    @media(max-width:760px){.slayers-page .slayers-release-banner{grid-template-columns:minmax(0,1fr)!important;gap:25px;margin:16px 12px 24px;padding:28px 22px;min-height:0}.slayers-page .slayers-release-cover{width:min(100%,380px);margin:0 auto;align-self:auto;padding:14px}.slayers-page .slayers-release-cover img{max-height:340px}}
+  </style>
 </head>
 <body class="slayers-page">
   <div class="scanlines" aria-hidden="true"></div>
@@ -27,29 +45,19 @@
   </header>
 
   <main id="top">
-    <section class="hero slayers-hero">
-      <div class="slayers-hero-bg" aria-hidden="true">
-        <iframe src="https://www.youtube-nocookie.com/embed/1ANzwLcsB4Q?autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=1ANzwLcsB4Q&amp;playsinline=1&amp;rel=0&amp;modestbranding=1" title="" tabindex="-1" allow="autoplay; encrypted-media" loading="eager"></iframe>
-      </div>
-      <div class="slayers-hero-dim" aria-hidden="true"></div>
-      <div class="hero-grid" aria-hidden="true"></div>
-
-      <div class="slayers-hero-card">
-        <div class="slayers-platform-strip"><span class="saturn-logo saturn-logo-hero" aria-hidden="true"></span><b>SEGA SATURN / JAPAN</b></div>
-        <div class="slayers-title-lockup">
-          <img src="../assets/images/slayers-royal/slayers-royal-logo-hygothic.png" alt="슬레이어즈 로얄 한글 로고" />
-        </div>
-      </div>
-
-      <div class="hero-copy slayers-hero-copy">
-        <p class="kicker">SEGA SATURN / KOREAN PATCH / v1.0</p>
-        <div class="hero-actions">
-          <a class="button primary patch-cta" href="#release"><span class="update-dot" aria-hidden="true"></span><span>패치 받기</span><span class="update-badge">v1.0</span></a>
-          <a class="button ghost" href="#features">패치 범위</a>
-        </div>
-        <p class="hero-description">세가 새턴판 <b>《슬레이어즈 로얄》</b>의 본편 대사와 장소·전투 UI, 타이틀·로딩 그래픽, 주문명과 이름 카드, 오프닝을 포함한 영상 자막, 그리고 보너스 메뉴·무비·설명 화면·사운드 모드·미니게임 UI까지 한국어화한 패치입니다. 본편 기준선은 세가 새턴 실기에서 기동 및 플레이 테스트를 진행했으며, v1.0에서 추가된 최신 보너스 UI 수정분은 별도 실기 검수가 남아 있습니다.</p>
-        <div class="status-row"><span>PLATFORM / SEGA SATURN</span><span>REGION / JAPAN</span><span class="status-active">STATUS / v1.0</span><span>HARDWARE / BASELINE TESTED</span><span>RELEASE / 2026.10.10</span></div>
-      </div>
+    <section class="slayers-release-banner" aria-label="슬레이어즈 로얄 한국어 패치 소개">
+      <header class="slayers-release-copy">
+        <p class="slayers-release-eyebrow">SEGA SATURN · KOREAN LOCALIZATION</p>
+        <h1>슬레이어즈 로얄</h1>
+        <p class="slayers-release-english">Slayers Royal</p>
+        <div class="slayers-release-pills"><span>SEGA SATURN</span><span>Japan</span><span>v1.0</span><span>2026.10.10</span></div>
+        <p class="slayers-release-lead">본편 대사와 전투·메뉴 UI, 타이틀·그래픽, 영상 자막, 보너스 메뉴까지 한국어화한 비공식 팬 패치입니다.</p>
+        <a class="slayers-release-action" href="#release">패치 다운로드 ↓</a>
+        <p class="slayers-release-note">본편 기준선은 세가 새턴 실기에서 테스트했으며, v1.0의 최신 보너스 UI 수정분은 별도 실기 검수가 남아 있습니다.</p>
+      </header>
+      <figure class="slayers-release-cover">
+        <img src="../assets/images/slayers-royal/slayers-royal-cover-white.jpg" alt="슬레이어즈 로얄 일본판 세가 새턴 패키지" loading="eager">
+      </figure>
     </section>
 
     <section id="game-intro" class="section major-section slayers-section game-intro-section">
