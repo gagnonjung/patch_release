@@ -107,12 +107,12 @@ body{background:linear-gradient(180deg,#2d2334 0,#101520 650px)!important}
 <div class="download">
 <div class="release">v1.0 · 2026.10.10 · 세가 새턴</div>
 <h3 class="filename">Slayers Royal (Korea) [v1.0 2026-10-10-12] PATCH.zip</h3>
-<div class="patch-meta"><div><span>크기</span><strong>82,113,563 bytes</strong></div><div><span>형식</span><strong>XDELTA / BIN-CUE</strong></div></div>
+<div class="patch-meta"><div><span>크기</span><strong>82,453,836 bytes</strong></div><div><span>형식</span><strong>XDELTA / BIN-CUE</strong></div></div>
 <a class="action release-link" href="https://drive.google.com/file/d/13Xcl9KhkL-4kkKzxD0gKL2gbiiTQjn25/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Google Drive에서 패치 받기 ↗</a>
-<p class="muted">압축 파일에는 Xdelta, CUE, 적용 안내와 패치 내역이 포함됩니다. 원본 게임 이미지는 포함하지 않습니다.</p>
+<p class="muted">압축 파일에는 자동 적용용 BAT·PowerShell 스크립트, Xdelta 3.2.0 실행 파일과 라이선스, CUE, 적용 안내와 패치 내역이 포함됩니다. 원본 게임 이미지는 포함하지 않습니다.</p>
 </div>
 <div class="hash">
-<div class="hash-row"><label>배포 ZIP · SHA-256</label><code>def094d9bbfdb824e624dbc107908c378758497150255acd8dbc918fda7a3b27</code></div>
+<div class="hash-row"><label>배포 ZIP · SHA-256</label><code>96c0ab43d8ac3f4379a657a55af17bcfe3f55dc142e264891226511b93f31f98</code></div>
 <div class="hash-row"><label>Xdelta · SHA-256</label><code>2e85c9253c9189e4397aa0810c1b443e2deacee4d449522982009c2cbf927494</code></div>
 <div class="hash-row"><label>패치된 Track 1 · SHA-256</label><code>f480293402003ddc6c946551a1475787dc3f09e79aa39c5e1364d9bba475f073</code></div>
 </div>
@@ -121,10 +121,10 @@ body{background:linear-gradient(180deg,#2d2334 0,#101520 650px)!important}
 <section class="section" id="install">
 <h2>패치 적용 방법</h2>
 <ol class="steps">
-<li>배포 ZIP <code>Slayers Royal (Korea) [v1.0 2026-10-10-12] PATCH.zip</code>의 압축을 해제합니다.</li>
-<li>일본판 <code>Slayers Royal (Japan) (Track 1).bin</code>을 준비합니다.</li>
-<li>원본 Track 1을 Source, <code>Slayers Royal (Korea) [v1.0 2026-10-10-12].xdelta</code>를 Patch로 지정하여 <code>Slayers Royal (Korea) (Track 1).bin</code>으로 출력합니다.</li>
-<li>원본 Track 2·3은 데이터 수정 없이 같은 폴더에 복사하고 각각 <code>Slayers Royal (Korea) (Track 2).bin</code>, <code>Slayers Royal (Korea) (Track 3).bin</code>으로 이름을 지정한 뒤 동봉된 <code>Slayers Royal (Korea).cue</code>로 실행합니다.</li>
+<li>배포 ZIP <code>Slayers Royal (Korea) [v1.0 2026-10-10-12] PATCH.zip</code>의 모든 파일을 한 폴더에 압축 해제합니다.</li>
+<li>지원 일본판 원본 <code>Slayers Royal (Japan) (Track 1).bin</code>, <code>(Track 2).bin</code>, <code>(Track 3).bin</code>을 같은 폴더에 준비합니다.</li>
+<li><code>apply_patch.bat</code>를 실행해 원본 Track 1의 경로를 입력하거나 파일을 배치 파일 위로 드래그 앤 드롭합니다. 동봉된 Xdelta가 자동 적용되며, 원본 파일은 수정하지 않습니다.</li>
+<li>패처가 원본 3트랙과 출력 파일의 SHA-256을 검증하고 Track 2·3과 CUE까지 자동 구성합니다. 완료 후 <code>Korea_BIN_CUE</code> 폴더의 <code>Slayers Royal (Korea).cue</code>로 실행하면 됩니다.</li>
 </ol>
 <p class="muted">오탈자·미번역·프리징 등을 발견한 경우 <a href="https://cafe.naver.com/f-e/cafes/16259867/menus/75" target="_blank" rel="noopener noreferrer">검수·제보 게시판 ↗</a>에 발생 화면과 함께 제보해 주세요.</p>
 </section>
