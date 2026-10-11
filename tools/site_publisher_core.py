@@ -70,6 +70,12 @@ DEFAULT = {
     "credits": "한마루", "cover_file": "", "screenshot1": "", "screenshot2": "", "screenshot3": "",
 }
 STYLES = """
+/* Unified red distribution restriction immediately after author/QA information. */
+.section.patch-warning{margin:0 0 24px;padding:18px 21px;border:1px solid #dd5a67;border-radius:12px;background:#301a23;color:#ff959d}
+.section.patch-warning h2{margin:0 0 8px;color:#ff646e;font-size:21px;font-weight:850;line-height:1.35}
+.section.patch-warning p{margin:0;color:#ff9ca3;font-size:14px;font-weight:750;line-height:1.85;overflow-wrap:anywhere}
+@media(max-width:680px){.section.patch-warning{padding:16px 17px}}
+
 :root{--paper:#1d2231;--bg:#101520;--line:#465067;--text:#edf0f5;--sub:#c5ccda;--accent:#e6b9d2}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:linear-gradient(180deg,#302439,#101520 660px);color:var(--text);font:15px/1.75 "Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif}
@@ -199,6 +205,8 @@ def render_page(data: dict, images: dict[str, str] | None = None) -> str:
 {('<hr><section id="qa"><h2>검수·알려진 문제</h2><div class="noticebox">' + h(d['known_issues']) + '</div></section>') if d['known_issues'] else ''}
 {('<hr><section id="original"><h2>지원 원본</h2>' + original + '</section>') if original else ''}
 <hr><section id="release"><h2>패치 다운로드</h2>{download}</section>
+<hr><section id="credits"><h2>제작 및 검수</h2><p>{h(d["credits"])}</p></section>
+<hr><section class="section patch-warning" id="patch-warning" role="note"><h2>경고</h2><p>본 한국어 패치의 임의 변조나 타기종으로의 포팅, 동의 없는 재배포는 허가하지 않습니다. 판매 또한 금지됩니다.</p></section>
 <hr>{html_notice()}</div></main>
 <footer>한마루 한글화 작업소 · {h(d['title_en'])} / {h(d['platform'])}</footer></body></html>
 """

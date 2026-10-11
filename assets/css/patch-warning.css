@@ -1,0 +1,5 @@
+/* Unified red distribution restriction immediately after author/QA information. */
+.section.patch-warning{margin:0 0 24px;padding:18px 21px;border:1px solid #dd5a67;border-radius:12px;background:#301a23;color:#ff959d}
+.section.patch-warning h2{margin:0 0 8px;color:#ff646e;font-size:21px;font-weight:850;line-height:1.35}
+.section.patch-warning p{margin:0;color:#ff9ca3;font-size:14px;font-weight:750;line-height:1.85;overflow-wrap:anywhere}
+@media(max-width:680px){.section.patch-warning{padding:16px 17px}}

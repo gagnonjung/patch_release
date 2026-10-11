@@ -91,6 +91,30 @@ class SitePublisherTest(unittest.TestCase):
         self.assertEqual(1, generated.count('assets/css/patch-history.css?v=20261011'))
         self.assertIn("맞춤법 정리", generated)
 
+    def test_red_warning_below_production_qa_in_all_projects(self):
+        root = Path(__file__).resolve().parent.parent
+        warning = "본 한국어 패치의 임의 변조나 타기종으로의 포팅, 동의 없는 재배포는 허가하지 않습니다. 판매 또한 금지됩니다."
+        stylesheet = (root / "assets/css/patch-warning.css").read_text("utf-8")
+        self.assertIn("color:#ff9ca3", stylesheet)
+        for rel in ("slayers-royal/index.html", "getter-robo-daikessen/index.html",
+                    "persona-2-innocent-sin/index.html", "zelda-mm/index.html",
+                    "zelda-oot/index.html", "zelda-oot-ura/index.html", "patch.html"):
+            with self.subTest(page=rel):
+                page = (root / rel).read_text("utf-8")
+                self.assertEqual(1, page.count('id="patch-warning"'))
+                self.assertEqual(1, page.count(warning))
+                self.assertIn("assets/css/patch-warning.css?v=20261012", page)
+                credit_heads = ("제작 및 검수", "패치 제작 및 테스트",
+                                "제작 및 테스트 정보", "패치 정보 및 테스트")
+                self.assertTrue(any(heading in page[:page.index('id="patch-warning"')]
+                                    for heading in credit_heads))
+                self.assertIn("파일 이용에 관한 권리 및 책임 고지", page)
+        generated = render_page(self.data)
+        self.assertEqual(1, generated.count('id="patch-warning"'))
+        self.assertEqual(1, generated.count(warning))
+        self.assertIn('color:#ff9ca3', generated)
+        self.assertLess(generated.index('id="credits"'), generated.index('id="patch-warning"'))
+
     def test_invalid_fields(self):
         for val in ("../danger", "a/b", "UPPER", "", "a..b"):
             with self.subTest(val=val):
