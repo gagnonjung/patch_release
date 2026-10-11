@@ -115,7 +115,7 @@ class SitePublisherTest(unittest.TestCase):
         self.assertIn('color:#ff9ca3', generated)
         self.assertLess(generated.index('id="credits"'), generated.index('id="patch-warning"'))
 
-    def test_all_patch_download_links_are_disabled(self):
+    def test_all_patch_download_links_are_restored(self):
         root = Path(__file__).resolve().parent.parent
         pages = ("slayers-royal/index.html", "getter-robo-daikessen/index.html",
                  "persona-2-innocent-sin/index.html", "patch.html",
@@ -124,18 +124,18 @@ class SitePublisherTest(unittest.TestCase):
         for page in pages:
             with self.subTest(page=page):
                 html = (root / page).read_text(encoding="utf-8")
-                self.assertNotIn("drive.google.com/file/d/", html)
-                self.assertNotIn("Google Drive 다운로드 ↗", html)
-                self.assertIn("현재 패치 다운로드 링크를 제공하지 않습니다.", html)
+                self.assertEqual(1, html.count("https://drive.google.com/file/d/"))
+                self.assertNotIn("현재 패치 다운로드 링크를 제공하지 않습니다.", html)
                 self.assertIn("id=\"patch-warning\"", html)
+                self.assertIn('class="history"', html)
         released = {**self.data, "status": "배포 중", "patch_filename": "sample.zip",
                     "patch_sha256": "a" * 64,
                     "download_url": "https://drive.google.com/file/d/sample/view"}
         generated = render_page(validate(released))
-        self.assertNotIn("drive.google.com", generated)
-        self.assertNotIn('href="https://drive.google.com', generated)
-        self.assertIn("현재 패치 다운로드 링크를 제공하지 않습니다.", generated)
-        self.assertIn("<h2>패치 배포 안내</h2>", generated)
+        self.assertIn('href="https://drive.google.com/file/d/sample/view"', generated)
+        self.assertIn("<h2>패치 다운로드</h2>", generated)
+        with self.assertRaises(PublishError):
+            validate({**released, "download_url": ""})
 
     def test_invalid_fields(self):
         for val in ("../danger", "a/b", "UPPER", "", "a..b"):
