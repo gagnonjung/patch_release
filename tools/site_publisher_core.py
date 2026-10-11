@@ -39,7 +39,7 @@ FIELDS = {
     "original_sha256": "원본 SHA-256",
     "patch_filename": "배포 ZIP 파일명",
     "patch_sha256": "배포 ZIP SHA-256",
-    "download_url": "다운로드 URL (게시 중단 · 공개하지 않음)",
+    "download_url": "다운로드 URL (Google Drive 등)",
     "credits": "제작·검수",
     "cover_file": "표지 이미지 (로컬 파일)",
     "screenshot1": "화면 예시 1 (로컬 파일)",
@@ -147,7 +147,7 @@ def validate(data: dict, allow_existing: bool = True) -> dict:
         if link.scheme != "https" or not link.netloc or link.username or link.password:
             raise PublishError("다운로드 주소는 올바른 HTTPS 링크여야 합니다")
     if d["status"] == "배포 중":
-        for field in ("patch_filename", "patch_sha256"):
+        for field in ("patch_filename", "patch_sha256", "download_url"):
             if not d[field].strip():
                 raise PublishError(f"배포 중에는 '{FIELDS[field]}'을 입력해야 합니다")
     for field in ("cover_file", "screenshot1", "screenshot2", "screenshot3"):
@@ -177,10 +177,10 @@ def render_page(data: dict, images: dict[str, str] | None = None) -> str:
     notes = "".join(f"<li>{h(line)}</li>" for line in d["notes"].splitlines() if line.strip())
     shots = "".join('<img src="' + h(images[k]) + '" alt="게임 스크린샷 ' + str(i) + '">'
                     for i, k in enumerate(("screenshot1", "screenshot2", "screenshot3"), 1) if images.get(k))
-    # Public download links are globally disabled at the request of the patch author.
-    # Keep version and checksum metadata, but never expose an external patch URL.
-    download_status = '<span class="disabled">현재 패치 다운로드 링크를 제공하지 않습니다.</span>'
-    download = '<div class="download"><strong>' + h(d["patch_filename"] or "배포 기록 없음") + '</strong>' + download_status
+    released = d["status"] == "배포 중"
+    link = ('<a class="btn" href="' + h(d["download_url"]) +
+            '" target="_blank" rel="noopener noreferrer">패치 다운로드 ↗</a>') if released else '<span class="disabled">배포 준비 중</span>'
+    download = '<div class="download"><strong>' + h(d["patch_filename"] or "배포 준비 중") + '</strong>' + link
     if d["patch_sha256"]:
         download += '<p class="muted">ZIP SHA-256</p><div class="hash">' + h(d["patch_sha256"]) + '</div>'
     download += '</div>'
@@ -193,7 +193,7 @@ def render_page(data: dict, images: dict[str, str] | None = None) -> str:
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="{h(d['title_ko'])} 한국어 패치 {h(d['patch_version'])} 안내">
 <title>{h(d['title_ko'])} — 한국어 패치 {h(d['patch_version'])}</title><style>{STYLES}</style><link rel="stylesheet" href="../assets/css/support-banner.css?v=20261010"><link rel="stylesheet" href="../assets/css/patch-history.css?v=20261011"></head>
-<body><nav class="nav"><div class="nav-inner"><a href="../index.html">한마루 한글화 작업소</a><a href="#release">배포 상태</a><a class="support-coffee" href="https://litt.ly/hanmaru" target="_blank" rel="noopener noreferrer" aria-label="후원하기"><img src="https://www.owlstown.com/assets/icons/bmc-yellow-button-941f96a1.png" alt="후원하기" loading="eager"></a></div></nav>
+<body><nav class="nav"><div class="nav-inner"><a href="../index.html">한마루 한글화 작업소</a><a href="#release">패치 다운로드</a><a class="support-coffee" href="https://litt.ly/hanmaru" target="_blank" rel="noopener noreferrer" aria-label="후원하기"><img src="https://www.owlstown.com/assets/icons/bmc-yellow-button-941f96a1.png" alt="후원하기" loading="eager"></a></div></nav>
 <main class="shell"><section class="hero"><div><span class="eyebrow">{h(d['platform']).upper()} · KOREAN LOCALIZATION</span>
 <h1>{h(d['title_ko'])}</h1><p class="subtitle">{h(d['title_en'])}</p>
 <div class="pills"><span>{h(d['region'])}</span><span>{h(d['patch_version'])}</span><span>{h(d['status'])}</span></div>
@@ -204,7 +204,7 @@ def render_page(data: dict, images: dict[str, str] | None = None) -> str:
 {('<hr><section id="updates" class="section"><h2>패치 업데이트 내역</h2><details class="history"><summary>버전별 상세 변경 내역 펼치기 (' + h(d['patch_version']) + ')</summary><article><span>' + h(d['patch_version']) + ' · ' + h(d['patch_date']) + '</span><h3>주요 변경 사항</h3><ul class="notes">' + notes + '</ul></article></details></section>') if notes else ''}
 {('<hr><section id="qa"><h2>검수·알려진 문제</h2><div class="noticebox">' + h(d['known_issues']) + '</div></section>') if d['known_issues'] else ''}
 {('<hr><section id="original"><h2>지원 원본</h2>' + original + '</section>') if original else ''}
-<hr><section id="release"><h2>패치 배포 안내</h2>{download}</section>
+<hr><section id="release"><h2>패치 다운로드</h2>{download}</section>
 <hr><section id="credits"><h2>제작 및 검수</h2><p>{h(d["credits"])}</p></section>
 <hr><section class="section patch-warning" id="patch-warning" role="note"><h2>경고</h2><p>본 한국어 패치의 임의 변조나 타기종으로의 포팅, 동의 없는 재배포는 허가하지 않습니다. 판매 또한 금지됩니다.</p></section>
 <hr>{html_notice()}</div></main>
@@ -312,9 +312,7 @@ def publish(repo: Path, data: dict, progress=lambda s: None) -> str:
         if audit_page(page_html):
             raise PublishError("공통 배포 고지 검증에 실패했습니다")
         page_file.write_text(page_html, encoding="utf-8")
-        # Exclude patch download URLs from publicly accessible publisher metadata.
-        entry = {k: v for k, v in d.items()
-                 if k not in ("cover_file", "screenshot1", "screenshot2", "screenshot3", "download_url")}
+        entry = {k: v for k, v in d.items() if k not in ("cover_file", "screenshot1", "screenshot2", "screenshot3")}
         entry["assets"] = {k: v[3:] for k, v in image_uris.items()}
         data_file.parent.mkdir(parents=True, exist_ok=True)
         data_file.write_text(json.dumps(entry, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
