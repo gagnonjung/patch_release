@@ -1,0 +1,10 @@
+/* Shared patch history panel, consistent with Slayers Royal. */
+.history{margin:16px 0 22px;border:1px solid #465269;border-radius:10px;overflow:hidden}
+.history summary{padding:13px 17px;font-weight:700;cursor:pointer;font-size:14px;background:#202a3d;color:#e8eaf5}
+.history summary:hover{background:#29344b}
+.history summary:focus-visible{outline:2px solid #ecd3e6;outline-offset:-3px}
+.history article{border-top:1px solid #374158;padding:17px 20px}
+.history article>span{font-size:11px;color:#bdadd4}
+.history article h3{font-size:17px;margin:8px 0 9px;color:#ecedf5}
+.history ul{padding-left:19px;margin:0;font-size:13px;color:#c3cadd;line-height:1.75}
+.history li{margin:4px 0}

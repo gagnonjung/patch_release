@@ -72,6 +72,25 @@ class SitePublisherTest(unittest.TestCase):
         self.assertEqual(1, sample.count(expected_icon))
         self.assertEqual(1, sample.count("support-banner.css?v=20261010"))
 
+    def test_patch_history_on_all_other_projects(self):
+        root = Path(__file__).resolve().parent.parent
+        for path in ("getter-robo-daikessen/index.html",
+                     "persona-2-innocent-sin/index.html",
+                     "zelda-mm/index.html", "zelda-oot/index.html",
+                     "zelda-oot-ura/index.html", "patch.html"):
+            with self.subTest(page=path):
+                source = (root / path).read_text("utf-8")
+                self.assertEqual(1, source.count('<details class="history">'))
+                self.assertEqual(1, source.count('id="changelog"'))
+                self.assertEqual(1, source.count("assets/css/patch-history.css?v=20261011"))
+                self.assertIn("버전별 상세 변경 내역 펼치기", source)
+                self.assertTrue('id="download"' in source or 'id="release"' in source)
+        data = {**self.data, "notes": "맞춤법 정리\nUI 보완"}
+        generated = render_page(data)
+        self.assertEqual(1, generated.count('<details class="history">'))
+        self.assertEqual(1, generated.count('assets/css/patch-history.css?v=20261011'))
+        self.assertIn("맞춤법 정리", generated)
+
     def test_invalid_fields(self):
         for val in ("../danger", "a/b", "UPPER", "", "a..b"):
             with self.subTest(val=val):

@@ -186,7 +186,7 @@ def render_page(data: dict, images: dict[str, str] | None = None) -> str:
     return f"""<!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="{h(d['title_ko'])} 한국어 패치 {h(d['patch_version'])} 안내">
-<title>{h(d['title_ko'])} — 한국어 패치 {h(d['patch_version'])}</title><style>{STYLES}</style><link rel="stylesheet" href="../assets/css/support-banner.css?v=20261010"></head>
+<title>{h(d['title_ko'])} — 한국어 패치 {h(d['patch_version'])}</title><style>{STYLES}</style><link rel="stylesheet" href="../assets/css/support-banner.css?v=20261010"><link rel="stylesheet" href="../assets/css/patch-history.css?v=20261011"></head>
 <body><nav class="nav"><div class="nav-inner"><a href="../index.html">한마루 한글화 작업소</a><a href="#release">패치 다운로드</a><a class="support-coffee" href="https://litt.ly/hanmaru" target="_blank" rel="noopener noreferrer" aria-label="후원하기"><img src="https://www.owlstown.com/assets/icons/bmc-yellow-button-941f96a1.png" alt="후원하기" loading="eager"></a></div></nav>
 <main class="shell"><section class="hero"><div><span class="eyebrow">{h(d['platform']).upper()} · KOREAN LOCALIZATION</span>
 <h1>{h(d['title_ko'])}</h1><p class="subtitle">{h(d['title_en'])}</p>
@@ -195,7 +195,7 @@ def render_page(data: dict, images: dict[str, str] | None = None) -> str:
 <div class="body"><section id="game"><h2>게임 정보</h2><div class="fact-grid">{facts}</div></section>
 <hr><section id="features"><h2>한국어화 범위</h2><div class="scope">{scope or '<article>작업 범위 정리 중</article>'}</div></section>
 {('<hr><section id="screens"><h2>스크린샷</h2><div class="screens">' + shots + '</div></section>') if shots else ''}
-{('<hr><section id="updates"><h2>패치 내용</h2><ul class="notes">' + notes + '</ul></section>') if notes else ''}
+{('<hr><section id="updates" class="section"><h2>패치 업데이트 내역</h2><details class="history"><summary>버전별 상세 변경 내역 펼치기 (' + h(d['patch_version']) + ')</summary><article><span>' + h(d['patch_version']) + ' · ' + h(d['patch_date']) + '</span><h3>주요 변경 사항</h3><ul class="notes">' + notes + '</ul></article></details></section>') if notes else ''}
 {('<hr><section id="qa"><h2>검수·알려진 문제</h2><div class="noticebox">' + h(d['known_issues']) + '</div></section>') if d['known_issues'] else ''}
 {('<hr><section id="original"><h2>지원 원본</h2>' + original + '</section>') if original else ''}
 <hr><section id="release"><h2>패치 다운로드</h2>{download}</section>
