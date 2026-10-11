@@ -27,7 +27,7 @@ a{color:inherit}nav{background:#181d2b;border-bottom:1px solid var(--line)}
 .description{font-size:15px;color:#cbd1df;line-height:1.9;margin:0}
 .scope{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.scope article{min-width:0;background:#131a2b;border:1px solid #3f485e;border-radius:12px;padding:18px}.scope strong{font-size:15px;color:#f0e5ee}.scope p{font-size:13px;line-height:1.8;color:#bfcbdd;margin:10px 0 0}
 .muted{color:#b7bfd0;font-size:13px;line-height:1.85}
-.qa{padding:21px;border:1px solid #4c506b;border-radius:12px;background:#141c2c}.qa p{margin:0 0 12px;font-size:14px;color:#d4d7e3}.qa p:last-child{margin-bottom:0}.qa b{color:#f2c0cb}
+.qa{padding:21px;border:1px solid #4c506b;border-radius:12px;background:#141c2c}.qa p{margin:0 0 12px;font-size:14px;color:#d4d7e3}.qa p:last-child{margin-bottom:0}.qa b{color:#f2c0cb}.qa p.test-env{color:#ff7272;font-weight:800}.qa p.test-env b{color:inherit}
 .pending{margin:13px 0 0;padding-left:21px;color:#c8cdda;font-size:13px;line-height:1.9}
 .hash{border:1px solid #404b65;border-radius:12px;background:#111a2a;padding:18px}.hash label{display:block;color:#9faed0;font-size:11px;letter-spacing:.06em}.hash code{display:block;font:12px/1.8 ui-monospace,Consolas,monospace;color:#eff3fb;overflow-wrap:anywhere;margin-top:4px}
 .download{padding:23px;background:#252c43;border:1px solid #616783;border-radius:13px}.download .release{font-size:12px;color:#edb7c6;font-weight:800;letter-spacing:.07em}.download h3{font-size:20px;margin:9px 0}.download p{margin:10px 0 0;font-size:14px;color:#d5d9e7}.download .download-link{display:inline-flex;align-items:center;justify-content:center;gap:9px;margin-top:18px;padding:12px 20px;border-radius:10px;background:#e8becb;color:#281c30;text-decoration:none;font-size:14px;font-weight:850;border:1px solid #efccd6;transition:background .2s ease,transform .2s ease}.download .download-link:hover{background:#f7dbe3;transform:translateY(-1px)}.download .download-link:focus-visible{outline:3px solid #fff;outline-offset:3px}.download .checksum{font-size:12px;line-height:1.8;color:#b8c5da;overflow-wrap:anywhere}
@@ -87,6 +87,7 @@ footer{max-width:980px;margin:0 auto 40px;padding:0 24px;display:flex;justify-co
 <hr class="sep">
 <section id="progress" class="section"><h2>현재 검수 현황</h2>
 <div class="qa">
+<p class="test-env"><b>테스트:</b> PC DuckStation / 실기·다른 에뮬레이터 미검증</p>
 <p><b>정적 통합 QA:</b> 최신 v0.5b 빌드 기준 PASS · 428개 파일 readback 불일치 0</p>
 <p><b>디스크 구조:</b> LBA·인덱스·폰트·글리프, Mode2 Form1 EDC/ECC 검사 PASS</p>
 <p><b>패치 적용:</b> 일본판 Rev 1 원본에 대한 Xdelta 왕복 및 Windows 자동 적용 검증 PASS</p>
