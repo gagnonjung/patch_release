@@ -115,6 +115,28 @@ class SitePublisherTest(unittest.TestCase):
         self.assertIn('color:#ff9ca3', generated)
         self.assertLess(generated.index('id="credits"'), generated.index('id="patch-warning"'))
 
+    def test_all_patch_download_links_are_disabled(self):
+        root = Path(__file__).resolve().parent.parent
+        pages = ("slayers-royal/index.html", "getter-robo-daikessen/index.html",
+                 "persona-2-innocent-sin/index.html", "patch.html",
+                 "zelda-mm/index.html", "zelda-oot/index.html",
+                 "zelda-oot-ura/index.html")
+        for page in pages:
+            with self.subTest(page=page):
+                html = (root / page).read_text(encoding="utf-8")
+                self.assertNotIn("drive.google.com/file/d/", html)
+                self.assertNotIn("Google Drive 다운로드 ↗", html)
+                self.assertIn("현재 패치 다운로드 링크를 제공하지 않습니다.", html)
+                self.assertIn("id=\"patch-warning\"", html)
+        released = {**self.data, "status": "배포 중", "patch_filename": "sample.zip",
+                    "patch_sha256": "a" * 64,
+                    "download_url": "https://drive.google.com/file/d/sample/view"}
+        generated = render_page(validate(released))
+        self.assertNotIn("drive.google.com", generated)
+        self.assertNotIn('href="https://drive.google.com', generated)
+        self.assertIn("현재 패치 다운로드 링크를 제공하지 않습니다.", generated)
+        self.assertIn("<h2>패치 배포 안내</h2>", generated)
+
     def test_invalid_fields(self):
         for val in ("../danger", "a/b", "UPPER", "", "a..b"):
             with self.subTest(val=val):
