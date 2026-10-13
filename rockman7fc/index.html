@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c1422">
+  <title>록맨7 FC — 웹 플레이 테스트</title>
+  <style>
+    :root{color-scheme:dark;--bg:#091321;--panel:#13233a;--line:#2c4a69;--fg:#edf7ff;--muted:#a7c0d8;--lime:#d9fa72}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% 0,#294969,var(--bg) 60%);font:15px/1.6 system-ui,"Malgun Gothic",sans-serif;color:var(--fg)}
+    main{max-width:930px;margin:0 auto;padding:30px 16px 60px}
+    header small{color:var(--lime);font-weight:800;letter-spacing:.12em}h1{margin:6px 0;font-size:clamp(26px,5vw,40px);line-height:1.2}header p{color:var(--muted);margin:6px 0 24px}
+    section{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}
+    .bar{display:flex;flex-wrap:wrap;gap:9px;align-items:center}
+    button,.choose{border:1px solid #5483a9;background:#275073;color:#fff;border-radius:9px;padding:10px 14px;font:inherit;font-weight:700;cursor:pointer}
+    button:hover,.choose:hover{background:#34668f}button:disabled{opacity:.4;cursor:not-allowed}
+    button:focus-visible,.choose:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+    .choose{background:var(--lime);border-color:var(--lime);color:#102233}.choose:hover{background:#e5ffa3}
+    #rom{position:absolute;opacity:0;width:1px;height:1px}
+    #status{color:var(--muted);margin:12px 0 0;overflow-wrap:anywhere}#status.error{color:#ffa4ac}
+    .screen{width:min(100%,640px);aspect-ratio:256/240;position:relative;background:#000;margin:auto;border:6px solid #030811;border-radius:6px;overflow:hidden}
+    #nes{width:100%;height:100%}#nes canvas{width:100%!important;height:100%!important;image-rendering:pixelated;display:block}
+    .placeholder{position:absolute;inset:0;display:grid;place-content:center;text-align:center;background:#071320;pointer-events:none;padding:20px}
+    .placeholder b{font-size:clamp(20px,5vw,32px);color:var(--lime)}.placeholder span{color:var(--muted)}.hidden{display:none}
+    .controls{max-width:640px;margin:15px auto 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:15px}
+    .dpad{display:grid;grid-template:repeat(3,48px)/repeat(3,48px);gap:4px}
+    .pad{user-select:none;-webkit-user-select:none;touch-action:none;padding:0;min-width:0;border-radius:12px}
+    .pad.active{background:#9cd9ff;color:#102334;transform:translateY(2px)}
+    [data-pad=up]{grid-area:1/2}[data-pad=left]{grid-area:2/1}[data-pad=right]{grid-area:2/3}[data-pad=down]{grid-area:3/2}
+    .mid{align-self:flex-end;display:flex;gap:8px;padding-bottom:12px}.mid button{padding:7px 9px;font-size:11px}
+    .ab{display:flex;gap:9px}.ab button{height:58px;width:58px;border-radius:50%;background:#a43a65;border-color:#d989aa;font-size:22px}
+    .ab button.active{background:#ffb2ce}kbd{background:#08101e;padding:1px 5px;border:1px solid #466384;border-radius:4px}
+    .help{margin:7px 0;padding-left:22px}.help li{margin:4px 0}.muted,footer{color:var(--muted)}footer{font-size:12px}
+    @media(max-width:570px){main{padding:16px 9px 40px}section{padding:11px}.controls{justify-content:space-around}.dpad{grid-template:repeat(3,42px)/repeat(3,42px)}.ab button{height:49px;width:49px}.mid{order:3;width:100%;justify-content:center;padding:0}}
+  </style>
+  <script defer src="https://cdn.jsdelivr.net/npm/jsnes@2.1.0/dist/jsnes.min.js"></script>
+  <script defer src="./player.js"></script>
+</head>
+<body>
+<main>
+  <header><small>NES / DEVELOPMENT BUILD</small><h1>록맨 7 FC — 웹 플레이</h1><p>패미컴 포팅 개발판을 브라우저에서 직접 테스트할 수 있어요</p></header>
+  <section>
+    <div class="bar">
+      <label for="rom" class="choose" tabindex="0">NES ROM 선택</label>
+      <input id="rom" type="file" accept=".nes,application/octet-stream" aria-label="로컬 NES ROM 선택">
+      <button id="pause" disabled>일시정지</button>
+      <button id="reset" disabled>리셋</button>
+      <button id="full">전체 화면</button>
+      <button id="capture" disabled>스크린샷</button>
+    </div>
+    <p id="status" role="status" aria-live="polite">ROM을 선택하면 브라우저에서만 읽습니다. 서버에 업로드하지 않습니다.</p>
+  </section>
+  <section>
+    <div class="screen" id="frame">
+      <div id="nes" aria-label="NES 에뮬레이터 화면"></div>
+      <div id="placeholder" class="placeholder"><b>ROCKMAN 7 FC</b><span>위에서 .nes 파일을 선택해 주세요</span></div>
+    </div>
+    <div class="controls" aria-label="터치 컨트롤러">
+      <div class="dpad">
+        <button class="pad" data-pad="up" aria-label="위">▲</button>
+        <button class="pad" data-pad="left" aria-label="왼쪽">◀</button>
+        <button class="pad" data-pad="right" aria-label="오른쪽">▶</button>
+        <button class="pad" data-pad="down" aria-label="아래">▼</button>
+      </div>
+      <div class="mid">
+        <button class="pad" data-pad="select">SELECT</button><button class="pad" data-pad="start">START</button>
+      </div>
+      <div class="ab">
+        <button class="pad" data-pad="b" aria-label="록버스터 B">B</button>
+        <button class="pad" data-pad="a" aria-label="점프 A">A</button>
+      </div>
+    </div>
+  </section>
+  <section>
+    <b>키보드 조작</b>
+    <ul class="help">
+      <li>이동 <kbd>←</kbd> <kbd>→</kbd> / 점프 <kbd>X</kbd> / 버스터·차지 <kbd>Z</kbd> / 슬라이딩 <kbd>↓</kbd>+<kbd>X</kbd></li>
+      <li>START <kbd>Enter</kbd> / SELECT <kbd>오른쪽 Ctrl</kbd> · 터치와 게임패드 입력도 지원</li>
+      <li>개발용 스테이지 방 이동: START+위/아래, 보스 방 이동: START+SELECT</li>
+    </ul>
+    <p class="muted">이 버전은 록맨6 플레이어 조작을 적용한 프리즈맨 29개 방 테스트판으로, 록맨7 전체 완성판은 아닙니다.</p>
+  </section>
+  <footer>웹 프런트엔드만 공개됩니다. ROM 파일은 배포하지 않습니다. JSNES 2.1.0 (Apache-2.0)</footer>
+</main>
+</body>
+</html>
