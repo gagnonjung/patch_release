@@ -120,4 +120,23 @@
     event.preventDefault(); frame.style.outline = "";
     if (event.dataTransfer?.files?.length) playFile(event.dataTransfer.files[0]);
   });
+
+  // Same-origin development ROM: load automatically when the page opens.
+  // Local file selection is still available for testing other developer builds.
+  async function loadBundledROM() {
+    const name = "Rockman7FC_Freeze_MM6_Player_20261013.nes";
+    try {
+      tell("내장 NES 개발판을 불러오는 중…");
+      const response = await fetch("./" + name, { cache: "no-cache" });
+      if (!response.ok) throw new Error("HTTP " + response.status);
+      const data = new Uint8Array(await response.arrayBuffer());
+      if (data.length !== 253968 || data[0] !== 0x4e || data[1] !== 0x45 || data[2] !== 0x53 || data[3] !== 0x1a) {
+        throw new Error("내장 ROM의 크기 또는 헤더가 맞지 않습니다.");
+      }
+      await playFile(new File([data], name, { type: "application/octet-stream" }));
+    } catch (error) {
+      tell("내장 ROM을 불러오지 못했습니다. NES ROM 선택으로 직접 열 수 있습니다: " + (error?.message || String(error)), true);
+    }
+  }
+  loadBundledROM();
 })();
