@@ -1,0 +1,68 @@
+:root{color-scheme:dark;--bg:#100f12;--panel:#1d1c22;--surface:#252229;--line:#544a52;--text:#faf6f2;--muted:#cabfc2;--red:#e04f46;--gold:#eecb90}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 60% -10%,#52303b 0,transparent 45%),linear-gradient(180deg,#221a20,#111116 730px);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.8}
+a{color:inherit}
+.navbar{background:#18171c;border-bottom:1px solid #514149}
+.nav-inner{max-width:1080px;margin:auto;padding:15px 22px;display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap}
+.brand{text-decoration:none;font-size:13px;font-weight:850;letter-spacing:.09em}
+.brand span{font-weight:400;color:#c6adb2}
+.links{display:flex;align-items:center;flex-wrap:wrap;gap:18px}
+.links a{font-size:13px;color:#ddd2d1;text-decoration:none}
+.links a:hover{color:#fff}
+.shell{max-width:1080px;margin:34px auto 55px;overflow:hidden;border:1px solid #604954;border-radius:22px;background:#1e1c24;box-shadow:0 25px 64px #0005}
+.hero{padding:clamp(24px,5vw,58px);display:grid;grid-template-columns:1.13fr .87fr;gap:clamp(22px,4vw,50px);align-items:center;min-height:430px;background:linear-gradient(118deg,#542932 0%,#30222b 55%,#202129 100%);border-bottom:1px solid #78515a}
+.hero .overline,.eyebrow{margin:0;color:var(--gold);font-size:12px;font-weight:850;letter-spacing:.13em}
+.hero h1{font-size:clamp(37px,5.6vw,64px);letter-spacing:-.065em;line-height:1.16;margin:10px 0}
+.hero .subhead{margin:0;color:#e0cfd1;font-size:15px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+.pills span{border:1px solid #a36a69;background:#733c40;padding:5px 12px;border-radius:30px;font-size:11px;font-weight:700;color:#fff5e7}
+.hero p.lead{font-size:15px;color:#eee0db;line-height:1.9;margin:18px 0}
+.hero-cta{display:inline-flex;align-items:center;padding:11px 18px;border-radius:9px;background:#f0d6b3;color:#271b1a;text-decoration:none;font-weight:850;font-size:13px}
+.hero-cta:hover{background:#fff0d4}
+.cover{min-width:0;margin:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px}
+.cover img{display:block;width:min(100%,340px);max-height:410px;object-fit:contain;border-radius:9px;border:1px solid #e8d7c477;box-shadow:0 16px 35px #0007}
+.cover figcaption{font-size:10px;letter-spacing:.11em;color:#e4bdba}
+.content{padding:clamp(22px,5vw,60px)}
+.section{margin:0 0 34px;scroll-margin-top:30px}
+.section h2{font-size:23px;letter-spacing:-.045em;line-height:1.35;margin:5px 0 16px}
+.section h3{font-size:16px;margin:7px 0 10px}
+.section p{margin:8px 0 13px}
+.section-index{display:block;font-size:11px;letter-spacing:.13em;font-weight:850;color:var(--gold)}
+.sep{border:0;border-top:1px solid #4b3f49;margin:32px 0}
+.fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+.fact{display:grid;grid-template-columns:98px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid #403b44;font-size:13px}
+.fact span{color:#c9afb4}
+.fact strong{font-weight:650}
+.copy{font-size:15px;line-height:1.9;color:#e5dfe1}
+.overview-card{padding:19px 22px;border-radius:13px;border:1px solid #574650;background:#261f29}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.gallery figure{margin:0;border:1px solid #5b4751;border-radius:12px;overflow:hidden;background:#16151b}
+.gallery img{display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:#09090b;image-rendering:pixelated}
+.gallery figure:nth-child(3) img{image-rendering:pixelated}
+.gallery figcaption{padding:13px 14px 15px;font-size:12px;line-height:1.6;color:#eadfdd}
+.gallery figcaption strong{display:block;font-size:13px;color:white}
+.small-note{color:#c9bcc2;font-size:12px}
+.scope-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.scope-card{border-radius:12px;border:1px solid #4f424a;background:#24222b;padding:17px 19px}
+.scope-card span{font-size:10px;letter-spacing:.12em;color:var(--gold);font-weight:850}
+.scope-card strong{display:block;font-size:16px;margin:3px 0}
+.scope-card p{font-size:13px;color:#dacbd0;margin:5px 0}
+.status-panel{border:1px solid #a16660;background:linear-gradient(130deg,#3c242b,#29232c);border-radius:12px;padding:20px 23px}
+.status-panel strong{color:#fff2c8}
+.status-panel p{color:#e2d6d7;font-size:14px}
+.status-chips{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+.status-chips span{background:#47313a;border:1px solid #945b5a;color:#ffe7dc;font-size:11px;padding:4px 10px;border-radius:20px}
+.release-wait{margin-top:16px;border:1px solid #73565c;border-radius:10px;background:#201c23;padding:17px}
+.release-wait b{display:block;margin-bottom:4px;font-size:15px;color:#f5d8bc}
+.release-wait p{margin:0 0 6px}
+.notice{padding:18px 20px;border:1px solid #77616b;border-radius:12px;background:#201d26;font-size:13px;color:#ddd3d4}
+.notice ul{padding-left:19px;margin:9px 0;display:grid;gap:7px}
+.legal-warning{margin-top:20px;padding:14px 20px;border-radius:10px;border:1px solid #a1555a;background:#381d26;font-size:12px;color:#ffc2bf}
+.footer{max-width:1080px;margin:0 auto 45px;padding:0 22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#b89eaa;font-size:11px}
+.section a:not(.hero-cta){color:#ffdda9}
+:focus-visible{outline:3px solid #ffe1a8;outline-offset:3px}
+@media(max-width:760px){.hero{grid-template-columns:minmax(0,1fr);padding:26px 22px;gap:24px}.hero h1{font-size:clamp(36px,9vw,50px)}.cover img{max-height:340px;width:min(100%,300px)}.gallery{grid-template-columns:1fr}.gallery figure{display:grid;grid-template-columns:44% 1fr;min-height:150px}.gallery img{height:100%;aspect-ratio:auto;max-height:220px}.gallery figcaption{display:flex;flex-direction:column;justify-content:center}.scope-grid,.fact-grid{grid-template-columns:1fr}.nav-inner{justify-content:center;gap:15px}.links{justify-content:center;gap:12px}.shell{border-radius:0;margin:0 auto 24px;border-left:0;border-right:0}.content{padding:27px 20px}}
+.hero > div,.hero .lead,.hero .subhead,.content,.section,.fact,.scope-card{min-width:0;max-width:100%}
+.hero .lead,.hero .subhead,.fact strong,.scope-card p{overflow-wrap:anywhere;word-break:normal}
+@media(max-width:420px){.gallery figure{grid-template-columns:1fr}.gallery img{height:auto;aspect-ratio:4/3}.fact{grid-template-columns:86px 1fr}.links{gap:10px}}

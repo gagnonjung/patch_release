@@ -4,3 +4,8 @@
 .nav-inner .support-coffee img{display:block;width:auto;height:34px;max-width:160px;object-fit:contain}
 .nav-inner .support-coffee:focus-visible{outline:2px solid #f5d3e1;outline-offset:4px;border-radius:4px}
 @media(max-width:760px){.nav-inner .support-coffee img{height:30px}.nav-inner .support-coffee{margin-inline:auto}}
+
+/* Visible fallback text if third-party coffee image cannot be loaded. */
+.nav-inner .support-coffee{gap:8px;white-space:nowrap}
+.nav-inner .support-coffee .support-label{display:inline-block;color:#f7e1cc;font-size:12px;font-weight:850;line-height:1.2;letter-spacing:-.02em}
+@media(max-width:760px){.nav-inner .support-coffee .support-label{font-size:11px}}
