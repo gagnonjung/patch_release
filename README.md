@@ -70,7 +70,9 @@ Catalog release tag policy:
 - Existing patch version update: use a green `UPDATE` tag with the `.is-update` variant so version updates are visually distinct from first releases.
 - Apply the green `UPDATE` tag whenever a published patch version is incremented, starting with Majora's Mask v1.01 (2026-08-26).
 
-When changing the page, preserve the existing CODEC-inspired visual language and the current download section order:
+**Mandatory:** Follow [SITE_DETAIL_LAYOUT_STANDARD.md](SITE_DETAIL_LAYOUT_STANDARD.md) for all game detail pages. The 2026-10-10 user-approved **simple Persona 2 layout** (reaffirmed 2026-10-20) takes precedence over legacy CODEC-style layouts: left facts + right cover; short introduction/facts; localization scope; verified original checksums; download/install only if released; creators + bold red testing statement; rights notice. No long overviews, decorative numbered sections, duplicate histories, or invented release claims.
+
+The following labels reflect a historical release format only and are not mandatory for new pages:
 
 1. `04-A / PATCH NOTES`
 2. `04-B / INSTALL GUIDE`
