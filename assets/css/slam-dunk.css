@@ -75,5 +75,13 @@ a{color:inherit}
 .test-env{margin:15px 0 6px!important}
 .notice ol{padding-left:23px;margin:5px 0;display:grid;gap:10px}
 .notice li{padding-left:3px}
+.hash-line{min-width:0;font-size:11px;line-height:1.65;overflow-wrap:anywhere;word-break:break-word}
+.hash-line code,.file-checksum code{overflow-wrap:anywhere;word-break:break-word;font-size:11px}
+.download-link{display:inline-flex;align-items:center;justify-content:center;max-width:100%;padding:11px 19px;margin:10px 0 12px;border-radius:10px;color:#21181b!important;background:#f7dcae;font-weight:850;font-size:13px;text-decoration:none;overflow-wrap:anywhere}
+.download-link:hover{background:#fff0d0}
+.release-wait .file-checksum{font-size:11px;color:#e9d7cd;line-height:1.75;margin-top:4px;overflow-wrap:anywhere}
+.install-steps{padding-left:24px;margin:4px 0 14px;color:#e6dbe0;font-size:13px;line-height:1.8}
+.install-steps li{padding:3px 0}
+.install-steps code{font-size:12px;color:#f9dba7;overflow-wrap:anywhere;word-break:break-word}
 @media(max-width:760px){.scope-grid{grid-template-columns:1fr}}
 @media(max-width:420px){.gallery figure{grid-template-columns:1fr}.gallery img{height:auto;aspect-ratio:4/3}.fact{grid-template-columns:86px 1fr}.links{gap:10px}}
