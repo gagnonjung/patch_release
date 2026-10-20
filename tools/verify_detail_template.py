@@ -93,7 +93,7 @@ def audit(slug: str) -> None:
         assert f'../{style}' in candidate, f"not linked: {style}"
     cover = (ROOT / "assets/css/detail-cover.css").read_text(encoding="utf-8")
     assert "360px" in cover and "16px" in cover and "object-fit: contain" in cover, "cover sizing drift"
-    assert all(src.get("alt") for src in c.images if "support" not in src.get("class", "")), "missing image alt"
+    assert all("alt" in src for src in c.images), "missing image alt attribute"
     assert all(href[1:] in c.ids for href in c.hrefs if href.startswith("#")), "broken in-page navigation"
     assert ".hero-banner" in candidate and "@media(max-width:760px)" in candidate, "mobile layout missing"
     assert "../assets/css/slam-dunk.css" not in candidate, "legacy dedicated layout returned"
