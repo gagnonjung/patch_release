@@ -85,7 +85,10 @@ def audit(slug: str) -> None:
     assert "class=\"test-env\"" in candidate, "red bold test status missing"
     assert "미검증" in candidate, "must distinguish runtime from static verification"
     assert "<ol class=\"steps\">" in candidate, "install guide missing"
-    assert candidate.count("https://drive.google.com/file/d/") <= 1, "unexpected duplicate Drive URL"
+    # Multiple distinct verified versions may remain linked for rollback/review.
+    drive_links = [href for href in c.hrefs if href.startswith("https://drive.google.com/file/d/")]
+    assert len(drive_links) == len(set(drive_links)), "duplicate Drive download links"
+    assert all(re.fullmatch(r"https://drive\\.google\\.com/file/d/[A-Za-z0-9_-]+/view(?:\\?[^\\s\"<>]*)?", url) for url in drive_links), "invalid Drive link"
     assert re.search(r"[a-fA-F0-9]{64}", candidate), "verified SHA-256 metadata absent"
     for style in STYLES:
         css_path = ROOT / style
