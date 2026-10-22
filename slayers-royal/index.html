@@ -94,7 +94,7 @@ body{background:linear-gradient(180deg,#2d2334 0,#101520 650px)!important}
 <section class="section" id="status">
 <h2>패치 현황 · 검수</h2>
 <div class="small-alert"><p class="qa-test-emphasis"><strong>테스트:</strong> 새턴 실기 · PC Ymir / 다른 에뮬레이터 호환성 미확인</p><p><strong>v1.02 업데이트:</strong> 주문 목록을 갈무리7 8px의 57종 완성형 이미지로 변경하고, 영문 접미사 F/N/S/C/B의 글꼴과 공백 폭(8→3px)을 조정했습니다. 시전 텍스트와 기존 UI는 유지했습니다.</p><p><strong>정적 검증:</strong> 최종 2026-10-15-13 HALF-SPACE 빌드와 BIN SHA-256 일치, 807파일 readback·기타 806파일 보존·EDC/ECC 및 Xdelta 역복원·Windows 자동패치 3트랙 해시 검증 통과. 새 1.02의 게임 실행/실기 프리징 해결 여부는 미검증입니다.</p></div>
-<div class="issues"><article><span>V1.02 SPELL LIST</span><p>이미지 방식으로 전환한 주문 목록은 정적 검증을 통과했지만, 그람스톡 동부 전투의 프리징 해결과 취소·재진입 등 장시간 실제 플레이 검증은 아직 완료되지 않았습니다. 문제가 재발하면 화면과 덤프를 함께 제보해 주세요.</p></article>
+<div class="issues"><article><span>V1.02 SPELL LIST</span><p>이미지 방식으로 전환한 주문 목록은 정적 검증을 통과했지만, 그람스톡 동부 전투의 프리징 해결과 취소·재진입 등 장시간 실제 플레이 검증은 아직 완료되지 않았습니다. 실제 플레이에서 같은 문제가 재발하는지는 추가 검증이 필요합니다.</p></article>
           <article><span>BONUS UI</span><p>선택 전 작은 보너스 글자가 찌그러져 보인다는 사용자 보고는 아직 해결되지 않았습니다.</p></article>
           <article><span>V1.0 HARDWARE QA</span><p>최신 <code>2026-10-10-12</code> 빌드의 무비 A·C 픽셀 정리와 보너스 UI 수정분은 실기·런타임 검증 대기 중입니다.</p></article>
           <article><span>VOICE</span><p>나가의 다이너스트 브레스 음성이 간헐적으로 멈추는 현상은 해결이 확정되지 않았으며 전체 플레이 프리징 회귀 검수도 완료되지 않았습니다.</p></article></div>
@@ -135,8 +135,7 @@ body{background:linear-gradient(180deg,#2d2334 0,#101520 650px)!important}
 <li><code>00_AUTO_PATCH.cmd</code>를 실행해 원본 Track 1을 선택하거나 파일을 CMD 위로 드래그 앤 드롭합니다. 원본 디스크 파일은 수정하지 않습니다.</li>
 <li>원본 3트랙과 패치 결과의 SHA-256 검증이 통과하면 <code>Slayers Royal (Korea)</code> 폴더에 한국어판 BIN/CUE가 생성됩니다. 이 폴더의 <code>Slayers Royal (Korea).cue</code>로 실행합니다.</li>
 </ol>
-<p class="muted">이전 한국어판에 덧씌우는 패치가 아닙니다. 지원 일본판 원본 Track 1~3이 필요합니다. 주문 목록 표시 문제나 프리징이 발생하면 제보해 주세요.</p>
-<p class="muted">오탈자·미번역·프리징 등을 발견한 경우 <a href="https://cafe.naver.com/f-e/cafes/16259867/menus/75" target="_blank" rel="noopener noreferrer">검수·제보 게시판 ↗</a>에 발생 화면과 함께 제보해 주세요.</p>
+<p class="muted">이전 한국어판에 덧씌우는 패치가 아닙니다. 지원 일본판 원본 Track 1~3이 필요합니다. 주문 목록 표시 및 프리징 여부는 실제 플레이에서 추가 확인이 필요합니다.</p>
 </section>
 <hr class="sep">
 <section class="section" id="credits">
