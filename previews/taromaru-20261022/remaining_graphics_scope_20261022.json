@@ -1,0 +1,69 @@
+{
+  "status": "PASS_SOURCE_AND_RESIDUAL_VISUAL_TRIAGE",
+  "scope": "No new localized byte patches; screen/text coverage is not complete",
+  "sprite_bank": {
+    "source": "TARO.STB",
+    "native_bpp": 8,
+    "total": 415,
+    "atlas_pages": 7,
+    "visually_flagged_emblems": [
+      {
+        "bank": 0,
+        "index": 134,
+        "offset": 93504,
+        "interpretation": "UNVERIFIED_ORNAMENT_OR_INSCRIPTION_KEEP_ORIGINAL"
+      },
+      {
+        "bank": 1,
+        "index": 1,
+        "offset": 137600,
+        "interpretation": "UNVERIFIED_ORNAMENT_OR_INSCRIPTION_KEEP_ORIGINAL"
+      }
+    ],
+    "remaining_atlas_frames": 413,
+    "Japanese_text_exclusion": "NOT_CONFIRMED",
+    "atlas": "taro_native8_full_review_20261022/index.html"
+  },
+  "backgrounds": [
+    {
+      "asset": "OPBG1.BIN",
+      "source_bytes": 86176,
+      "sha256": "21e0c830c9994eb62568113885aa42d7beda1d8205cc8af6603f388c7417c07b",
+      "visual_reference": "opbg1_bin_4bpp_tiles.png",
+      "visual_observation": "Background scenery/tile-pattern dominated; Japanese sentence or credits not identified at the atlas scale",
+      "format_status": "RAW_4BPP_TILE_VISUAL_HYPOTHESIS_NOT_GAME_RENDER_PROOF",
+      "Japanese_text_exclusion": "NOT_CONFIRMED",
+      "safe_action": "KEEP_ORIGINAL_NO_CANDIDATE"
+    },
+    {
+      "asset": "OPBG2.BIN",
+      "source_bytes": 176928,
+      "sha256": "076c5d47c8b72030aedcc020a293e62a02e685967ed1a90de1c8caa5a6cfd45f",
+      "visual_reference": "opbg2_bin_4bpp_tiles.png",
+      "visual_observation": "Background scenery/tile-pattern dominated; Japanese sentence or credits not identified at the atlas scale",
+      "format_status": "RAW_4BPP_TILE_VISUAL_HYPOTHESIS_NOT_GAME_RENDER_PROOF",
+      "Japanese_text_exclusion": "NOT_CONFIRMED",
+      "safe_action": "KEEP_ORIGINAL_NO_CANDIDATE"
+    },
+    {
+      "asset": "ENDBG.BIN",
+      "source_bytes": 186272,
+      "sha256": "b5df4fcd6049a6506fb1d565169e7ba597a3521eb707f34084b0acfaa415eccb",
+      "visual_reference": "endbg_bin_4bpp_tiles.png",
+      "visual_observation": "Background scenery/tile-pattern dominated; Japanese sentence or credits not identified at the atlas scale",
+      "format_status": "RAW_4BPP_TILE_VISUAL_HYPOTHESIS_NOT_GAME_RENDER_PROOF",
+      "Japanese_text_exclusion": "NOT_CONFIRMED",
+      "safe_action": "KEEP_ORIGINAL_NO_CANDIDATE"
+    }
+  ],
+  "unreadable_character_title": "Enkai upper character label remains unconfirmed; never infer from narrative role",
+  "rank_seal": "Retain original emblem unless proven source characters and display consumers",
+  "preserved_user_choices": [
+    "HUD 心/体",
+    "1-9 rank numbers and 段",
+    "名人"
+  ],
+  "build": false,
+  "runtime": "NOT_RUN",
+  "source_mutation": false
+}
