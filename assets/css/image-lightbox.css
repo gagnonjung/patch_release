@@ -1,0 +1,23 @@
+/* Modal screenshot viewer for project pages. Keeps the game catalogue in place. */
+.project-lightbox{width:min(96vw,1200px);max-width:min(96vw,1200px);max-height:95dvh;margin:auto;padding:0;border:0;background:transparent;color:#f1f4fa;font-family:system-ui,-apple-system,"Noto Sans KR","Malgun Gothic",sans-serif;overflow:visible}
+.project-lightbox::backdrop{background:rgba(3,8,18,.88);backdrop-filter:blur(4px)}
+.project-lightbox,.project-lightbox *{box-sizing:border-box}
+.project-lightbox-frame{display:flex;flex-direction:column;max-height:94dvh;overflow:hidden;border:1px solid #5a6b88;border-radius:12px;background:#131b2b;box-shadow:0 24px 64px #000a}
+.project-lightbox-header{display:flex;align-items:center;gap:10px;justify-content:space-between;padding:10px 14px;border-bottom:1px solid #34435b;background:#1b273c}
+.project-lightbox-title{font-size:13px;font-weight:800;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.project-lightbox-close{border:1px solid #657791;border-radius:8px;background:#35465d;color:#fff;width:38px;height:38px;flex:none;cursor:pointer;font-size:24px;line-height:1}
+.project-lightbox-stage{display:flex;align-items:center;justify-content:center;min-height:0;height:min(75dvh,780px);background:#090f1c;overflow:hidden}
+.project-lightbox-stage img{display:block;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;background:#090f1c;image-rendering:auto}
+.project-lightbox-footer{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 14px;border-top:1px solid #34435b}
+.project-lightbox-caption{min-width:0;flex:1;font-size:12px;line-height:1.5;color:#e1e6ed;overflow-wrap:anywhere}
+.project-lightbox-controls{display:flex;align-items:center;gap:6px;flex:none}
+.project-lightbox-controls[hidden]{display:none!important}
+.project-lightbox-controls button{border:1px solid #566a88;border-radius:7px;background:#293a54;color:#fff;min-width:37px;min-height:36px;padding:5px 9px;cursor:pointer;font-size:13px}
+.project-lightbox-controls button:hover,.project-lightbox-close:hover{background:#4c607d}
+.project-lightbox-controls button:disabled{opacity:.45;cursor:default}
+.project-lightbox-counter{min-width:38px;text-align:center;color:#c2cad8;font-size:11px;font-variant-numeric:tabular-nums}
+.project-lightbox button:focus-visible,.project-lightbox-target:focus-visible{outline:2px solid #f1c66f;outline-offset:3px}
+.project-lightbox-target{cursor:zoom-in}
+html.project-lightbox-open{overflow:hidden}
+@media(max-width:700px){.project-lightbox{width:97vw;max-width:97vw}.project-lightbox-frame{max-height:94dvh}.project-lightbox-stage{height:min(68dvh,690px)}.project-lightbox-header{padding:8px 10px}.project-lightbox-footer{padding:9px 10px;gap:8px}.project-lightbox-controls button{min-width:34px;min-height:34px;padding:5px 7px}.project-lightbox-caption{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.project-lightbox{scroll-behavior:auto}}
