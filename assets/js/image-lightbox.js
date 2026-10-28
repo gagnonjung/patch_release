@@ -75,6 +75,12 @@
     main.addEventListener("click",function(event){
       if(event.defaultPrevented||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
       var img=event.target.closest("img.project-lightbox-target");
+      if(!img){
+        var linkedPhoto=event.target.closest("a");
+        if(linkedPhoto&&linkedPhoto.closest(".catalogue-gallery")){
+          img=linkedPhoto.querySelector("img.project-lightbox-target");
+        }
+      }
       if(!img||!main.contains(img))return;
       var link=img.closest("a");
       if(link&&!link.closest(".catalogue-gallery")&&link.href!==img.src&&link.href!==img.currentSrc)return;
