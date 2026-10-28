@@ -22,7 +22,7 @@
     aside.setAttribute("aria-label","페이지 빠른 이동");
     aside.innerHTML='<button class="floating-toc-trigger" type="button" aria-expanded="false" aria-controls="floating-toc-panel">목차</button>'+
       '<div class="floating-toc-panel" id="floating-toc-panel"><div class="floating-toc-title">페이지 목차</div>'+
-      '<nav class="floating-toc-list" aria-label="상세 페이지 목차"></nav>'+
+      '<div class="floating-toc-list" role="navigation" aria-label="상세 페이지 목차"></div>'+
       '<div class="floating-toc-bottom"><button class="floating-toc-top" type="button">↑ 맨 위로</button></div></div>';
     var list=aside.querySelector(".floating-toc-list");
     var trigger=aside.querySelector(".floating-toc-trigger");
