@@ -1,0 +1,16 @@
+/* World of Longplays hero video layer. Original game footage only, never the KR patch. */
+body.game-theme .hero-banner.has-game-video{position:relative;isolation:isolate;overflow:hidden}
+body.game-theme .hero-banner.has-game-video .game-video-layer{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:var(--theme-alt,#151d2b)}
+body.game-theme .hero-banner.has-game-video .game-video-layer iframe{position:absolute;top:50%;left:50%;display:block;width:100%;height:100%;border:0;transform:translate(-50%,-50%);pointer-events:none;filter:saturate(.8) brightness(.78)}
+body.game-theme .hero-banner.has-game-video::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(12,17,28,.92) 0%,rgba(12,17,28,.82) 43%,rgba(12,17,28,.57) 77%,rgba(12,17,28,.70) 100%)}
+body.game-theme .hero-banner.has-game-video>:not(.game-video-layer):not(.game-video-ui){position:relative;z-index:2}
+body.game-theme .hero-banner.has-game-video .game-video-ui{position:absolute;z-index:4;bottom:12px;right:15px;display:flex;align-items:center;justify-content:flex-end;gap:9px;flex-wrap:wrap;max-width:min(95%,600px);font:11px/1.45 system-ui,-apple-system,"Malgun Gothic",sans-serif}
+body.game-theme .hero-banner.has-game-video .game-video-toggle{min-height:32px;padding:5px 11px;border:1px solid rgba(225,232,243,.6);border-radius:8px;background:rgba(16,25,40,.90);color:#fff;font:700 11px/1.25 system-ui,sans-serif;cursor:pointer}
+body.game-theme .hero-banner.has-game-video .game-video-toggle:hover{background:#35475f}
+body.game-theme .hero-banner.has-game-video .game-video-source{color:#e1e7ef;text-decoration:none;background:rgba(17,25,39,.84);padding:6px 9px;border-radius:7px}
+body.game-theme .hero-banner.has-game-video .game-video-source:hover{text-decoration:underline}
+body.game-theme .hero-banner.has-game-video .game-video-ui :focus-visible{outline:2px solid #ffe0a1;outline-offset:2px}
+body.game-theme .hero-banner.has-game-video .game-video-ui *{box-sizing:border-box}
+@media(max-width:760px){body.game-theme .hero-banner.has-game-video::before{background:linear-gradient(90deg,rgba(12,17,28,.89),rgba(12,17,28,.64))}body.game-theme .hero-banner.has-game-video .game-video-ui{position:relative;bottom:auto;right:auto;justify-content:flex-start;grid-column:1/-1;align-self:end;margin-top:8px;width:100%}body.game-theme .hero-banner.has-game-video .game-video-ui .game-video-source{font-size:10px}}
+@media(prefers-reduced-motion:reduce){body.game-theme .hero-banner.has-game-video .game-video-layer iframe{display:none}}
+@media print{body.game-theme .hero-banner.has-game-video .game-video-layer,body.game-theme .hero-banner.has-game-video .game-video-ui{display:none!important}body.game-theme .hero-banner.has-game-video::before{display:none}}
