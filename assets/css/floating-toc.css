@@ -1,5 +1,5 @@
 /* Shared project-page floating table of contents — 2026-10-28 */
-.floating-toc{position:fixed;z-index:90;top:50%;right:max(14px,calc((100vw - 980px)/2 - 194px));width:176px;transform:translateY(-50%);font-family:system-ui,-apple-system,"Noto Sans KR","Malgun Gothic",sans-serif;font-size:12px;line-height:1.45}
+.floating-toc{position:fixed;z-index:90;top:50%;right:max(14px,calc((100vw - 1200px)/2 - 194px));width:176px;transform:translateY(-50%);font-family:system-ui,-apple-system,"Noto Sans KR","Malgun Gothic",sans-serif;font-size:12px;line-height:1.45}
 .floating-toc,.floating-toc *{box-sizing:border-box}
 .floating-toc-trigger{display:none}
 .floating-toc-panel{overflow:hidden;border:1px solid #48556d;border-radius:12px;background:#172032f5;color:#edf0f7;box-shadow:0 10px 38px #0005;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
@@ -14,7 +14,7 @@
 .floating-toc-top:hover{background:#29364b;color:#fff}
 .floating-toc :focus-visible{outline:2px solid #f0c67a;outline-offset:2px}
 main .body > section[id]{scroll-margin-top:26px}
-@media(max-width:1399px){
+@media(max-width:1649px){
  .floating-toc{top:auto;right:16px;bottom:calc(18px + env(safe-area-inset-bottom,0px));width:auto;max-width:calc(100vw - 32px);transform:none;display:flex;flex-direction:column;align-items:flex-end;gap:9px}
  .floating-toc-trigger{order:2;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:92px;min-height:48px;padding:0 15px;border:1px solid #7b8da8;border-radius:999px;background:#1e3048;color:#fff;font-size:13px;font-weight:800;line-height:1;box-shadow:0 5px 22px #0008;cursor:pointer}
  .floating-toc-trigger[aria-expanded="true"]{background:#314761}
