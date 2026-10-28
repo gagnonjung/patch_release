@@ -1,0 +1,13 @@
+/* Shared editorial game-introduction section. Keep existing detail-page CSS untouched. */
+.game-spotlight{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:24px;align-items:center;margin:16px 0 5px}
+.game-spotlight .spotlight-media{margin:0;min-width:0;background:#0d1320;border:1px solid var(--line,#354058);border-radius:12px;overflow:hidden}
+.game-spotlight .spotlight-media img{display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:#0b1020;image-rendering:auto}
+.game-spotlight .spotlight-media figcaption{padding:8px 12px;border-top:1px solid var(--line,#354058);font-size:11px;line-height:1.5;color:var(--sub,#bdc5d5)}
+.game-spotlight .spotlight-media figcaption a{color:inherit;text-decoration:underline;text-decoration-color:rgba(189,197,213,.45);text-underline-offset:2px}
+.game-spotlight .spotlight-copy{min-width:0}
+.game-spotlight .spotlight-copy h3{font-size:clamp(1.15rem,2.1vw,1.6rem);line-height:1.38;letter-spacing:-.04em;margin:0 0 12px;font-weight:800;color:var(--text,#edeff5)}
+.game-spotlight .spotlight-lead{font-size:14px;line-height:1.83;margin:0 0 18px;color:var(--text,#edeff5)}
+.game-spotlight .spotlight-highlights{border-top:1px solid var(--line,#354058)}
+.game-spotlight .spotlight-highlights p{font-size:13px;line-height:1.7;margin:0;padding:11px 0;border-bottom:1px solid var(--line,#354058);color:var(--sub,#bdc5d5)}
+.game-spotlight .spotlight-highlights strong{display:block;color:var(--accent,#e7b2bc);font-size:13px;margin-bottom:1px;font-weight:750}
+@media(max-width:700px){.game-spotlight{grid-template-columns:1fr;gap:17px}.game-spotlight .spotlight-copy h3{font-size:1.32rem}.game-spotlight .spotlight-lead{font-size:14px}.game-spotlight .spotlight-media img{max-height:360px}}
