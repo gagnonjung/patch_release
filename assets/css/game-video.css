@@ -12,5 +12,4 @@ body.game-theme .hero-banner.has-game-video .game-video-source:hover{text-decora
 body.game-theme .hero-banner.has-game-video .game-video-ui :focus-visible{outline:2px solid #ffe0a1;outline-offset:2px}
 body.game-theme .hero-banner.has-game-video .game-video-ui *{box-sizing:border-box}
 @media(max-width:760px){body.game-theme .hero-banner.has-game-video::before{background:linear-gradient(90deg,rgba(12,17,28,.89),rgba(12,17,28,.64))}body.game-theme .hero-banner.has-game-video .game-video-ui{position:relative;bottom:auto;right:auto;justify-content:flex-start;grid-column:1/-1;align-self:end;margin-top:8px;width:100%}body.game-theme .hero-banner.has-game-video .game-video-ui .game-video-source{font-size:10px}}
-@media(prefers-reduced-motion:reduce){body.game-theme .hero-banner.has-game-video .game-video-layer iframe{display:none}}
 @media print{body.game-theme .hero-banner.has-game-video .game-video-layer,body.game-theme .hero-banner.has-game-video .game-video-ui{display:none!important}body.game-theme .hero-banner.has-game-video::before{display:none}}
