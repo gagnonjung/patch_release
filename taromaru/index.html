@@ -69,7 +69,7 @@ footer{max-width:980px;margin:0 auto 40px;padding:0 24px;display:flex;justify-co
 <p class="english">Shinrei Jusatsushi Taroumaru / 心霊呪殺師 太郎丸</p>
 <div class="pills"><span>SEGA SATURN</span><span>일본판</span><span>v0.8a 패치</span></div>
 <p class="lead">1997년 세가 새턴으로 출시된 괴기 액션 게임의 한국어화 프로젝트입니다. 원본 아트와 영문 표기를 보존하면서 일본어 타이틀, 메뉴, 캐릭터 이름, 제작진 표기를 한국어로 옮기고 있습니다.</p>
-<span class="state">v0.8a 패치 · 사용자 게임 검수 대기</span>
+<span class="state">v0.8a 패치 · 실기·에뮬레이터 부분 검수 완료</span>
 </header><figure class="hero-preview detail-cover"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHpQn0kMg-_vWFMjOZOG3xWZJiEV-xHKrFMfkfvFc-5g&amp;s=10" alt="심령주살사 타로마루 세가 새턴 커버 아트" loading="eager"></figure></section>
 <div class="body">
 <section id="game" class="section"><h2>게임 정보</h2><div class="grid">
@@ -92,12 +92,12 @@ footer{max-width:980px;margin:0 auto 40px;padding:0 24px;display:flex;justify-co
 </div><p class="muted">인물·이펙트·원형 문양 그래픽은 원형 유지 대상입니다. 위 범위는 0.8a 패치 파일에 반영된 작업입니다. 모든 게임 화면과 구간을 검수한 상태는 아닙니다.</p></section>
 <hr class="sep">
 <section id="progress" class="section"><h2>현재 검수 현황</h2><div class="qa">
-<p class="test-env"><b>게임 실행:</b> 0.8a 사용자 검수 대기 · 실기·에뮬레이터 및 전체 플레이 검증 미완료</p>
+<p class="test-env"><b>게임 실행:</b> 사용자 보고 기준, 세가 새턴 실기 및 에뮬레이터에서 플레이 검수 진행·확인. <strong>엔딩 구간 미검수</strong></p>
 <p><b>패치 적용:</b> Windows CMD에서 일본판 CUE를 대상으로 Xdelta 적용 후 한국어판 19트랙/CUE 대조 PASS</p>
 <p><b>디스크 구조:</b> 원본 19트랙 검사, 오디오 18트랙 원형 유지, Track 01 전체 3,986섹터 EDC/ECC 및 ISO 80개 파일 정적 검증 PASS</p>
 <p><b>오류 방지:</b> 기존 출력 폴더·CUE INDEX 불일치·오디오 누락·중복 적용·변조 패치 입력 거부 확인</p>
-<p><b>남은 확인:</b> 색상·정렬·AA 등 일부 시각 조정, 배경 일본어 전수 확인, 프리징·세이브 호환성·전체 게임 실행 검수</p>
-</div><p class="muted">위 PASS는 패키지에 포함된 정적·자동 적용 검증 기록입니다. 게임 실행 결과를 의미하지 않으며, 한국어화 전체 완료는 확인되지 않았습니다.</p></section>
+<p><b>남은 확인:</b> 엔딩 및 전체 플레이 구간, 오프닝·엔딩 이름과 표기, 배경 일본어 잔존 여부, 장시간 플레이·세이브 호환성 등 미확인 항목</p>
+</div><p class="muted">정적·자동 패치 적용 검증은 패키지 기록에 따른 PASS입니다. 이와 별개로 사용자가 실기와 에뮬레이터 플레이 검수를 보고했습니다. 다만 엔딩은 확인하지 못했으므로 전체 게임 완주·전 구간 검수 완료로 표시하지 않습니다.</p></section>
 <hr class="sep">
 <section id="source" class="section"><h2>원본 파일 정보</h2><div class="hash">
 <div class="hash-row"><label>지원 대상</label><code>Shinrei Jusatsushi Taroumaru (Japan) · T-4804G</code></div>
@@ -128,7 +128,7 @@ footer{max-width:980px;margin:0 auto 40px;padding:0 24px;display:flex;justify-co
 <li>원본 옆에 생성된 <code>Shinrei Jusatsushi Taroumaru (Korea)</code> 폴더의 <code>Shinrei Jusatsushi Taroumaru (Korea).cue</code>로 실행합니다.</li>
 </ol>
 <p class="muted">추가 저장 공간 약 600MB 이상을 확보하세요. 원본 19트랙과 CUE 구조를 해시로 확인한 후 별도 폴더를 만들며, 원본 BIN/CUE를 덮어쓰지 않습니다. 기존 한국어판이나 다른 수정본에 재적용하지 마세요.</p>
-<div class="beta-note"><strong>v0.8a 패치 검수 안내</strong><p>자동 패치 적용 및 디스크 정적 검사는 통과했습니다. 실제 게임 내 출력·전체 진행·세이브 호환성은 사용자 검수가 필요합니다.</p></div></section>
+<div class="beta-note"><strong>v0.8a 검수 안내</strong><p>사용자가 실기와 에뮬레이터에서 플레이 검수를 진행했습니다. 엔딩은 아직 확인하지 않았으며 전체 구간·세이브 호환성 등은 별도 검수 대상입니다. 자동 패치 적용과 디스크 정적 검사는 기존 기준으로 통과했습니다.</p></div></section>
 <hr class="sep">
 <section id="credits" class="section"><h2>제작 및 검수</h2><div class="grid">
 <div class="fact"><span>한국어화</span><strong>한마루</strong></div>
