@@ -4,13 +4,15 @@
   function init(){
     var main=document.querySelector("main.shell")||document.querySelector("main");
     if(!main||document.querySelector(".floating-toc"))return;
+    // A compact overview: skip secondary technical/legal sections without removing them from the page.
+    var priority={"game":1,"game-spotlight":1,"features":1,"scope":1,"quality-of-life":1,"progress":1,"status":1,"release":1,"download":1,"install":1};
     var sections=Array.prototype.slice.call(main.querySelectorAll(".body > section")).filter(function(el){
-      return !!el.querySelector("h2");
+      return !!el.querySelector("h2") && !!priority[el.id];
     });
     if(sections.length<2)return;
     var labels={
       "game":"게임 정보","game-spotlight":"게임 카탈로그",
-      "features":"한국어화","scope":"한국어화","patch":"한국어화",
+      "features":"패치 내용","scope":"패치 내용","quality-of-life":"편의 기능",
       "progress":"검수 현황","status":"검수 현황",
       "changelog":"업데이트 내역","source":"원본 파일","original":"원본 파일","hash":"원본·해시",
       "release":"패치 다운로드","download":"패치 다운로드",
@@ -36,7 +38,7 @@
       }
       var title=labels[section.id]||heading.textContent.trim().replace(/\s+/g," ");
       if(!labels[section.id]){
-        if(/한국어화|패치 주요/.test(title))title="한국어화";
+        if(/한국어화|패치 주요/.test(title))title="패치 내용";
         else if(/제작|테스트/.test(title))title="제작·검수";
         else if(/패치 정보/.test(title))title="검수 현황";
         else if(/패치 파일|다운로드/.test(title))title="패치 다운로드";
