@@ -23,6 +23,39 @@ body.game-theme .floating-toc-list a[aria-current="location"]{border-left-color:
 body.game-theme .floating-toc-trigger,body.game-theme .floating-toc-panel{border-color:color-mix(in srgb,var(--theme-accent) 36%,#57657b)!important}
 body.game-theme .floating-toc-trigger::before{color:var(--theme-accent)}
 body.game-theme .download-link,body.game-theme .action{box-shadow:0 0 0 1px color-mix(in srgb,var(--theme-accent) 26%,transparent)}
+/* Shared, explicit hero download button: some older detail pages had no .action rule. */
+body.game-theme .hero-banner .hero-copy > a.action{
+  box-sizing:border-box;
+  display:flex;
+  width:fit-content;
+  max-width:100%;
+  min-height:44px;
+  align-items:center;
+  justify-content:center;
+  margin-top:15px;
+  padding:11px 20px;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:10px;
+  background:var(--theme-accent,#e7b8ce)!important;
+  color:#141824!important;
+  font-family:inherit;
+  font-size:14px;
+  font-weight:800;
+  line-height:1.45;
+  text-align:center;
+  text-decoration:none!important;
+  box-shadow:0 4px 16px rgba(0,0,0,.23);
+  cursor:pointer;
+}
+body.game-theme .hero-banner .hero-copy > a.action:hover{
+  filter:brightness(1.10);
+  box-shadow:0 7px 21px rgba(0,0,0,.32);
+}
+body.game-theme .hero-banner .hero-copy > a.action:focus-visible{
+  outline:3px solid #fff;
+  outline-offset:3px;
+}
+
 /* Wider reading area with comfortable inner margins. */
 @media(min-width:761px){
  body.game-theme .body{padding-left:clamp(34px,4.25vw,70px);padding-right:clamp(34px,4.25vw,70px)}
