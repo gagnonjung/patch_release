@@ -9,6 +9,10 @@ body.game-theme[data-game-theme="zelda-oot"]{--theme-base:#0e1c17;--theme-alt:#1
 body.game-theme[data-game-theme="zelda-mm"]{--theme-base:#141123;--theme-alt:#21182e;--theme-accent:#cbb6fa;--theme-paper-accent:#65488e;--theme-hero:rgba(24,15,40,.95);}
 body.game-theme[data-game-theme="zelda-ura"]{--theme-base:#0e1723;--theme-alt:#1b2332;--theme-accent:#b6d5ff;--theme-paper-accent:#3f6995;--theme-hero:rgba(15,27,45,.95);}
 body.game-theme[data-game-theme="mgs-tts"]{--theme-base:#111b1a;--theme-alt:#1c2928;--theme-accent:#afc49a;--theme-paper-accent:#466857;--theme-hero:rgba(18,30,29,.96);}
+body.game-theme[data-game-theme="jojo"]{--theme-base:#171326;--theme-alt:#2a1b3f;--theme-accent:#d5a5f3;--theme-paper-accent:#7245aa;--theme-hero:rgba(30,19,48,.94);}
+body.game-theme[data-game-theme="ninpen-manmaru"]{--theme-base:#10253a;--theme-alt:#163951;--theme-accent:#7ccef6;--theme-paper-accent:#217a99;--theme-hero:rgba(16,42,62,.95);}
+body.game-theme[data-game-theme="sakura-taisen"]{--theme-base:#28181e;--theme-alt:#3e2732;--theme-accent:#f5b9c5;--theme-paper-accent:#ae5a73;--theme-hero:rgba(49,26,39,.96);}
+body.game-theme[data-game-theme="sonic-r"]{--theme-base:#13223a;--theme-alt:#243e56;--theme-accent:#ffcf60;--theme-paper-accent:#d08d38;--theme-hero:rgba(21,40,63,.94);}
 body.game-theme{background:linear-gradient(150deg,var(--theme-base) 0%,#101521 56%,#0d121c 100%)!important;min-height:100vh}
 body.game-theme .shell{max-width:1200px!important;width:calc(100% - 44px);border-color:color-mix(in srgb,var(--theme-accent) 30%,#253247)!important;box-shadow:0 18px 46px #0006}
 body.game-theme .nav-inner,body.game-theme footer{max-width:1200px!important}
