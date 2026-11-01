@@ -1,0 +1,51 @@
+/* Four project preview pages. Shared with normal release detail layout, but NO fake download actions. */
+:root{color-scheme:dark;--bg:#101521;--card:#1b2231;--line:#39475f;--text:#eff1f7;--sub:#b9c4d4}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:#101521;color:var(--text);font:14px/1.8 system-ui,-apple-system,"Noto Sans KR","Malgun Gothic",sans-serif}
+a{color:inherit}
+nav.site-nav{background:#151d2b;border-bottom:1px solid #35435c}
+.nav-inner{max-width:1200px;margin:0 auto;min-height:66px;padding:12px 24px;display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.brand{font-weight:900;letter-spacing:.08em;text-decoration:none;font-size:14px}
+.links{display:flex;flex-wrap:wrap;align-items:center;gap:18px}
+.links a{font-size:12px;text-decoration:none;color:#c5cfdf}
+.links a:hover{color:#fff}
+.shell{margin:28px auto 52px;background:var(--card);border:1px solid #39475f;border-radius:22px;overflow:hidden}
+.hero-banner{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(250px,.85fr);gap:clamp(22px,4vw,50px);padding:clamp(28px,4vw,58px);align-items:center;min-height:405px;border-bottom:1px solid #4a5364}
+.hero-copy{min-width:0}
+.eyebrow{font-size:12px;font-weight:900;color:var(--theme-accent);letter-spacing:.12em}
+.hero-copy h1{margin:14px 0 3px;font-size:clamp(32px,4vw,47px);letter-spacing:-.055em;line-height:1.25}
+.english{font-size:16px;margin:0 0 21px;color:#d2dae5;overflow-wrap:anywhere}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}
+.pills span{border:1px solid #657188;background:#252e40;color:#dee5f2;padding:4px 12px;border-radius:99px;font-size:12px}
+.lead{font-size:15px;color:#e0e4f0;line-height:1.85;margin:0 0 19px}
+.state{display:inline-flex;align-items:center;background:#1b2a3a;border:1px solid color-mix(in srgb,var(--theme-accent) 45%,#45546b);color:#eff1f8;border-radius:9px;padding:8px 13px;font-size:12px;font-weight:800}
+.state:before{content:"";width:7px;height:7px;background:var(--theme-accent);border-radius:50%;margin-right:9px}
+.hero-preview{min-width:0;margin:0;align-self:stretch;display:flex;align-items:center;justify-content:center;border:1px solid #48536d;border-radius:15px;padding:16px;background:#101828;box-shadow:0 12px 30px #0004}
+.hero-preview img{display:block;width:100%;height:auto;max-height:350px;object-fit:contain}
+.body{padding:37px clamp(24px,5vw,64px) 49px}
+.section{margin:0 0 25px}
+.section h2{font-size:21px;letter-spacing:-.03em;line-height:1.4;margin:0 0 16px}
+.sep{border:0;border-top:1px solid #364157;margin:28px 0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 25px}
+.fact{display:grid;grid-template-columns:108px minmax(0,1fr);gap:11px;padding:12px 0;border-bottom:1px solid #354058}
+.fact span{color:#aab9ce;font-size:12px}
+.fact strong{font-size:13px;font-weight:650;overflow-wrap:anywhere}
+.scope{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.scope article{padding:18px;min-width:0;border:1px solid #40516b;border-radius:12px;background:#121b2b}
+.scope article strong{color:#e7edf7;font-size:14px}
+.scope article p{color:#c2cddd;font-size:13px;line-height:1.8;margin:10px 0 0}
+.qa{border:1px solid #455471;border-radius:12px;background:#151e2e;padding:20px}
+.qa p{margin:0 0 10px;font-size:14px;color:#d8dfec}
+.qa p:last-child{margin-bottom:0}
+.qa b{color:var(--theme-accent)}
+.muted{font-size:12px;color:#b9c4d4;line-height:1.9;margin:12px 0 0}
+.unreleased{border:1px dashed color-mix(in srgb,var(--theme-accent) 60%,#596681);border-radius:13px;background:#141e2f;padding:25px}
+.unreleased strong{font-size:19px;color:#fff;display:block;margin-bottom:6px}
+.unreleased p{color:#c8d1de;margin:7px 0;font-size:14px}
+.unreleased .no-download{display:inline-flex;align-items:center;gap:8px;pointer-events:none;opacity:.8;border-radius:9px;background:#26334b;border:1px solid #5c6880;color:#eff2f9;font-size:13px;font-weight:800;padding:11px 17px;margin:12px 0 2px}
+.legal{background:#111a29;border:1px solid #43516b;border-radius:12px;padding:20px;color:#cbd5e5;font-size:13px;line-height:1.9}
+.legal p{margin:0}
+footer.site-footer{max-width:1200px;margin:0 auto 35px;padding:0 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#9daac0;font-size:11px}
+.catalogue-source{font-size:11px}
+@media(max-width:760px){.hero-banner{grid-template-columns:1fr;padding:28px 22px;gap:23px;min-height:0}.hero-preview{max-width:380px;width:100%;margin:0 auto}.hero-copy h1{font-size:clamp(29px,7.8vw,39px)}.body{padding:27px 22px 35px}.grid,.scope{grid-template-columns:1fr}.nav-inner{justify-content:center}.links{gap:12px;justify-content:center}.shell{margin:0 auto 24px;border-left:0;border-right:0;border-radius:0}}
+@media print{.unreleased{border-style:solid}}
