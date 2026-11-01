@@ -82,3 +82,9 @@ a.game-card:hover .thumb-frame>img{transform:scale(1.02)}
 .top-nav .support-link{align-items:center;gap:8px;white-space:nowrap}
 .top-nav .support-label{display:inline-block;color:#3c3031;font-size:12px;font-weight:850;line-height:1.2}
 @media(max-width:520px){.top-nav .support-link img{height:30px}.top-nav .support-label{font-size:11px}}
+
+/* Unreleased project previews are separated from downloadable patches. */
+.catalog-heading.preview-heading{margin-top:45px}
+.catalog-heading.preview-heading h2{font-size:24px;line-height:1.2;letter-spacing:-.045em;margin:0;font-weight:800}
+.game-card .new-release-tag.is-preview{background:#59667b}
+@media(max-width:760px){.catalog-heading.preview-heading h2{font-size:22px}}
