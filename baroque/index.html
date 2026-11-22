@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="세가 새턴 바로크 일본판 V1.004 한국어 패치 v0.9b Beta. 다운로드, 적용 방법, SHA-256 및 검수 범위 안내.">
-<title>바로크 — 세가 새턴 한국어 패치 v0.9b Beta</title>
+<meta name="description" content="세가 새턴 바로크 일본판 V1.004 한국어 패치 v1.0. 적용 방법, MD5·SHA-256 및 검수 범위 안내.">
+<title>바로크 — 세가 새턴 한국어 패치 v1.0</title>
 <style>
 :root{color-scheme:dark;--bg:#101520;--card:#1b2231;--surface:#131b2b;--line:#354058;--text:#edeff5;--sub:#bdc5d5;--accent:#e7b2bc}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#292130 0,#111521 620px);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.75}
@@ -67,9 +67,9 @@ footer{max-width:980px;margin:0 auto 40px;padding:0 24px;display:flex;justify-co
 <header class="hero-copy">
 <div class="eyebrow">SEGA SATURN · KOREAN LOCALIZATION</div>
 <h1>바로크</h1><p class="english">BAROQUE / バロック</p>
-<div class="pills"><span>SS</span><span>일본판 V1.004</span><span>v0.9b Beta</span><span>패치 공개</span></div>
-<p class="lead">무너진 세계와 신경탑을 배경으로 한 《바로크》 새턴판의 비공식 한국어화 작업입니다. 대사와 UI, 일부 이미지·오프닝·엔딩 영상에 한국어를 적용해 검수하고 있습니다.</p>
-<span class="state">v0.9b Beta · 공개 검수판</span>
+<div class="pills"><span>SS</span><span>일본판 V1.004</span><span>v1.0 패치</span><span>조합형 한글 키보드</span></div>
+<p class="lead">무너진 세계와 신경탑을 배경으로 한 《바로크》 새턴판의 비공식 한국어 패치입니다. 대사와 메뉴·아이템·상태 메시지, 영상 자막에 한국어를 적용했으며 한 페이지 조합형 한글 이름 입력을 지원합니다.</p>
+<span class="state">v1.0 · 한국어 패치</span>
 </header>
 <figure class="hero-preview detail-cover"><img src="https://cdn.mobygames.com/covers/8637949-baroque-sega-saturn-front-cover.jpg" alt="바로크 1998년 일본판 세가 새턴 패키지 커버 아트" loading="eager" referrerpolicy="no-referrer"></figure>
 </section>
@@ -80,49 +80,50 @@ footer{max-width:980px;margin:0 auto 40px;padding:0 24px;display:flex;justify-co
 <div class="fact"><span>개발</span><strong>STING</strong></div>
 <div class="fact"><span>원작 발매</span><strong>1998년 5월 21일 (일본)</strong></div>
 <div class="fact"><span>대상</span><strong>일본판 · T-33901G · V1.004</strong></div>
-<div class="fact"><span>배포 상태</span><strong>v0.9b Beta · Google Drive 공개</strong></div>
+<div class="fact"><span>패치 버전</span><strong>v1.0 · 2026.11.22</strong></div>
 <div class="fact"><span>커버 출처</span><strong><a href="https://cdn.mobygames.com/covers/8637949-baroque-sega-saturn-front-cover.jpg" target="_blank" rel="noopener noreferrer">MobyGames · 새턴판 커버</a></strong></div>
 </div></section>
 <hr class="sep">
 <section id="game-spotlight" class="section"><h2>게임 소개</h2><p class="description">독특하고 불안한 분위기의 신경탑을 탐색하며 세계의 진실에 다가가는 게임입니다. 한국어 패치는 게임의 원래 연출과 자막 위치를 존중하는 방향으로 제작하고 있습니다.</p></section>
 <hr class="sep">
 <section id="features" class="section"><h2>한국어화 작업 범위</h2><div class="scope">
-<article><strong>대사와 아이템</strong><p>스토리 대사·선택지·아이템명과 설명, 상태 알림의 한국어 초안 및 화면 폭 검수</p></article>
-<article><strong>메뉴와 그래픽</strong><p>메뉴·설정·이름 입력·랭킹·층 이동 화면, 한글 글리프와 주요 이미지 수정</p></article>
+<article><strong>대사와 아이템</strong><p>스토리 대사·선택지·아이템명과 설명, 상태 알림을 한국어로 수정하고 출력 폭을 점검</p></article>
+<article><strong>메뉴와 그래픽</strong><p>메뉴·설정·랭킹·층 이동 화면, 한글 글리프와 주요 이미지 수정 및 조합형 이름 입력 구현</p></article>
 <article><strong>오프닝과 엔딩</strong><p>네이티브 CAK 영상 9편에 한국어 자막을 통합하고 폰트 AA·페이드·배경 복원을 검수</p></article>
 </div><p class="muted">나열된 범위는 실제 작업 및 부분 실행 검증이 있는 항목입니다. 게임 전체에서 모든 일본어가 제거되었다는 뜻은 아닙니다.</p></section>
 <hr class="sep">
 <section id="progress" class="section"><h2>현재 검수 현황</h2><div class="qa">
-<p class="test-env"><b>테스트:</b> PC Mednafen/EmuCap의 일부 장면 PASS · 새턴 실기, 전 구간 플레이 및 세이브 호환성 미검증</p>
-<p><b>배포 기준:</b> 2026.11.22 누적 수정판 v0.9b. ZIP 적용기 복원·출력 3파일 바이트 비교·원본 보존·ZIP CRC 검사 PASS. 과거 구형 ZIP은 보관 처리</p>
-<p><b>텍스트:</b> 확인된 원문 약 1,946건 중 초안 약 1,922건. 소비처 미확정 167건, 번역 최종 승인 및 전체 플레이 QA 미완료</p>
+<p class="test-env"><b>테스트:</b> PC Mednafen/EmuCap에서 일부 기능 PASS · 새턴 실기 사용자 확인(기기·검수 범위 상세 미기록) · 엔딩까지 전체 플레이 및 모든 저장 환경의 호환성 미검증</p>
+<p><b>패치 기준:</b> 2026.11.22 v1.0. 일본판 원본에 적용 후 결과 CUE/BIN 3개 파일의 전체 바이트 비교, 원본 보존, ZIP CRC 검사 PASS. 사용자 승인 최종 0.9b 게임 이미지와 데이터 동일</p>
+<p><b>텍스트:</b> 대사·메뉴·아이템명과 설명·상태 알림의 한국어 문구와 화면 배치 검수 기록. 모든 분기와 엔딩까지의 플레이 QA는 미완료</p>
 <p><b>구조/글꼴:</b> 검수 디스크 ISO 218파일 재읽기·변경 섹터 검사 이력, 한글 717글리프 갱신</p>
-<p><b>런타임:</b> 타이틀·첫 마을·메뉴·아이템·랭킹·이름 입력·일부 영상의 개별 실행 검증 기록</p>
-</div><p class="muted">이번 베타에는 아이템 등급명 통일, 효과 알림, 여러 줄 대사 여백, 소지 한도 초과 메시지 개행 등 누적 수정분을 포함했습니다. 조합형 한글 이름 키보드는 포함하지 않습니다. 전체 구간 플레이·실기·모든 분기의 검증이 완료된 정식판이 아니므로 오류 제보를 환영합니다.</p></section>
+<p><b>런타임:</b> 타이틀·메뉴·아이템·영상 일부 장면과 조합형 한글 이름 입력(11,172음절), 저장·재시작·불러오기, 상태 메시지·밝기 안내의 부분 실행 검증 기록</p>
+</div><p class="muted">v1.0에는 아이템 등급명 통일, 효과 알림, 여러 줄 대사 여백, 소지 한도 초과 메시지 개행과 조합형 한글 이름 키보드, 상태별 조사·어미 및 명암 안내 정렬 수정분이 포함됩니다. 다만 전체 구간과 모든 실기·저장 환경의 정상 동작을 보장하는 것은 아닙니다.</p></section>
 <hr class="sep">
 <section id="source" class="section"><h2>원본 게임 이미지 기준</h2>
-<div class="hash"><label>지원 원본 · Japan V1.004 · T-33901G · Track 1 BIN</label><code>Baroque (Japan) (Track 1).bin</code><label>Track 1 SHA-256</label><code>5a3fa8a51fb495c4edc7098caf4fb2093ce2f68b51abcb43cc87ba1d2ce8477f</code><label>Track 2 SHA-256</label><code>b9a7d354cdbba8b3da28cbd71382a04ee79550110e6de45605d19028362192e1</code><label>CUE SHA-256</label><code>5b8a841b44a6175ebd07356bf34ce665eaa91063718f1eecf2f9cf376ff619a8</code></div>
+<div class="hash"><label>지원 원본 · Japan V1.004 · T-33901G · Track 1 BIN</label><code>Baroque (Japan) (Track 1).bin</code><label>Track 1 MD5</label><code>1F22CF4B439775BBC31C65EBE6CCD6AC</code><label>Track 1 SHA-256</label><code>5a3fa8a51fb495c4edc7098caf4fb2093ce2f68b51abcb43cc87ba1d2ce8477f</code><label>Track 2 SHA-256</label><code>b9a7d354cdbba8b3da28cbd71382a04ee79550110e6de45605d19028362192e1</code><label>CUE SHA-256</label><code>5b8a841b44a6175ebd07356bf34ce665eaa91063718f1eecf2f9cf376ff619a8</code></div>
 <p class="muted">일본판 원본 Track 1·2 BIN 및 CUE가 필요한 패치입니다. 원본 게임 데이터·패치 완료 BIN은 배포하지 않습니다.</p></section>
 <hr class="sep">
-<section id="release" class="section"><h2>한국어 패치 v0.9b Beta 다운로드</h2>
-<div class="download"><div class="release">BETA RELEASE · 2026.11.22</div><h3>바로크 한국어 패치 v0.9b</h3>
-<p>일본판 T-33901G / V1.004용 xdelta 패치입니다. 구형 ZIP을 대체하는 최신 누적 검수판이며, 전체 플레이 검수가 완료되지 않은 베타 버전입니다.</p>
-<p class="filename">Baroque_Korean_Patch_0.9b.zip · 55,940,614 bytes</p>
-<a class="download-link" href="https://hanmarus.tistory.com/164" target="_blank" rel="noopener noreferrer">티스토리에서 v0.9b 패치 받기</a>
-<p class="checksum">로컬 제작 ZIP SHA-256: <code>9ef02e008ec02464192a07e35ca95e0819479e963fb5311f9c9ed691527ec2d0</code></p>
-<p class="checksum">xdelta SHA-256: <code>736db2d80f5b6475ac5953af7d8c0a2d7443740834a64f4dcd17d8200a7f54ce</code></p>
-<p class="checksum">패치 결과 Track 1 SHA-256: <code>2cf0e7918a2f217a210a0fc827b15c86afe579f21e592c91b95c9e8e3e5e5ee3</code></p>
-<p class="muted">패치 다운로드는 <a href="https://hanmarus.tistory.com/164" target="_blank" rel="noopener noreferrer">한마루 티스토리의 바로크 배포 게시글</a>에서 안내합니다. ZIP 해시는 로컬에서 검증한 배포 패키지 기준이며, 내려받은 파일과 대조할 수 있습니다.</p>
+<section id="release" class="section"><h2>한국어 패치 v1.0 다운로드</h2>
+<div class="download"><div class="release">VERSION 1.0 · 2026.11.22</div><h3>바로크 한국어 패치 v1.0</h3>
+<p>일본판 T-33901G / V1.004용 xdelta 패치입니다. 한글 조합형 키보드·영상 자막·시스템 및 아이템 수정분을 포함한 v1.0 패키지이며, 엔딩까지의 전체 플레이 검수는 아직 완료되지 않았습니다.</p>
+<p class="filename">Baroque_Korean_Patch_1.0.zip · 55,977,293 bytes (로컬 빌드 기준)</p>
+<a class="download-link" href="https://hanmarus.tistory.com/164" target="_blank" rel="noopener noreferrer">티스토리에서 v1.0 패치 받기</a>
+<p class="checksum">로컬 제작 v1.0 ZIP SHA-256: <code>bcd064bdea8af040c7cd36710ace298b01abb7e572b8aaaaedc1cf8514177215</code></p>
+<p class="checksum">xdelta SHA-256: <code>562645fba307e971b9f0b2eb17d2b4c0928e31de0d12d0d190b4a2958a7ba8d2</code></p>
+<p class="checksum">패치 결과 Track 1 MD5: <code>AC0A486CECABFE945F37BF88AFC1BAC4</code></p>
+<p class="checksum">패치 결과 Track 1 SHA-256: <code>5e36cd1bf672ebdd4e01543510a2b57fe331e823d3958033c97a2907bdeb533c</code></p>
+<p class="muted">패치 다운로드는 <a href="https://hanmarus.tistory.com/164" target="_blank" rel="noopener noreferrer">한마루 티스토리의 바로크 배포 게시글</a>에서 안내합니다. ZIP 해시는 로컬에서 검증한 v1.0 패키지 기준입니다. 티스토리에 첨부한 파일과 동일한지 내려받아 확인할 때 참고해 주세요.</p>
 </div></section>
 <hr class="sep">
 <section id="install" class="section"><h2>패치 적용 방법</h2><ol class="steps">
 <li>지원 원본 일본판 <strong>V1.004 · T-33901G</strong>의 <code>Baroque (Japan).cue</code>와 Track 1·Track 2 BIN 두 파일을 같은 폴더에 준비합니다.</li>
-<li><a href="https://hanmarus.tistory.com/164" target="_blank" rel="noopener noreferrer">티스토리 바로크 배포글</a>에서 <code>Baroque_Korean_Patch_0.9b.zip</code>을 다운로드한 뒤 압축을 해제합니다.</li>
+<li><a href="https://hanmarus.tistory.com/164" target="_blank" rel="noopener noreferrer">티스토리 바로크 배포글</a>에서 <code>Baroque_Korean_Patch_1.0.zip</code>을 다운로드한 뒤 압축을 해제합니다.</li>
 <li>원본 <code>Baroque (Japan).cue</code> 또는 Track 1 BIN을 동봉된 <code>00_APPLY_PATCH.cmd</code>에 끌어다 놓습니다. Windows PowerShell과 1GB 이상의 여유 공간이 필요합니다.</li>
-<li><code>PATCH_APPLY_PASS</code> 메시지와 자동 해시 검증을 확인한 다음, 원본 옆에 생성된 <code>Baroque (Korea) 0.9b</code> 폴더에서 <code>Baroque (Korea).cue</code>를 실행합니다.</li>
-</ol><p class="muted">패치는 원본을 덮어쓰지 않습니다. 기존 출력 폴더가 있으면 안전을 위해 적용을 중단합니다. 파일별 체크섬과 수동 적용 방법은 ZIP 안의 <code>README_KO.md</code> 및 <code>PATCH_MANIFEST.json</code>을 확인하세요.</p></section>
+<li><code>PATCH_APPLY_PASS</code> 메시지와 자동 해시 검증을 확인한 다음, 원본 옆에 생성된 <code>Baroque (Korea) 1.0</code> 폴더에서 <code>Baroque (Korea).cue</code>를 실행합니다.</li>
+</ol><p class="muted">패치는 원본을 덮어쓰지 않습니다. 기존 출력 폴더가 있으면 안전을 위해 적용을 중단합니다. 파일별 체크섬과 수동 적용 방법은 ZIP 안의 <code>README_KO.md</code> 및 <code>PATCH_MANIFEST.json</code>을 확인하세요. 한글 이름은 기존 저장 정보와 별도 백업 메모리 항목 <code>BRQKR_NAME0</code>을 함께 사용하므로 저장 데이터를 백업하고 구버전 세이브스테이트는 사용하지 마세요.</p></section>
 <hr class="sep">
-<section id="credits" class="section"><h2>제작 및 검수</h2><div class="grid"><div class="fact"><span>한국어화</span><strong>한마루</strong></div><div class="fact"><span>검수</span><strong>PC Mednafen / EmuCap 부분 검증 · 사용자 게임 플레이 QA 대기</strong></div></div></section>
+<section id="credits" class="section"><h2>제작 및 검수</h2><div class="grid"><div class="fact"><span>한국어화</span><strong>한마루</strong></div><div class="fact"><span>분석·기술 지원</span><strong>ChatGPT Codex (6.1 Sol Medium)</strong></div><div class="fact"><span>검수</span><strong>Mednafen / EmuCap 일부 기능 검증 · 실기 사용자 확인 · 전체 완주 미확인</strong></div></div></section>
 <hr class="sep">
 <section class="section patch-warning" id="patch-warning" role="note"><h2>경고</h2><p>본 한국어 패치의 임의 변조나 타기종으로의 포팅, 동의 없는 재배포는 허가하지 않습니다. 판매 또한 금지됩니다.</p></section>
 <hr class="sep">
@@ -134,5 +135,5 @@ footer{max-width:980px;margin:0 auto 40px;padding:0 24px;display:flex;justify-co
 <li>본 한글패치 파일을 이용하여 금전적 이득을 취하는 모든 행위를 일절 금합니다. 해당 행위로 발생하는 모든 책임은 이용 당사자에게 있으며, 패치 제작자는 어떠한 책임도 지지 않습니다.(패치 파일 자체 및 패치 롬 파일 판매, 패치 롬 카트리지 제작 및 판매, 웹하드 등 상업적 사이트 업로드, 토렌트 사이트 공유 등)</li>
 <li>상기 C·D·E항의 금지 행위가 적발된 경우, 또는 본 한글패치 파일 공유로 인해 원저작자 및 유통사, 기관의 요청이 있을 경우 예고 없이 게시물이 비공개 처리될 수 있으며, 향후 작업 예정인 작품의 한글패치 파일도 공유하지 않을 수 있습니다.</li>
 </ol></div></section>
-</div></main><footer><span>한마루 한글화 작업소</span><span>BAROQUE / SEGA SATURN · v0.9b Beta</span></footer>
+</div></main><footer><span>한마루 한글화 작업소</span><span>BAROQUE / SEGA SATURN · v1.0</span></footer>
 </body></html>
