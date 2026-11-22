@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="악마성 드라큘라 X 월하의 야상곡 PS1 일본판 Rev 2 한국어화 작업 소개.">
+<title>악마성 드라큘라 X 월하의 야상곡 — 한국어화 제작 중</title>
+<style>
+:root{color-scheme:dark;--bg:#101520;--card:#1b2231;--surface:#131b2b;--line:#354058;--text:#edeff5;--sub:#bdc5d5;--accent:#e7b2bc}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#292130 0,#111521 620px);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.75}
+a{color:inherit}nav{background:#181d2b;border-bottom:1px solid var(--line)}
+.nav-inner{max-width:980px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{font-size:13px;font-weight:800;letter-spacing:.08em;text-decoration:none}.brand span{color:#a2abc2;font-weight:400}
+.links{display:flex;align-items:center;flex-wrap:wrap;gap:18px}.links a{text-decoration:none;font-size:13px;color:#c4cbda}.links a:hover{color:#fff}
+.shell{max-width:980px;margin:28px auto 55px;background:var(--card);border:1px solid #42455e;border-radius:22px;overflow:hidden;box-shadow:0 20px 54px #0004}
+.hero-banner{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(260px,.88fr);gap:clamp(22px,4vw,48px);align-items:center;padding:clamp(26px,4.5vw,50px);min-height:390px;background:linear-gradient(125deg,#372335 0%,#25283b 57%,#1b2433 100%);border-bottom:1px solid #5b4960}
+.hero-copy{min-width:0}.eyebrow{font-size:12px;line-height:1.5;font-weight:800;letter-spacing:.1em;color:#f3b8c8}.hero-copy h1{margin:12px 0 6px;font-size:clamp(32px,4vw,46px);letter-spacing:-.05em;line-height:1.2}.english{font-size:17px;line-height:1.45;color:#d2d5e0;margin:0 0 22px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 23px}.pills span{font-size:12px;color:#e1e3ee;background:#372d43;border:1px solid #716078;padding:5px 11px;border-radius:99px}
+.lead{font-size:15px;color:#e4e4ee;line-height:1.85;margin:0 0 22px}
+.state{display:inline-flex;align-items:center;gap:9px;background:#624459;border:1px solid #bc839c;color:#ffe7ef;border-radius:9px;padding:10px 15px;font-size:13px;font-weight:800}
+.state::before{content:"";width:8px;height:8px;border-radius:50%;background:#f4bdc8;box-shadow:0 0 9px #e89eaf}
+.hero-preview{margin:0;min-width:0;display:flex;align-items:center;justify-content:center;align-self:stretch;padding:16px;border:1px solid #564a60;background:#121724;border-radius:15px;box-shadow:0 12px 30px #0004}
+.hero-preview img{display:block;width:100%;height:auto;max-height:350px;object-fit:contain;image-rendering:auto}
+
+.body{padding:36px clamp(22px,5.5vw,62px) 48px}.sep{border:0;border-top:1px solid #3e465b;margin:33px 0}.section{margin:0 0 24px}.section h2{font-size:21px;line-height:1.3;margin:0 0 15px;letter-spacing:-.025em}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}.fact{border-bottom:1px solid #343e55;padding:12px 0;display:grid;grid-template-columns:106px minmax(0,1fr);gap:9px}.fact span{font-size:12px;color:#aab1c7}.fact strong{font-size:13px;font-weight:600;overflow-wrap:anywhere}
+.description{font-size:15px;color:#cbd1df;line-height:1.9;margin:0}
+.scope{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.scope article{min-width:0;background:#131a2b;border:1px solid #3f485e;border-radius:12px;padding:18px}.scope strong{font-size:15px;color:#f0e5ee}.scope p{font-size:13px;line-height:1.8;color:#bfcbdd;margin:10px 0 0}
+.muted{color:#b7bfd0;font-size:13px;line-height:1.85}
+.qa{padding:21px;border:1px solid #4c506b;border-radius:12px;background:#141c2c}.qa p{margin:0 0 12px;font-size:14px;color:#d4d7e3}.qa p:last-child{margin-bottom:0}.qa b{color:#f2c0cb}.qa p.test-env{color:#ff7272;font-weight:800}.qa p.test-env b{color:inherit}
+.pending{margin:13px 0 0;padding-left:21px;color:#c8cdda;font-size:13px;line-height:1.9}
+.hash{border:1px solid #404b65;border-radius:12px;background:#111a2a;padding:18px}.hash label{display:block;color:#9faed0;font-size:11px;letter-spacing:.06em}.hash code{display:block;font:12px/1.8 ui-monospace,Consolas,monospace;color:#eff3fb;overflow-wrap:anywhere;margin-top:4px}
+.download{padding:23px;background:#252c43;border:1px solid #616783;border-radius:13px}.download .release{font-size:12px;color:#edb7c6;font-weight:800;letter-spacing:.07em}.download h3{font-size:20px;margin:9px 0}.download p{margin:10px 0 0;font-size:14px;color:#d5d9e7}.download .download-link{display:inline-flex;align-items:center;justify-content:center;gap:9px;margin-top:18px;padding:12px 20px;border-radius:10px;background:#e8becb;color:#281c30;text-decoration:none;font-size:14px;font-weight:850;border:1px solid #efccd6;transition:background .2s ease,transform .2s ease}.download .download-link:hover{background:#f7dbe3;transform:translateY(-1px)}.download .download-link:focus-visible{outline:3px solid #fff;outline-offset:3px}.download .checksum{font-size:12px;line-height:1.8;color:#b8c5da;overflow-wrap:anywhere}
+.legal{background:#151c2b;border:1px solid #49536b;border-radius:12px;padding:21px}.legal ol{padding-left:23px;font-size:13px;display:grid;gap:12px;line-height:1.85}.legal li{padding-left:4px;overflow-wrap:anywhere}
+footer{max-width:980px;margin:0 auto 40px;padding:0 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#939fb7;font-size:12px}
+@media(max-width:760px){.hero-banner{grid-template-columns:minmax(0,1fr);min-height:0;gap:25px;padding:28px 22px}.hero-preview{width:min(100%,380px);margin:0 auto;align-self:auto;padding:14px}.hero-preview img{max-height:340px}.hero-copy h1{font-size:clamp(31px,8vw,40px)}}
+@media(max-width:680px){.shell{margin:0 auto 24px;border-left:0;border-right:0;border-radius:0}.body{padding:26px 22px 36px}.grid,.scope{grid-template-columns:1fr}.fact{grid-template-columns:106px minmax(0,1fr)}.nav-inner{justify-content:center}.links{justify-content:center;gap:12px}.legal{padding:16px}}
+.download .filename{margin:9px 0 12px;font-size:12px;line-height:1.7;color:#dce3f1;font-family:ui-monospace,Consolas,monospace;overflow-wrap:anywhere}
+.patch-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:13px 0 4px}
+.patch-meta div{padding:10px 13px;border:1px solid #4b5570;border-radius:9px;background:#1c2538}
+.patch-meta span{display:block;color:#b7bfd0;font-size:11px}
+.patch-meta strong{font-size:13px}
+.release-hashes{margin-top:14px}
+.hash-row+.hash-row{padding-top:13px;margin-top:12px;border-top:1px solid #35415a}
+.steps{padding-left:23px;color:#d9dfe9;font-size:14px;line-height:1.95}
+.steps li{padding-left:4px;margin-bottom:6px}
+.steps code{font-size:12px;overflow-wrap:anywhere}
+.beta-note{margin-top:15px;padding:17px 19px;border:1px solid #685a78;border-radius:11px;background:#232337;color:#dce0ed}
+.beta-note strong{color:#f0c5d1}
+.beta-note p{font-size:13px;margin:6px 0 0;line-height:1.8}
+@media(max-width:520px){.patch-meta{grid-template-columns:1fr}}
+</style>
+
+<link rel="stylesheet" href="../assets/css/support-banner.css?v=20261010"><link rel="stylesheet" href="../assets/css/patch-history.css?v=20261011"><link rel="stylesheet" href="../assets/css/patch-warning.css?v=20261012"><link rel="stylesheet" href="../assets/css/detail-cover.css?v=20261020-uniform">
+<link rel="stylesheet" href="../assets/css/game-catalogue.css?v=20261028">
+<link rel="stylesheet" href="../assets/css/floating-toc.css?v=20261029-compact">
+<script src="../assets/js/floating-toc.js?v=20261029-compact" defer></script>
+<link rel="stylesheet" href="../assets/css/image-lightbox.css?v=20261028">
+<script defer src="../assets/js/image-lightbox.js?v=20261028"></script>
+<link rel="stylesheet" href="../assets/css/game-themes.css?v=20261029-button-fix">
+<link rel="stylesheet" href="../assets/css/game-video.css?v=20261028">
+<script src="../assets/js/game-video.js?v=20261028" defer></script>
+
+</head>
+<body class="game-theme" data-game-theme="castlevania-sotn">
+<nav><div class="nav-inner"><a class="brand" href="../index.html">HANMARU</a><div class="links"><a href="../index.html">전체 게임</a><a href="#game-spotlight">게임 소개</a><a href="#features">작업 범위</a><a href="#release">패치 상태</a></div><a class="support-coffee" href="https://litt.ly/hanmaru" target="_blank" rel="noopener noreferrer" aria-label="커피 후원하기"><img src="https://www.owlstown.com/assets/icons/bmc-yellow-button-941f96a1.png" alt="" loading="eager"><span class="support-label">커피 후원</span></a></div></nav>
+<main class="shell"><section class="hero-banner" aria-label="악마성 드라큘라 X 월하의 야상곡 한국어화 소개">
+<header class="hero-copy"><div class="eyebrow">PLAYSTATION · KOREAN LOCALIZATION</div>
+<h1>악마성 드라큘라 X<br>월하의 야상곡</h1><p class="english">Castlevania: Symphony of the Night / 悪魔城ドラキュラX 月下の夜想曲</p>
+<div class="pills"><span>PS1</span><span>일본판 Rev 2</span><span>WIP</span><span>제작 중</span></div>
+<p class="lead">알루카드와 함께 드라큘라 성의 비밀을 찾는 탐색형 액션 RPG입니다. 일본어판의 대사·아이템·메뉴를 원작의 분위기를 살려 한국어로 즐기기 위한 프로젝트입니다.</p>
+<span class="state">한국어화 · 제작 중</span></header>
+<figure class="hero-preview detail-cover"><img src="https://cdn.thegamesdb.net/images/original/boxart/front/86500-1.jpg" alt="악마성 드라큘라 X 월하의 야상곡 PlayStation 일본판 원작 커버 아트" loading="eager" referrerpolicy="no-referrer"></figure>
+</section><div class="body"><section id="game" class="section"><h2>게임 정보</h2><div class="grid">
+<div class="fact"><span>게임명</span><strong>악마성 드라큘라 X 월하의 야상곡</strong></div>
+<div class="fact"><span>기종</span><strong>PlayStation (PS1)</strong></div>
+<div class="fact"><span>원제</span><strong>悪魔城ドラキュラX 月下の夜想曲</strong></div>
+<div class="fact"><span>장르</span><strong>탐색형 액션 RPG</strong></div>
+<div class="fact"><span>원작 발매</span><strong>1997년 3월 20일 (일본)</strong></div>
+<div class="fact"><span>개발·발매</span><strong>코나미 (KONAMI)</strong></div>
+</div></section>
+<hr class="sep">
+<section id="game-spotlight" class="section game-catalogue"><h2>게임 카탈로그</h2>
+<div class="catalogue-sheet"><div class="catalogue-ribbon"><span>GAME CATALOGUE · 작품 가이드</span><span class="catalogue-platform">PLAYSTATION · 1997 · ACTION RPG</span></div><div class="catalogue-layout"><div class="catalogue-gallery"><figure class="catalogue-shot primary"><a href="https://fantasyanime.com/valhalla/castlevaniasotn/screenshots/large/04-MarbleGallery05.png" target="_blank" rel="noopener noreferrer" aria-label="원작 게임 화면 1 확대"><img src="https://fantasyanime.com/valhalla/castlevaniasotn/screenshots/large/04-MarbleGallery05.png" alt="대리석 회랑에서 알루카드가 적과 마주한 원작 PlayStation 화면" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a><figcaption><span class="num">01</span><span>원작 화면 · 대리석 회랑</span></figcaption></figure>
+<figure class="catalogue-shot"><a href="https://fantasyanime.com/valhalla/castlevaniasotn/screenshots/large/13-ClockTower08.png" target="_blank" rel="noopener noreferrer" aria-label="원작 게임 화면 2 확대"><img src="https://fantasyanime.com/valhalla/castlevaniasotn/screenshots/large/13-ClockTower08.png" alt="시계탑 지역에서 알루카드가 적과 대치하는 원작 PlayStation 화면" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a><figcaption><span class="num">02</span><span>원작 화면 · 시계탑</span></figcaption></figure>
+<figure class="catalogue-shot"><a href="https://fantasyanime.com/valhalla/castlevaniasotn/screenshots/large/07-Chapel04.png" target="_blank" rel="noopener noreferrer" aria-label="원작 게임 화면 3 확대"><img src="https://fantasyanime.com/valhalla/castlevaniasotn/screenshots/large/07-Chapel04.png" alt="예배당에서 알루카드가 적과 전투하는 원작 PlayStation 화면" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a><figcaption><span class="num">03</span><span>원작 화면 · 예배당</span></figcaption></figure></div><div class="catalogue-story"><p class="catalogue-kicker">작품 소개 · 주요 게임 시스템</p><h3>드라큘라 성을 자유롭게 탐색하는 액션 RPG</h3><p class="catalogue-intro">알루카드가 되어 드라큘라 성 내부를 탐험하는 작품입니다. 새로운 장비와 이동 능력을 얻으면서 막혀 있던 길을 다시 찾아가고, 숨겨진 방과 새로운 통로를 발견하게 됩니다.</p><div class="catalogue-detail"><p><strong>확장되는 탐험</strong>성의 각 구역이 서로 이어져 있어 이전에 방문한 장소로 되돌아가는 과정도 중요합니다.</p><p><strong>무기·마법·변신</strong>다양한 장비와 특수 능력의 조합에 따라 전투와 탐색 방식이 달라집니다.</p></div></div></div><p class="catalogue-source">사진: <a href="https://fantasyanime.com/valhalla/castlevaniasotn/castlevsotn_shots04.htm" target="_blank" rel="noopener noreferrer">FantasyAnime · PS1 원작 화면</a> (한국어 패치 화면이 아님). 커버: <a href="https://thegamesdb.net/game.php?id=86500" target="_blank" rel="noopener noreferrer">TheGamesDB</a> · 일본판 원작 패키지</p></div></section>
+<hr class="sep">
+<section id="features" class="section"><h2>한국어화 작업 범위</h2><div class="scope">
+<article><strong>대사·아이템</strong><p>일본어 대사 및 아이템명·설명의 자연스러운 한국어화, 용어 일관성과 문장 길이를 확인하는 작업</p></article>
+<article><strong>메뉴·화면</strong><p>인게임 메뉴 및 시스템 텍스트, 글꼴과 그래픽의 한국어 출력·배치를 점검하는 작업</p></article>
+<article><strong>표시·조작</strong><p>원작 화면의 형태를 존중하면서 글자 폭과 안내 문구, 필요시 조작 편의성까지 검토하는 작업</p></article>
+</div><p class="muted">실제 완료 범위는 작업 중인 일본판 Rev 2 프로젝트의 빌드 검증 후 확정합니다. 이 페이지는 완료 항목을 선언하는 곳이 아닙니다.</p></section>
+<hr class="sep">
+<section id="progress" class="section"><h2>현재 검수 현황</h2><div class="qa">
+<p class="test-env"><b>테스트:</b> 배포용 빌드·실제 게임 실행 검수 자료 미확인 · PS1 실기 및 전 구간 플레이 검수 여부 확인 필요</p>
+<p><b>대상 프로젝트:</b> 일본판 Rev 2 기반 한국어화 작업 경로 확인</p>
+<p><b>작업 범위:</b> 아이템·텍스트·메뉴·폰트 등 구체적 반영분은 로컬 빌드 및 QA 자료 확인 후 업데이트</p>
+<p><b>최종 배포 자료:</b> 패치 버전·적용 대상 해시·ZIP 파일·티스토리 게시물 URL 미확정</p>
+</div><p class="muted">패치 파일은 아직 이 사이트에 연결하지 않았으며, 테스트 여부를 임의로 추정하지 않았습니다.</p></section>
+<hr class="sep">
+<section id="source" class="section"><h2>원본 파일 정보</h2><div class="hash">
+<label>작업 기준</label><code>Akumajou Dracula X - Gekka no Yasoukyoku (Japan) (Rev 2)</code>
+<label>지원 원본 MD5</label><code>최종 빌드 확인 전</code>
+<label>패치 후 MD5</label><code>최종 빌드 확인 전</code>
+</div><p class="muted">작업 폴더 이름으로 대상 리비전을 식별했으며, 실제 배포판의 지원 파일명·MD5·SHA-256은 아직 검증하지 않았습니다.</p></section>
+<hr class="sep">
+<section id="release" class="section"><h2>한국어 패치</h2><div class="download">
+<div class="release">WORK IN PROGRESS · 2026.11.22</div><h3>한국어 패치 · 제작 중</h3>
+<p>다운로드는 현재 준비되지 않았습니다. 패치 배포 시 한마루 티스토리의 해당 게시물로 연결하며, 여기에는 게임 소개와 검증된 릴리스 정보만 안내합니다.</p>
+<p class="muted">원본 게임 BIN/CUE 등 게임 데이터는 제공하지 않습니다. 패치 파일과 버전 번호, 해시는 확인 후 등록합니다.</p>
+</div></section>
+<hr class="sep">
+<section id="install" class="section"><h2>패치 적용 방법</h2><ol class="steps">
+<li>원본 일본어판 디스크 이미지와 저장 파일을 백업합니다.</li>
+<li>배포 시 안내되는 Rev 2의 정확한 해시와 패치 파일의 대상 리비전을 확인합니다.</li>
+<li>패치 형식과 실행 방식은 실제 배포 패키지의 설명서를 기준으로 적용합니다.</li>
+</ol><p class="muted">현재는 패치 종류나 실행 파일 이름을 확정하지 않았습니다.</p></section>
+<hr class="sep">
+<section id="credits" class="section"><h2>제작 및 검수</h2><div class="grid"><div class="fact"><span>한국어화</span><strong>한마루</strong></div><div class="fact"><span>검수</span><strong>최종 빌드 확인 후 기록 예정</strong></div></div></section>
+<hr class="sep">
+<section class="section patch-warning" id="patch-warning" role="note"><h2>경고</h2><p>본 한국어 패치의 임의 변조나 타기종으로의 포팅, 동의 없는 재배포는 허가하지 않습니다. 판매 또한 금지됩니다.</p></section>
+<hr class="sep">
+<section id="notice" class="section"><h2>파일 이용에 관한 권리 및 책임 고지</h2><div class="legal"><p><strong>파일 다운로드 전에 아래 사항을 반드시 확인 바랍니다.</strong></p><ol type="A">
+<li>원칙적으로, 해당 기종의 원본 디스크 또는 카트리지를 보유한 분이 개인적으로만 이용한다는 전제 하에 본 한글패치 파일을 다운로드할 수 있습니다.</li>
+<li>상기 A항 조건에 해당하지 않는 분이 본 한글패치 파일을 다운로드하여 이용할 경우에 발생하는 모든 책임은 이용 당사자에게 있으며, 패치 제작자는 어떠한 책임도 지지 않습니다.</li>
+<li>본 한글패치 파일 자체를 제작자의 허가 없이 타 사이트에 재배포하지 말아 주시고, 재배포를 원하실 경우 패치원본 게시물의 링크를 공유해 주시기 바랍니다.(아카이빙 포함)</li>
+<li>본 게시물의 본문 글 일부 또는 전체를 무단으로 옮겨 작성하지 말아 주시기 바랍니다. 단, 타 사이트에서 발췌하거나 인용한 문구에 대해서는 예외로 합니다.</li>
+<li>본 한글패치 파일을 이용하여 금전적 이득을 취하는 모든 행위를 일절 금합니다. 해당 행위로 발생하는 모든 책임은 이용 당사자에게 있으며, 패치 제작자는 어떠한 책임도 지지 않습니다.(패치 파일 자체 및 패치 롬 파일 판매, 패치 롬 카트리지 제작 및 판매, 웹하드 등 상업적 사이트 업로드, 토렌트 사이트 공유 등)</li>
+<li>상기 C·D·E항의 금지 행위가 적발된 경우, 또는 본 한글패치 파일 공유로 인해 원저작자 및 유통사, 기관의 요청이 있을 경우 예고 없이 게시물이 비공개 처리될 수 있으며, 향후 작업 예정인 작품의 한글패치 파일도 공유하지 않을 수 있습니다.</li>
+</ol></div></section></div></main>
+<footer><span>한마루 한글화 작업소</span><span>CASTLEVANIA: SYMPHONY OF THE NIGHT · PLAYSTATION</span></footer>
+</body></html>
