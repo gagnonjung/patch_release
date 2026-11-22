@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="악마성 드라큘라 X 월하의 야상곡 PS1 일본판 Rev 2 한국어화 작업 소개.">
-<title>악마성 드라큘라 X 월하의 야상곡 — 한국어 패치 v0.9b</title>
+<meta name="description" content="악마성 드라큘라 X 월하의 야상곡 일반판·S 이식판 통합 한국어 패치 소개, 원작 스크린샷 비교와 공통 패처 안내.">
+<title>악마성 드라큘라 X 월하의 야상곡 / 월하의 야상곡 S — 한국어 패치</title>
 <style>
 :root{color-scheme:dark;--bg:#101520;--card:#1b2231;--surface:#131b2b;--line:#354058;--text:#edeff5;--sub:#bdc5d5;--accent:#e7b2bc}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#292130 0,#111521 620px);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.75}
@@ -53,6 +53,7 @@ footer{max-width:980px;margin:0 auto 40px;padding:0 24px;display:flex;justify-co
 
 <link rel="stylesheet" href="../assets/css/support-banner.css?v=20261010"><link rel="stylesheet" href="../assets/css/patch-history.css?v=20261011"><link rel="stylesheet" href="../assets/css/patch-warning.css?v=20261012"><link rel="stylesheet" href="../assets/css/detail-cover.css?v=20261020-uniform">
 <link rel="stylesheet" href="../assets/css/game-catalogue.css?v=20261028">
+<link rel="stylesheet" href="../assets/css/patch-compare.css?v=20261122">
 <link rel="stylesheet" href="../assets/css/floating-toc.css?v=20261029-compact">
 <script src="../assets/js/floating-toc.js?v=20261029-compact" defer></script>
 <link rel="stylesheet" href="../assets/css/image-lightbox.css?v=20261028">
@@ -63,20 +64,20 @@ footer{max-width:980px;margin:0 auto 40px;padding:0 24px;display:flex;justify-co
 
 </head>
 <body class="game-theme" data-game-theme="castlevania-sotn">
-<nav><div class="nav-inner"><a class="brand" href="../index.html">HANMARU</a><div class="links"><a href="../index.html">전체 게임</a><a href="#game-spotlight">게임 소개</a><a href="#features">작업 범위</a><a href="#versions">버전 비교</a><a href="#release">패치 상태</a></div><a class="support-coffee" href="https://litt.ly/hanmaru" target="_blank" rel="noopener noreferrer" aria-label="커피 후원하기"><img src="https://www.owlstown.com/assets/icons/bmc-yellow-button-941f96a1.png" alt="" loading="eager"><span class="support-label">커피 후원</span></a></div></nav>
+<nav><div class="nav-inner"><a class="brand" href="../index.html">HANMARU</a><div class="links"><a href="../index.html">전체 게임</a><a href="#game-spotlight">게임 소개</a><a href="#features">작업 범위</a><a href="#comparison">화면 비교</a><a href="#release">패치 상태</a></div><a class="support-coffee" href="https://litt.ly/hanmaru" target="_blank" rel="noopener noreferrer" aria-label="커피 후원하기"><img src="https://www.owlstown.com/assets/icons/bmc-yellow-button-941f96a1.png" alt="" loading="eager"><span class="support-label">커피 후원</span></a></div></nav>
 <main class="shell"><section class="hero-banner" aria-label="악마성 드라큘라 X 월하의 야상곡 한국어화 소개">
 <header class="hero-copy"><div class="eyebrow">PLAYSTATION · KOREAN LOCALIZATION</div>
-<h1>악마성 드라큘라 X<br>월하의 야상곡</h1><p class="english">Castlevania: Symphony of the Night / 悪魔城ドラキュラX 月下の夜想曲</p>
-<div class="pills"><span>PS1</span><span>일본판 Rev 2</span><span>v0.9b</span><span>제작 중</span></div>
-<p class="lead">PlayStation 일본어판 『월하의 야상곡』의 일반판 한국어 패치입니다. 알루카드와 함께 드라큘라 성을 탐험하며, 대사·아이템·메뉴를 한국어로 즐기기 위한 프로젝트입니다. 새턴 콘텐츠 이식판 『월하의 야상곡 S』와는 별개의 패치입니다.</p>
-<span class="state">v0.9b · 한국어 패치</span></header>
+<h1>악마성 드라큘라 X<br>월하의 야상곡 / S</h1><p class="english">Castlevania: Symphony of the Night / 悪魔城ドラキュラX 月下の夜想曲</p>
+<div class="pills"><span>PS1</span><span>일본판 Rev 2 기반</span><span>일반판 v0.9b / S</span><span>공통 패처 준비 중</span></div>
+<p class="lead">PlayStation판 『월하의 야상곡』과 세가 새턴판 콘텐츠를 이식한 『월하의 야상곡 S』를 하나의 패처에서 선택하는 한국어화 프로젝트입니다. 두 버전의 화면과 콘텐츠 차이를 아래에서 비교할 수 있습니다.</p>
+<span class="state">일반판 v0.9b · 통합 패처 준비 중</span></header>
 <figure class="hero-preview detail-cover"><img src="../assets/images/castlevania-sotn/ps1-japan-rev2-cover.png" alt="악마성 드라큘라 X 월하의 야상곡 PlayStation 일본판 원작 커버 아트" loading="eager" referrerpolicy="no-referrer"></figure>
 </section><div class="body"><section id="game" class="section"><h2>게임 정보</h2><div class="grid">
-<div class="fact"><span>게임명</span><strong>악마성 드라큘라 X 월하의 야상곡 (일반판)</strong></div>
-<div class="fact"><span>기종</span><strong>PlayStation (PS1) · 일반판</strong></div>
+<div class="fact"><span>게임명</span><strong>월하의 야상곡 / 월하의 야상곡 S</strong></div>
+<div class="fact"><span>기종</span><strong>PlayStation (PS1) · 일반판 / 새턴 콘텐츠 이식판</strong></div>
 <div class="fact"><span>원제</span><strong>悪魔城ドラキュラX 月下の夜想曲</strong></div>
 <div class="fact"><span>장르</span><strong>탐색형 액션 RPG</strong></div>
-<div class="fact"><span>원작 발매</span><strong>1997년 3월 20일 (일본)</strong></div>
+<div class="fact"><span>원작 발매</span><strong>PS1 1997.03.20 · 세가 새턴 1998.06.25</strong></div>
 <div class="fact"><span>개발·발매</span><strong>코나미 (KONAMI)</strong></div>
 </div></section>
 <hr class="sep">
@@ -89,21 +90,49 @@ footer{max-width:980px;margin:0 auto 40px;padding:0 24px;display:flex;justify-co
 <article><strong>대사·아이템</strong><p>일본어 대사 및 아이템명·설명의 자연스러운 한국어화, 용어 일관성과 문장 길이를 확인하는 작업</p></article>
 <article><strong>메뉴·화면</strong><p>인게임 메뉴 및 시스템 텍스트, 글꼴과 그래픽의 한국어 출력·배치를 점검하는 작업</p></article>
 <article><strong>표시·조작</strong><p>원작 화면의 형태를 존중하면서 글자 폭과 안내 문구, 필요시 조작 편의성까지 검토하는 작업</p></article>
-</div><p class="muted">실제 완료 범위는 작업 중인 일본판 Rev 2 프로젝트의 빌드 검증 후 확정합니다. 이 페이지는 완료 항목을 선언하는 곳이 아닙니다.</p></section>
+</div><p class="muted"><strong>번역 및 검수는 한마루가 직접 강도 높게 진행했습니다.</strong> 대사·아이템 설명·시스템 문구를 꼼꼼히 확인하며 자연스러운 한국어 표현과 시리즈 용어의 일관성을 중점적으로 다듬었습니다. 정확한 기능별 적용 범위는 최종 패치 기준으로 안내합니다.</p></section>
 <hr class="sep">
-<section id="versions" class="section"><h2>공통 패처에서 버전 선택</h2><div class="qa"><p><b>① 월하의 야상곡 · PS1 일반판:</b> 일본어판 Rev 2를 기반으로 한 일반판 한국어 패치 v0.9b입니다. 현재 페이지입니다.</p><p><b>② <a href="../castlevania-sotn-s/">월하의 야상곡 S · 새턴 콘텐츠 이식판</a>:</b> PlayStation 기반 게임에 세가 새턴판 콘텐츠를 이식하는 별도 선택 항목입니다.</p><p><b>공통 패처:</b> 하나의 다운로드 파일과 패처에서 두 버전 중 하나를 선택하는 방식으로 준비하고 있습니다. 두 페이지는 같은 티스토리 게시물로 연결할 예정입니다.</p><p><b>세이브 호환:</b> 일반판과 S판은 세이브 파일이 서로 호환되지 않습니다. 선택한 버전에 맞는 별도 저장 데이터와 백업을 사용해 주세요.</p></div></section>
+<section id="comparison" class="section"><h2>일반판과 S판 · 화면 비교</h2>
+<p class="description">두 버전의 차이점을 동일한 기준으로 비교합니다. 로고·타이틀·캐릭터 선택의 실제 게임 화면은 스크린샷을 제공받은 뒤 삽입합니다.</p>
+<div class="patch-compare">
+<article class="patch-compare-card" id="compare-startup"><h3>시작 로고 · KONAMI / SEGA SATURN</h3><p>일반판의 코나미 로고와 S판에서 사용하려는 세가 새턴 로고를 나란히 비교합니다. 실제 구현 화면은 스크린샷 수령 후 확인합니다.</p><div class="patch-compare-grid"><figure class="patch-compare-shot" data-shot="startup-normal"><figcaption>일반판 · KONAMI 로고</figcaption><div class="patch-compare-slot"><div class="patch-compare-placeholder">실제 게임 스크린샷 대기<br>(일반판 · KONAMI 로고)</div></div></figure><figure class="patch-compare-shot" data-shot="startup-s"><figcaption>S판 · SEGA SATURN 로고</figcaption><div class="patch-compare-slot"><div class="patch-compare-placeholder">실제 게임 스크린샷 대기<br>(S판 · SEGA SATURN 로고)</div></div></figure></div></article>
+<article class="patch-compare-card" id="compare-title"><h3>타이틀 화면 로고</h3><p>두 버전의 타이틀 그래픽과 로고 구성을 같은 크기로 비교합니다.</p><div class="patch-compare-grid"><figure class="patch-compare-shot" data-shot="title-normal"><figcaption>일반판 · 타이틀 화면</figcaption><div class="patch-compare-slot"><div class="patch-compare-placeholder">실제 게임 스크린샷 대기<br>(일반판 · 타이틀 화면)</div></div></figure><figure class="patch-compare-shot" data-shot="title-s"><figcaption>S판 · 타이틀 화면</figcaption><div class="patch-compare-slot"><div class="patch-compare-placeholder">실제 게임 스크린샷 대기<br>(S판 · 타이틀 화면)</div></div></figure></div></article>
+<article class="patch-compare-card" id="compare-character"><h3>캐릭터 선택 화면</h3><p>일반판과 S판의 캐릭터 선택 인터페이스 차이를 보여 줍니다.</p><div class="patch-compare-grid"><figure class="patch-compare-shot" data-shot="character-normal"><figcaption>일반판 · 캐릭터 선택</figcaption><div class="patch-compare-slot"><div class="patch-compare-placeholder">실제 게임 스크린샷 대기<br>(일반판 · 캐릭터 선택)</div></div></figure><figure class="patch-compare-shot" data-shot="character-s"><figcaption>S판 · 캐릭터 선택</figcaption><div class="patch-compare-slot"><div class="patch-compare-placeholder">실제 게임 스크린샷 대기<br>(S판 · 캐릭터 선택)</div></div></figure></div></article>
+<article class="patch-compare-card patch-compare-card--stage" id="compare-stage"><h3>추가 스테이지 · 세가 새턴판 원작 자료</h3><p>일반 PlayStation판에 없던 새턴판의 추가 구역입니다. 아래 이미지는 웹에서 찾은 <strong>세가 새턴 원작판 참고 화면</strong>이며, 『월하의 야상곡 S』 이식 빌드의 실제 플레이 화면이 아닙니다. S판의 최종 구현 여부는 추후 확인합니다.</p><div class="patch-compare-grid"><figure class="patch-compare-shot" data-shot="stage-garden"><figcaption>지하정원 (地下庭園 / Underground Garden)</figcaption><div class="patch-compare-slot"><a href="https://www.vgmuseum.com/mrp/cv-sotn/screens/sat-garden2.png" target="_blank" rel="noopener noreferrer" title="외부 원작 참고 스크린샷 열기"><img src="https://www.vgmuseum.com/mrp/cv-sotn/screens/sat-garden2.png" alt="세가 새턴 원작판의 지하정원 (地下庭園 / Underground Garden) 게임 화면" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></div></figure><figure class="patch-compare-shot" data-shot="stage-prison"><figcaption>저주받은 감옥 (呪われた牢獄 / Cursed Prison)</figcaption><div class="patch-compare-slot"><a href="https://www.vgmuseum.com/mrp/cv-sotn/screens/sat-prison2.png" target="_blank" rel="noopener noreferrer" title="외부 원작 참고 스크린샷 열기"><img src="https://www.vgmuseum.com/mrp/cv-sotn/screens/sat-prison2.png" alt="세가 새턴 원작판의 저주받은 감옥 (呪われた牢獄 / Cursed Prison) 게임 화면" loading="lazy" decoding="async" referrerpolicy="no-referrer"></a></div></figure></div><p class="patch-compare-source">원작 스크린샷 출처: <a href="https://www.vgmuseum.com/mrp/stage-sotn.htm" target="_blank" rel="noopener noreferrer">VGMuseum · Castlevania: Symphony of the Night, Saturn-Exclusive Areas</a>. 역성에는 지옥정원과 영혼의 감옥도 대응됩니다. 외부 이미지가 표시되지 않으면 출처 링크에서 확인해 주세요.</p></article>
+</div>
+</section>
 <hr class="sep">
-<section id="source" class="section"><h2>원본 파일 정보</h2><div class="hash">
-<label>작업 기준</label><code>Akumajou Dracula X - Gekka no Yasoukyoku (Japan) (Rev 2)</code>
-<label>지원 원본 MD5</label><code>최종 빌드 확인 전</code>
-<label>패치 후 MD5</label><code>최종 빌드 확인 전</code>
-</div><p class="muted">공통 패처의 일반판 선택 결과에 대한 MD5는 완성 후 확인해 기재합니다. S판 결과와 별도로 확인해 주세요.</p></section>
+<section id="versions" class="section"><h2>하나의 패처에서 두 버전 선택</h2><div class="qa">
+<p><b>① 월하의 야상곡 · 일반판:</b> PlayStation 일본어판 Rev 2 기반 한국어 패치 v0.9b입니다.</p>
+<p><b>② 월하의 야상곡 S:</b> PlayStation 기반으로 세가 새턴판 콘텐츠 이식을 목표로 하는 별도 선택 항목입니다. 포함 범위는 최종 빌드 기준으로 안내합니다.</p>
+<p><b>공통 패처:</b> 하나의 패처에서 원하는 버전을 선택하도록 구성하고 있습니다. 통합 다운로드는 이 페이지 하나에서 안내합니다.</p>
+<p><b>세이브 주의:</b> <strong>일반판과 S판은 서로 세이브 파일이 호환되지 않습니다.</strong> 각각 저장 파일을 따로 관리하고 백업해 주세요.</p>
+</div></section>
 <hr class="sep">
-<section id="release" class="section"><h2>공통 패처 · 다운로드 안내</h2><div class="download"><div class="release">일반판 v0.9b · 공통 패처 준비 중</div><h3>월하의 야상곡 / 월하의 야상곡 S · 공통 패처</h3><p>한 개의 패처에서 <strong>① PS1 일반판</strong>과 <strong>② 월하의 야상곡 S</strong> 중 원하는 버전을 선택하도록 구성하고 있습니다. 각 페이지마다 별도 패치 파일을 받을 필요가 없도록 준비 중입니다.</p><p class="muted">패처 및 통합 다운로드 링크는 아직 준비 중입니다. 완성되면 두 페이지에 같은 티스토리 게시물 링크를 추가합니다. 배포 ZIP의 해시와 일반판·S판 각각의 패치 후 MD5는 실제 결과를 확인한 뒤 안내합니다. 원본 게임 데이터는 제공하지 않습니다.</p></div></section>
+<section id="source" class="section"><h2>원본 파일 및 MD5</h2>
+<div class="hash">
+<label>작업 기준 · 일반판</label><code>Akumajou Dracula X - Gekka no Yasoukyoku (Japan) (Rev 2)</code>
+<label>지원 원본 MD5</label><code>배포 빌드 확인 전</code>
+<label>일반판 v0.9b · 패치 후 MD5</label><code>확인 전</code>
+<label>월하의 야상곡 S · 패치 후 MD5</label><code>확인 전</code>
+</div><p class="muted">일반판과 S판의 패치 결과 해시는 서로 다른 항목으로 안내합니다. S판의 적용 대상 원본 리비전과 실제 출력 파일명도 통합 패처 완성 후 확인할 예정입니다.</p></section>
 <hr class="sep">
-<section id="install" class="section"><h2>패치 적용 방법</h2><ol class="steps"><li>패처의 안내에 맞는 일본어판 원본 이미지를 준비하고 원본 및 세이브 파일을 백업합니다.</li><li>티스토리의 단일 배포 글에서 공통 패처를 받은 뒤 압축을 해제하고 실행합니다.</li><li>버전 선택 화면에서 <strong>① 월하의 야상곡 · PS1 일반판</strong>을 선택해 원본 파일에 패치를 적용합니다.</li><li>선택한 버전의 결과 파일로 실행합니다. 다른 버전의 세이브 파일은 불러오지 마세요.</li></ol><p class="muted">위 안내는 계획 중인 적용 흐름입니다. 실제 실행 파일명, 지원 원본 파일명 및 작업 완료 파일의 이름은 패처 완성 후 업데이트합니다. 일반판과 S판은 세이브 파일이 서로 호환되지 않습니다. 선택한 버전에 맞는 별도 저장 데이터와 백업을 사용해 주세요.</p></section>
+<section id="release" class="section"><h2>통합 패처 · 다운로드 안내</h2><div class="download">
+<div class="release">일반판 v0.9b / S판 · 통합 패처 준비 중</div>
+<h3>월하의 야상곡 · 일반판 / S판 선택형 패처</h3>
+<p>하나의 패처에서 <strong>① 일반 PlayStation판</strong> 또는 <strong>② 새턴 콘텐츠 이식판 S</strong>를 선택하는 방식으로 준비 중입니다. 배포 파일은 티스토리의 단일 게시물에서 제공할 예정입니다.</p>
+<p class="muted">현재 다운로드 링크는 등록되지 않았습니다. 실제 배포 패키지가 완성되면 링크·ZIP 해시·선택 버전별 MD5를 확인해 이곳에 안내합니다. 게임 원본 파일은 제공하지 않습니다.</p>
+</div></section>
 <hr class="sep">
-<section id="credits" class="section"><h2>제작</h2><div class="grid"><div class="fact"><span>한국어화</span><strong>한마루</strong></div></div></section>
+<section id="install" class="section"><h2>패치 적용 방법</h2><ol class="steps">
+<li>통합 패처가 지원하는 일본어판 원본 디스크 이미지와 세이브 파일을 백업합니다.</li>
+<li>티스토리에서 패처 파일을 받은 뒤 압축을 해제하고 실행합니다.</li>
+<li>버전 선택 화면에서 <strong>① 일반판</strong> 또는 <strong>② 월하의 야상곡 S</strong>를 선택합니다.</li>
+<li>패처의 안내에 따라 원본 이미지를 지정하고 패치를 적용한 뒤, 생성된 해당 버전의 게임 이미지로 실행합니다.</li>
+</ol><p class="muted">위 방법은 계획 중인 패처의 사용 흐름입니다. 실행 파일 이름과 실제 지원 리비전은 패처 완성 시 확정합니다. 일반판과 S판의 세이브 파일은 서로 호환되지 않습니다.</p></section>
+<hr class="sep">
+<section id="credits" class="section"><h2>한국어화 및 번역 검수</h2><div class="grid"><div class="fact"><span>한국어화</span><strong>한마루</strong></div><div class="fact"><span>번역 검수</span><strong>한마루 · 직접 집중적으로 검수</strong></div><div class="fact"><span>기술 지원</span><strong>ChatGPT Codex</strong></div></div>
+<p class="muted">번역 검수는 한마루가 직접 맡아 일본어 표현을 한국어로 자연스럽게 다듬고, 대사와 각종 설명 문구의 표현을 꼼꼼하게 확인했습니다.</p></section>
 <hr class="sep">
 <section class="section patch-warning" id="patch-warning" role="note"><h2>경고</h2><p>본 한국어 패치의 임의 변조나 타기종으로의 포팅, 동의 없는 재배포는 허가하지 않습니다. 판매 또한 금지됩니다.</p></section>
 <hr class="sep">
@@ -115,5 +144,5 @@ footer{max-width:980px;margin:0 auto 40px;padding:0 24px;display:flex;justify-co
 <li>본 한글패치 파일을 이용하여 금전적 이득을 취하는 모든 행위를 일절 금합니다. 해당 행위로 발생하는 모든 책임은 이용 당사자에게 있으며, 패치 제작자는 어떠한 책임도 지지 않습니다.(패치 파일 자체 및 패치 롬 파일 판매, 패치 롬 카트리지 제작 및 판매, 웹하드 등 상업적 사이트 업로드, 토렌트 사이트 공유 등)</li>
 <li>상기 C·D·E항의 금지 행위가 적발된 경우, 또는 본 한글패치 파일 공유로 인해 원저작자 및 유통사, 기관의 요청이 있을 경우 예고 없이 게시물이 비공개 처리될 수 있으며, 향후 작업 예정인 작품의 한글패치 파일도 공유하지 않을 수 있습니다.</li>
 </ol></div></section></div></main>
-<footer><span>한마루 한글화 작업소</span><span>CASTLEVANIA: SYMPHONY OF THE NIGHT · PLAYSTATION</span></footer>
+<footer><span>한마루 한글화 작업소</span><span>CASTLEVANIA: SYMPHONY OF THE NIGHT / S · PLAYSTATION</span></footer>
 </body></html>

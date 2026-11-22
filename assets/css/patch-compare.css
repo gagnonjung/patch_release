@@ -1,0 +1,15 @@
+/* Side-by-side screenshot comparison. Shared component only; site shell remains unchanged. */
+.patch-compare{display:grid;gap:20px}
+.patch-compare-card{border:1px solid #45506a;background:#131b2b;border-radius:12px;padding:18px}
+.patch-compare-card h3{font-size:17px;letter-spacing:-.02em;margin:0 0 8px}
+.patch-compare-card p{font-size:13px;color:#c9d0dd;line-height:1.75;margin:0 0 12px}
+.patch-compare-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.patch-compare-shot{margin:0;min-width:0}
+.patch-compare-shot figcaption{font-size:12px;font-weight:700;color:#e2e7f0;margin:0 0 8px}
+.patch-compare-slot{height:auto;aspect-ratio:4/3;border:1px solid #46516b;background:#0d1422;border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:8px}
+.patch-compare-slot img{display:block;max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain;image-rendering:auto}
+.patch-compare-placeholder{display:flex;align-items:center;justify-content:center;text-align:center;width:100%;height:100%;min-height:120px;padding:10px;color:#abb6ce;font-size:13px;line-height:1.65;background:repeating-linear-gradient(-45deg,#111a2a,#111a2a 12px,#141d2e 12px,#141d2e 24px)}
+.patch-compare-source{font-size:12px;color:#aeb8c9;margin-top:12px;overflow-wrap:anywhere}
+.patch-compare-source a{color:#c3d6fa}
+.patch-compare-card--stage .patch-compare-slot{aspect-ratio:4/3}
+@media(max-width:680px){.patch-compare-grid{grid-template-columns:1fr}.patch-compare-card{padding:14px}}
