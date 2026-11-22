@@ -6,7 +6,7 @@
 - 1:1 디자인 기준: `persona-2-innocent-sin/index.html`
 - 새턴 페이지 참고: `slayers-royal/index.html`
 - 고정 규정: `SITE_DETAIL_LAYOUT_STANDARD.md`
-- 검증: `python tools/verify_detail_template.py <slug>` + 데스크톱·모바일 시각 검수
+- 내부 검증: `python tools/verify_detail_template.py <slug>` + 데스크톱·모바일 시각 검수. 웹페이지에는 테스트·QA 결과를 게시하지 않는다.
 - 원본·패치 파일 및 검증된 해시·링크 보존. 테스트 환경의 정적/실기 여부 구별
 - 사용자가 푸시를 지시한 경우에만 변경 범위 검증 후 커밋/푸시. 배포된 링크 그대로 사용
 
